@@ -15,7 +15,7 @@ const ARoutes = () => {
   return (
   <Routes>
     <Route path="/" element={<Home/>} />
-    <Route path="/takmatotur" element={<About/>} />
+    <Route path="/om" element={<About/>} />
     <Route path="/topptur" element={<Tour/>} />
     <Route path="/coach" element={<Coach/>} />
     <Route path="/trailcamp" element={<TrailCamp/>} />

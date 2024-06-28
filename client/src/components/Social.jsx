@@ -8,8 +8,8 @@ const Social = () => {
       <ul className="flex">
         <li>
           <a
-             className="text-PrimaryColor transition hover:text-black text-xl"
-            href="http://wwww.instagram.com"
+            className="text-PrimaryColor transition hover:text-black text-xl"
+            href="https://www.instagram.com/tak_mat_o_tur?igsh=dmlvaWVwc3EzdHR2"
             target="blank"
           >
             <TiSocialInstagram />
@@ -18,7 +18,7 @@ const Social = () => {
         <li>
           <a
             className="text-PrimaryColor transition hover:text-black text-xl"
-            href="http://wwww.instagram.com"
+            href="https://www.facebook.com/profile.php?id=61558195943539"
             target="blank"
           >
             <RiFacebookBoxFill />
