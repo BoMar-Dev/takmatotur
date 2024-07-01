@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const Card = ({ image, title, link, description }) => {
   return (
-    <div className="bg-white flex flex-col p-5 w-full md:w-[80%] lg:w-[50%] md:m-auto shadow-xl mt-10 mb-10 rounded-lg flex-grow">
+    <div className="bg-white flex flex-col p-5 shadow-xl rounded-lg flex-grow mb-12">
       <img className="rounded-md" src={image} alt={title} />
-      <Link to={link}>
-        <h2 className="text-xl mt-2 font-medium">{title}</h2>
+      <Link to={link} className="mt-2 font-medium text-xl flex-grow">
+        {title}
       </Link>
-      <p className="text-[16px] mt-5">{description}</p>
+      <p className="text-[16px] mt-5 md:w-[80%]">{description}</p>
     </div>
   );
 };

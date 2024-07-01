@@ -1,8 +1,8 @@
 import { useLocation } from "react-router-dom";
 
 // Import images
-import headerImg from "../img/header/start1.jpg"; // Example image for the home page
-import headerImgTwo from "../img/header/start2.jpg"; // Example image for the home page
+import headerLandingPage from "../img/header/landing.jpg"; // Example image for the home page
+import headerAbout from "../img/header/about.jpg"; // Example image for the home page
 
 // Import components
 import MobileNav from "./MobileNav"; // Your mobile navigation component
@@ -19,9 +19,9 @@ const Header = () => {
   const getImageForPath = (pathname) => {
     switch (pathname) {
       case "/":
-        return `url(${headerImgTwo})`; // Correctly formatted URL for CSS
+        return `url(${headerLandingPage})`; // Correctly formatted URL for CSS
       case "/om":
-        return `url(${headerImg})`; // Correctly formatted URL for CSS
+        return `url(${headerAbout})`; // Correctly formatted URL for CSS
       default:
         return `url(${logoHome})`; // Assuming logoHome is defined and this is the correct path
     }
@@ -40,10 +40,11 @@ const Header = () => {
     >
       <div className="flex flex-col lg:flex-row w-full justify-between items-start">
         {/* logo - will navigate to start page ( "/") */}
-        <Link to={"/"} className="max-w-[200px] pt-5">
+        <Link to="/" className="pt-5 z-40">
           <img
             src={Logo}
             alt="logotype"
+            className="max-w-[200px] cursor-pointer" // Ensuring the image behaves like a button
             style={{ width: "100px", height: "auto" }}
           />
         </Link>

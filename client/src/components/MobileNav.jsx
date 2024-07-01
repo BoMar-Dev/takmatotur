@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { motion } from "framer-motion"; // Import framer-motion
+// Import framer-motion
+import { motion } from "framer-motion";
+// import icons
 import { SlMenu } from "react-icons/sl";
 import { IoClose } from "react-icons/io5";
+// import Link
 import { Link } from "react-router-dom";
 
 const MobileNav = () => {
@@ -27,7 +30,7 @@ const MobileNav = () => {
     <nav className="text-PrimaryColor lg:hidden xl:hidden">
       <div
         onClick={toggleMenu}
-        className="text-4xl font-extrabold cursor-pointer mt-8"
+        className="text-4xl font-extrabold cursor-pointer mt-12"
       >
         <SlMenu />
       </div>
