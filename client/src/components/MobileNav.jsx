@@ -30,7 +30,7 @@ const MobileNav = () => {
     <nav className="text-PrimaryColor lg:hidden xl:hidden">
       <div
         onClick={toggleMenu}
-        className="text-4xl font-extrabold cursor-pointer mt-12"
+        className="text-5xl font-extrabold cursor-pointer mt-12"
       >
         <SlMenu />
       </div>

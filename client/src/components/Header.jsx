@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 // Import images
 import headerLandingPage from "../img/header/landing.jpg"; // Example image for the home page
 import headerAbout from "../img/header/about.jpg"; // Example image for the home page
+import headerContact from "../img/contact/contactHeader.jpg";
 
 // Import components
 import MobileNav from "./MobileNav"; // Your mobile navigation component
@@ -22,6 +23,8 @@ const Header = () => {
         return `url(${headerLandingPage})`; // Correctly formatted URL for CSS
       case "/om":
         return `url(${headerAbout})`; // Correctly formatted URL for CSS
+      case "/kontakt":
+        return `url(${headerContact})`;
       default:
         return `url(${logoHome})`; // Assuming logoHome is defined and this is the correct path
     }
