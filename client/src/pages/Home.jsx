@@ -37,13 +37,12 @@ const Home = () => {
         style={{ top: "-250px" }}
         onClick={() => setIsActive(!isActive)}
       >
-        {/* Div that holds the trail camp and button  */}
-        <div className={`ml-5 xl:ml-1 text-emerald-800 ${isActive ? "" : ""}`}>
-          Trail Camp 2024
+        <div className="ml-5 xl:ml-1 font-semibold text-emerald-800 ">
+          <h1 className=" ">Trail Camp 2024</h1>
         </div>
-        <div className=" bg-emerald-800 rounded-sm">
-          <Link to="/trailcamp" className="block">
-            <button className="before:ease relative h-12 w-40 overflow-hidden border border-PrimaryColor shadow-2xl rounded-sm">
+        <div className="mt-2">
+          <Link to="/trailcamp">
+            <button className="relative h-12 w-40 overflow-hidden border border-PrimaryColor shadow-2xl rounded-sm bg-emerald-800">
               <span className="relative z-10 text-white">Boka / Info</span>
             </button>
           </Link>
@@ -71,7 +70,7 @@ const Home = () => {
           genuin vistelse fylld med äventyr, god mat och fantastisk natur.
         </p>
       </div>
-      <div className="card-container grid grid-cols-1 lg:grid-cols-2 xl:w-[80%] m-auto gap-10">
+      <div className="card-container grid grid-cols-1 lg:grid-cols-2 xl:w-[80%] m-auto gap-10 md:w-[80%]">
         {/* top card */}
         <Card
           image={mondayRun}

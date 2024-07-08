@@ -1,3 +1,18 @@
+/* Import the Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+/* Set Montserrat as the primary font */
+body {
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+/* Optionally, set Montserrat for specific elements */
+h1, h2, h3, h4, h5, h6, p, a, li {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +39,5 @@
     @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
   } */
 }
-
 
 
