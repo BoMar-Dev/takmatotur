@@ -17,12 +17,12 @@ const About = () => {
         }}
       ></div>
 
-      <div className="flex justify-center ">
+      <header className="flex justify-center mb-6">
         <h1 className="text-2xl font-bold">Tak Mat O Tur</h1>
-      </div>
+      </header>
 
-      <div className="p-5 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%]">
-        <div className="mb-5 font-semibold text-center">
+      <div className="p-5 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%] bg-white rounded-md shadow-lg">
+        <section className="mb-5 font-semibold text-center">
           <p>
             Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
             komfort, gastronomi och äventyr för att skapa oförglömliga
@@ -32,10 +32,10 @@ const About = () => {
             äventyrsfyllt besök på en av Sveriges vackraste platser, har du
             hittat rätt.
           </p>
-        </div>
+        </section>
 
-        {/* Image and text div for xl and above */}
-        <div className="hidden xl:flex xl:space-x-10 items-center bg-white shadow-xl rounded-lg p-5">
+        {/* Image and text section for xl and above */}
+        <section className="hidden xl:flex xl:space-x-10 items-center bg-white shadow-xl rounded-lg p-5">
           <div className="flex-1 xl:order-1">
             <p>
               Tak Mat o Tur är ett familjeföretag som drivs av Martin och Emma
@@ -57,24 +57,24 @@ const About = () => {
               fylld med äventyr, god mat och fantastisk natur.
             </p>
           </div>
-          <div className="flex-1 xl:order-2">
+          <figure className="flex-1 xl:order-2">
             <img
               className="rounded-xl shadow-xl w-full"
               src={portraitImg}
               alt="bild på grundarna av Tak Mat O Tur"
             />
-          </div>
-        </div>
+          </figure>
+        </section>
 
-        {/* Image and text div for lg and below */}
-        <div className="xl:hidden">
-          <div className="img-div">
+        {/* Image and text section for lg and below */}
+        <section className="xl:hidden">
+          <figure className="img-div">
             <img
               className="rounded-full xl:rounded-xl shadow-xl w-full md:w-3/4 lg:w-3/5 m-auto"
               src={portraitImg}
               alt="bild på grundarna av Tak Mat O Tur"
             />
-          </div>
+          </figure>
           <div className="relative mt-5">
             <p>
               Tak Mat o Tur är ett familjeföretag som drivs av Martin och Emma
@@ -98,7 +98,7 @@ const About = () => {
               fylld med äventyr, god mat och fantastisk natur.
             </p>
           </div>
-        </div>
+        </section>
 
         {/* button div */}
         <div className="button-holder flex justify-center mt-5 mb-5">

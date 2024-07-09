@@ -22,7 +22,7 @@ const Contact = () => {
         <div className="hidden xl:flex xl:space-x-10 items-center p-5">
           <div className="flex-1 xl:order-1 text-center">
             <header className="text-xl font-semibold m-auto">
-              <h1>Hör av er</h1>
+              <h1>Vi svara så fort vi kan</h1>
             </header>
             <p className="p-5">
               Är det information ni söker som ni inte finner på hemsidan eller
@@ -59,9 +59,8 @@ const Contact = () => {
         {/* Layout for lg and below */}
         <div className="xl:hidden">
           <div className="text-container text-center">
-            <header className="text-xl font-semibold m-auto">
-              <h1>Hör av er</h1>
-            </header>
+            <header className="text-xl font-semibold m-auto"></header>
+            <h1 className="font-bold">Vi svarar så fort vi kan</h1>
             <p className="p-5">
               Är det information ni söker som ni inte finner på hemsidan eller
               söker ni kanske ett skräddarsytt paket? Tveka inte på att höra av

@@ -1,8 +1,7 @@
-// import component
+import { Link } from "react-router-dom";
 import Card from "../components/Card";
 
-// import img
-import profil from "../img/coach/profil.jpg";
+// import images
 import profil2 from "../img/coach/profil2.jpg";
 import corporateCoach from "../img/coach/foretag.jpg";
 import privatCoach from "../img/coach/personlig.jpg";
@@ -11,7 +10,7 @@ import backgroundImg from "../img/about/background.svg";
 
 const Coach = () => {
   return (
-    <section className="section flex flex-col p-5 items-center relative">
+    <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto">
       <div
         className="absolute top-[-700px] left-0 h-full w-full bg-cover bg-center"
         style={{
@@ -58,7 +57,7 @@ const Coach = () => {
           <img
             src={profil2}
             alt="profilbild på Martin Gillgren löpcoach tak mat o tur"
-            className="w-full rounded-3xl object-cover xl:w-[80%]"
+            className="w-full rounded-3xl object-cover xl:w-[80%] 3xl:w-[50%]"
             style={{ height: "auto", maxHeight: "100%" }}
           />
         </div>
@@ -69,19 +68,19 @@ const Coach = () => {
         <Card
           image={mondayRun}
           title="Måndagslöpning"
-          link="/coach"
+          link="/coach/mandaglopning"
           description="Upptäck magin med Jämtlands härligaste löpargrupp! Under sex måndagar får du chansen att vara med i en inspirerande gemenskap och utveckla din löpning på bästa sätt."
         />
         <Card
           image={corporateCoach}
           title="Företagsträning"
-          link="/foretag"
+          link="/coach/foretag"
           description="Vill ni skapa en starkare teamkänsla, öka arbetsglädjen och samtidigt förbättra hälsan hos era medarbetare? – Följ med oss på en 10-veckors Löpcoachingresa för Företagsgrupper!."
         />
         <Card
           image={privatCoach}
           title="Personlig löpcoachning"
-          link="/personlig"
+          link="/coach/personlig"
           description="Privat löpcoachning från Tak Mat o Tur erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken"
         />
       </div>
