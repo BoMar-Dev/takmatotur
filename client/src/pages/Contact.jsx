@@ -1,4 +1,3 @@
-// // Montserrat
 import { useEffect } from "react";
 
 // import img
@@ -22,28 +21,27 @@ const Contact = () => {
         <div className="hidden xl:flex xl:space-x-10 items-center p-5">
           <div className="flex-1 xl:order-1 text-center">
             <header className="text-xl font-semibold m-auto">
-              <h1>Vi svara så fort vi kan</h1>
+              <h2>Vi svara så fort vi kan</h2>
             </header>
             <p className="p-5">
-              Är det information ni söker som ni inte finner på hemsidan eller
-              önskar ni kanske ett skräddarsytt paket? Tveka inte på att höra av
-              er, vi finns tillgängliga för att ni ska få bästa tänkbara
-              service.
+              Är det information som ni inte finner på hemsidan eller önskar ni
+              kanske ett skräddarsytt paket? Tveka inte på att höra av er, vi
+              finns tillgängliga för att ni ska få bästa tänkbara service.
             </p>
             <div className="flex flex-col font-bold p-5 mb-5">
               <div className="flex items-center space-x-2">
                 <BsFillTelephoneFill />
-                <h2>+4670123456</h2>
+                <span>+4670123456</span>
               </div>
               <div className="flex items-center space-x-2 mt-2">
                 <IoMdMail />
-                <h2>takmatotur@gmail.com</h2>
+                <span>takmatotur@gmail.com</span>
               </div>
             </div>
           </div>
           <div className="flex-1 xl:order-2">
             <a
-              href="https://maps.app.goo.gl/1q72xMDJvq3WwuQu8"
+              href="https://maps.app.goo.gl/c4VqP7NFmp96eBkn6"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -59,8 +57,9 @@ const Contact = () => {
         {/* Layout for lg and below */}
         <div className="xl:hidden">
           <div className="text-container text-center">
-            <header className="text-xl font-semibold m-auto"></header>
-            <h1 className="font-bold">Vi svarar så fort vi kan</h1>
+            <header className="text-xl font-semibold m-auto">
+              <h2>Vi svarar så fort vi kan</h2>
+            </header>
             <p className="p-5">
               Är det information ni söker som ni inte finner på hemsidan eller
               söker ni kanske ett skräddarsytt paket? Tveka inte på att höra av
@@ -70,11 +69,11 @@ const Contact = () => {
             <div className="flex flex-col font-bold p-5 mb-5">
               <div className="flex items-center space-x-2">
                 <BsFillTelephoneFill />
-                <h2>+4670123456</h2>
+                <span>+4670123456</span>
               </div>
               <div className="flex items-center space-x-2 mt-2">
                 <IoMdMail />
-                <h2>takmatotur@gmail.com</h2>
+                <span>takmatotur@gmail.com</span>
               </div>
             </div>
           </div>

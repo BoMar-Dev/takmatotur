@@ -87,7 +87,7 @@ const Header = () => {
               {/* // The icon is conditionally rendered based on whether the link is active -  isActiveLink(link.path) returns true if the current path matches the link's path, indicating that the link is active. */}
               <Link
                 to={link.path}
-                className={`text-PrimaryColor hover:text-slate-500 hover:font-extrabold transition font-semibold ${
+                className={`text-PrimaryColor hover:text-slate-950 hover:scale-110 hover:font-extrabold transition font-semibold ${
                   isActiveLink(link.path) ? "text-bold" : ""
                 }`}
               >

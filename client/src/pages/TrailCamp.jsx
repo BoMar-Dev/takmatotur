@@ -5,117 +5,129 @@ import welcome from "../img/trailcamp/welcome.jpg";
 
 const TrailCamp = () => {
   return (
-    <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto mb-5">
+    <section className="relative flex flex-col items-center p-5 mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
       <div
-        className="absolute top-[-700px] left-0 h-full w-full bg-cover bg-center"
+        className="absolute top-[-700px] left-0 w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "300%",
-          backgroundPosition: "",
-          backgroundRepeat: "repeat-y",
+          backgroundSize: "100%",
+          backgroundRepeat: "repeat-x",
           opacity: 0.15,
           zIndex: -1,
           transform: "translateX(-30%)",
         }}
       ></div>
-      <header className="flex flex-col justify-center items-center text-center mb-6">
-        <h1 className="text-2xl font-bold mb-2">Trail Camp 2024</h1>
+      <header className="flex flex-col items-center justify-center mb-6 text-center">
+        <h1 className="mb-2 text-2xl font-bold">Trail Camp 2024</h1>
         <h2 className="text-lg font-bold">30/8 - 1/9</h2>
       </header>
-      <article className="flex flex-col space-y-6 p-5">
-        <section className="text-center">
-          <p>
-            Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse
-            i hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
-            september bjuder vi in dig till tre dagar fyllda med inspiration,
-            utmaning och gemenskap i en av Sveriges mest natursköna miljöer.
-          </p>
+
+      <div className="mb-6 text-center  font-semibold md:w-[80%] xl:w-[70%]">
+        <p>
+          Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse i
+          hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
+          september bjuder vi in dig till tre dagar fyllda med inspiration,
+          utmaning och gemenskap i en av Sveriges mest natursköna miljöer.
+        </p>
+      </div>
+
+      <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md">
           <img
-            className="rounded-md mt-4"
+            className="w-full xl:w-[50%] rounded-none"
             src={welcome}
-            alt="bild på Tak Mat O Tur och en av deras stop i ett vattenfall där man kan bada"
+            alt="Trail Camp"
           />
+          <div className="w-full xl:w-[50%] xl:ml-0 p-4">
+            <h3 className="mb-2 font-semibold">Vad ingår?</h3>
+            <ul className="list-inside list-disc">
+              <li className="mb-1 list-none">
+                4 löppass: Våra erfarna ledare tar dig med på storslagna
+                löpturer genom Åres fantastiska landskap – från tät skog till
+                vidsträckta fjällvidder.
+              </li>
+              <li className=" list-none">
+                Boende med helpension: Bo bekvämt på fantastiska{" "}
+                <a href="https://mullfjallet.se/" className="font-extrabold">
+                  Pensionat Mullfjället
+                </a>{" "}
+                och njut av näringsrika och välsmakande måltider i den perfekta
+                miljön för att koppla av och umgås mellan passen.
+              </li>
+            </ul>
+          </div>
         </section>
 
-        <section>
-          <h3 className="font-semibold mb-2">Vad ingår?</h3>
-          <ul className="list-disc list-inside">
-            <p className="mb-1">
-              4 löppass: Våra erfarna ledare tar dig med på storslagna löpturer
-              genom Åres fantastiska landskap – från tät skog till vidsträckta
-              fjällvidder.
-            </p>
-            <p>
-              Boende med helpension: Bo bekvämt på fantastiska{" "}
-              <a href="https://mullfjallet.se/" className="font-extrabold">
-                Pensionat Mullfjället
-              </a>{" "}
-              och njut av näringsrika och välsmakande måltider i den perfekta
-              miljön för att koppla av och umgås mellan passen.
-            </p>
-          </ul>
-        </section>
-
-        <section>
-          <h3 className="font-semibold mb-2">Föreläsning med Markus Torgeby</h3>
-          <p>
-            Inspireras av{" "}
-            <a href="https://www.markustorgeby.com/" className="font-extrabold">
-              Marcus Torgeby
-            </a>
-            , den legendariske löparen och författaren som delar med sig av sina
-            insikter om löpning, livet och att finna sin egen väg genom
-            utmaningar och framgångar.
-          </p>
+        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between bg-white rounded-lg shadow-md">
           <img
-            className="rounded-md mt-4"
+            className="w-full xl:w-[50%] rounded-none"
             src={torgeby}
             alt="föreläsare Marcus Torgeby"
           />
+          <div className="w-full xl:w-[50%] xl:mr-0 p-4">
+            <h3 className="mb-2 font-semibold">
+              Föreläsning med Markus Torgeby
+            </h3>
+            <p>
+              Inspireras av{" "}
+              <a
+                href="https://www.markustorgeby.com/"
+                className="font-extrabold"
+              >
+                Marcus Torgeby
+              </a>
+              , den legendariske löparen och författaren som delar med sig av
+              sina insikter om löpning, livet och att finna sin egen väg genom
+              utmaningar och framgångar.
+              <br /> Vi är såklart lite extra solt över att ha med Markus här då
+              han i år är en av sommarpratarna i p1.
+            </p>
+          </div>
         </section>
 
-        <section>
-          <h3 className="font-semibold mb-2">Varför ska du delta?</h3>
-          <p>
-            Trail Camp Åre är mer än bara ett träningsläger – det är en
-            möjlighet att koppla bort från vardagens stress och återknyta
-            kontakten med naturen och din egen kropp. Här får du chansen att
-            utveckla din löpteknik, bygga uthållighet och styrka, samtidigt som
-            du njuter av fantastisk gemenskap och mat med likasinnade löpare.
-            Oavsett om ditt mål är att förbättra din tid, hitta löpglädje eller
-            bara uppleva den svenska fjällvärlden på ett nytt sätt, är detta
-            lägret för dig.
-          </p>
-          <p className="mt-5">
-            Boka din plats idag och TÄVLA om att få hela helgen gratis
-            tillsammans med en vän. Platserna är begränsade, så se till att boka
-            din plats redan idag för att säkra din medverkan i denna unika
-            löparupplevelse. Av de 10 första betalande anmälda lottar vi ut hela
-            helgen gratis plus att du får ta med en vän utan extra kostnad!!
-          </p>
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md">
           <img
-            className="rounded-md mt-4"
+            className="w-full xl:w-[50%] rounded-none"
             src={group}
-            alt="gruppbild på deltagare och två st ledare från Tak Mat o Tur"
+            alt="Trail Camp Group"
           />
-        </section>
-
-        <section>
-          <h3 className="font-semibold mb-2">Priser</h3>
-          <p>
-            Boende med helpension, löpguidning och föreläsning med Markus
-            Torgeby: 4900 kr.
-          </p>
-          <p className="mt-1">
-            {" "}
-            Utan övernattning: Löpguidning, 2 luncher och 2 middagar samt
-            föreläsning: 2950 kr.
-          </p>
-          <p className="font-bold mt-2">
-            BOKA - info@mullfjallet.se <br /> ange "Trail camp Åre 2024"
-          </p>
+          <div className="w-full xl:w-[50%] xl:ml-0 p-4">
+            <h3 className="mb-2 font-semibold">Varför ska du delta?</h3>
+            <p>
+              Trail Camp Åre är mer än bara ett träningsläger – det är en
+              möjlighet att koppla bort från vardagens stress och återknyta
+              kontakten med naturen och din egen kropp. Här får du chansen att
+              utveckla din löpteknik, bygga uthållighet och styrka, samtidigt
+              som du njuter av fantastisk gemenskap och mat med likasinnade
+              löpare. Oavsett om ditt mål är att förbättra din tid, hitta
+              löpglädje eller bara uppleva den svenska fjällvärlden på ett nytt
+              sätt, är detta lägret för dig.
+            </p>
+          </div>
         </section>
       </article>
+
+      <section className="flex flex-col w-full md:w-[80%] lg:w-[75%] xl:w-[90%] p-3">
+        <p className="xl:w-[70%] xl:text-center xl:m-auto">
+          Boka din plats idag och TÄVLA om att få hela helgen gratis tillsammans
+          med en vän. Platserna är begränsade, så se till att boka din plats
+          redan idag för att säkra din medverkan i denna unika löparupplevelse.
+          Av de 10 första betalande anmälda lottar vi ut hela helgen gratis plus
+          att du får ta med en vän utan extra kostnad!!
+        </p>
+        <h3 className="mb-2 mt-4 font-semibold">Priser</h3>
+        <p>
+          Boende med helpension, löpguidning och föreläsning med Markus Torgeby:
+          4900 kr.
+        </p>
+        <p className="mt-1">
+          Utan övernattning: Löpguidning, 2 luncher och 2 middagar samt
+          föreläsning: 2950 kr.
+        </p>
+        <p className="mt-2 font-bold">
+          BOKA - info@mullfjallet.se <br /> ange "Trail camp Åre 2024"
+        </p>
+      </section>
     </section>
   );
 };
