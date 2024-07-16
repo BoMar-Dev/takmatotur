@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Card from "../components/Card";
 
 // import images
@@ -23,7 +22,7 @@ const Coach = () => {
           transform: "translateX(-30%)",
         }}
       ></div>
-      <header className="text-center mb-10">
+      <header className="text-center mb-5">
         <h1 className="text-2xl font-bold">Löpcoach – Martin Gillgren</h1>
       </header>
       <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">

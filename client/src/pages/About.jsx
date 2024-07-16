@@ -4,7 +4,7 @@ import backgroundImg from "../img/about/background.svg";
 
 const About = () => {
   return (
-    <section className="section p-5 relative">
+    <section className="section p-5 pb-16 relative">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -21,7 +21,7 @@ const About = () => {
         <h1 className="text-2xl font-bold">Tak Mat O Tur</h1>
       </header>
 
-      <div className="p-5 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%] bg-white rounded-md shadow-lg">
+      <div className="p-5 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%] g">
         <section className="mb-5 font-semibold text-center">
           <p>
             Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
@@ -103,7 +103,7 @@ const About = () => {
         {/* button div */}
         <div className="button-holder flex justify-center mt-5 mb-5">
           <Link to="/kontakt" className="inline-flex bg-slate-800 rounded-md">
-            <button className="relative h-12 w-40 overflow-hidden border border-PrimaryColor shadow-2xl rounded-md">
+            <button className="relative h-12 w-40 overflow-hidden border border-PrimaryColor shadow-2xl rounded-md  hover:bg-sky-700">
               <span className="relative z-10 text-white">Frågor / Kontakt</span>
             </button>
           </Link>

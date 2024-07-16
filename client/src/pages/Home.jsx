@@ -31,7 +31,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="bg-white p-5 relative">
+    <main className="bg-white p-5 pb-10 relative">
       <header
         className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:text-xl font-bold text-PrimaryColor z-10"
         style={{ top: "-250px" }}
@@ -41,7 +41,7 @@ const Home = () => {
         </div>
         <div className="mt-2">
           <Link to="/trailcamp">
-            <button className="relative h-12 w-40 overflow-hidden border border-PrimaryColor shadow-2xl rounded-sm bg-emerald-800">
+            <button className="relative h-12 w-40 overflow-hidden border border-PrimaryColor shadow-2xl rounded-sm bg-emerald-800 hover:bg-sky-700">
               <span className="relative z-10 text-white">Boka / Info</span>
             </button>
           </Link>
@@ -76,7 +76,7 @@ const Home = () => {
         <Card
           image={mondayRun}
           title="Måndagslöpning"
-          link="/coach"
+          link="/coach/mandagslopning"
           description="Upptäck magin med Jämtlands härligaste löpargrupp! Under sex måndagar får du chansen att vara med i en inspirerande gemenskap och utveckla din löpning på bästa sätt."
         />
         <Card

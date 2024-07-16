@@ -88,7 +88,7 @@ const Header = () => {
               <Link
                 to={link.path}
                 className={`text-PrimaryColor hover:text-slate-950 hover:scale-110 hover:font-extrabold transition font-semibold ${
-                  isActiveLink(link.path) ? "text-bold" : ""
+                  isActiveLink(link.path) ? "text-bold scale-110" : ""
                 }`}
               >
                 {link.label}
