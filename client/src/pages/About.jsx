@@ -103,8 +103,8 @@ const About = () => {
         {/* button div */}
         <div className="button-holder flex justify-center mt-5 mb-5">
           <Link to="/kontakt" className="inline-flex bg-slate-800 rounded-md">
-            <button className="relative h-12 w-40 overflow-hidden border border-PrimaryColor shadow-2xl rounded-md  hover:bg-sky-700">
-              <span className="relative z-10 text-white">Frågor / Kontakt</span>
+            <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
+              <span className="relative z-10">Frågor / Kontakt</span>
             </button>
           </Link>
         </div>

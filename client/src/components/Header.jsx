@@ -8,6 +8,8 @@ import headerAbout from "../img/header/about.jpg"; // Example image for the home
 import headerContact from "../img/contact/contactHeader.jpg";
 import headerCoach from "../img/coach/coachHeader.jpg";
 import headerCamp from "../img/trailcamp/campHeader.jpg";
+import headerTour from "../img/tour/tourHeader.jpg";
+import headerAcco from "../img/accommodation/accoHeader.jpg";
 
 // Import components
 import MobileNav from "./MobileNav"; // Your mobile navigation component
@@ -42,6 +44,10 @@ const Header = () => {
         return `url(${headerCoach})`;
       case "/trailcamp":
         return `url(${headerCamp})`;
+      case "/topptur":
+        return `url(${headerTour})`;
+      case "/boende":
+        return `url(${headerAcco})`;
       default:
         return `url(${headerLandingPage})`; // Default image
     }

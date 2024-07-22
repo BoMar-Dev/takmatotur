@@ -39,7 +39,7 @@ const MobileNav = () => {
         initial="closed"
         animate={openMenu ? "open" : "closed"}
         variants={variants}
-        className="bg-white shadow-2xl absolute w-full top-0 right-0 max-w-xs h-screen z-20"
+        className="bg-white shadow-2xl absolute w-full top-0 right-0 max-w-xs h-screen z-50"
       >
         <div
           onClick={resetAnimationClasses}

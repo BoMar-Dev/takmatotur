@@ -1,3 +1,4 @@
+//import img
 import backgroundImg from "../img/about/background.svg";
 import torgeby from "../img/trailcamp/marcustorgeby.jpg";
 import group from "../img/trailcamp/group.jpg";
@@ -22,7 +23,7 @@ const TrailCamp = () => {
         <h2 className="text-lg font-bold">30/8 - 1/9</h2>
       </header>
 
-      <div className="mb-6 text-center  font-semibold md:w-[80%] xl:w-[70%]">
+      <div className="mb-6 text-center font-semibold md:w-[80%] xl:w-[70%]">
         <p>
           Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse i
           hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
@@ -32,7 +33,7 @@ const TrailCamp = () => {
       </div>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md">
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={welcome}
@@ -46,7 +47,7 @@ const TrailCamp = () => {
                 löpturer genom Åres fantastiska landskap – från tät skog till
                 vidsträckta fjällvidder.
               </li>
-              <li className=" list-none">
+              <li className="list-none">
                 Boende med helpension: Bo bekvämt på fantastiska{" "}
                 <a href="https://mullfjallet.se/" className="font-extrabold">
                   Pensionat Mullfjället
@@ -58,7 +59,7 @@ const TrailCamp = () => {
           </div>
         </section>
 
-        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between bg-white rounded-lg shadow-md">
+        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={torgeby}
@@ -85,7 +86,7 @@ const TrailCamp = () => {
           </div>
         </section>
 
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md">
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={group}
