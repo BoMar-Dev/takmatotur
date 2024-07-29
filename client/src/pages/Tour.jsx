@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Card from "../components/Card";
+import BookingForm from "../components/BookingForm.jsx";
 
 // import images
 import vinter from "../img/tour/vinter.jpg";
@@ -8,14 +10,18 @@ import hostOchVar from "../img/tour/ovriga.jpg";
 import backgroundImg from "../img/about/background.svg";
 
 const Tour = () => {
+  const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
+
+  const openBookingForm = () => setIsBookingFormOpen(true);
+  const closeBookingForm = () => setIsBookingFormOpen(false);
+
   return (
     <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto">
       <div
-        className="absolute top-[-700px] left-0 h-full w-full bg-cover bg-center"
+        className="absolute inset-0 h-full w-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "700%",
-          backgroundPosition: "",
+          backgroundSize: "300%",
           backgroundRepeat: "no-repeat",
           opacity: 0.15,
           zIndex: -1,
@@ -25,7 +31,7 @@ const Tour = () => {
       <header className="text-center mb-5">
         <h1 className="text-2xl font-bold">Topptur - för alla årstider</h1>
       </header>
-      <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]  ">
+      <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
         <article className="p-5 xl:w-2/3 m-auto">
           <p className="mb-5">
             Oavsett om det är höst, vinter, vår eller sommar så erbjuder vi
@@ -45,36 +51,48 @@ const Tour = () => {
         </h2>
       </header>
       <div className="card-container md:w-[80%] flex flex-col xl:flex-row xl:space-x-5">
-        <Card
-          image={vinter}
-          title="Vinter"
-          link=""
-          description="Upptäck vårt fantastiska vinterlandskap och följ med på en topptur där du slipper folkmassan. Detta är lika mycket en naturupplevlese som ett äventyr. "
-        />
-        <Card
-          image={sommar}
-          title="Sommar"
-          link=""
-          description="Här finns inga gränser. Vill du bara njuta av naturen eller springa dig trött ? Kanske ha en personlig kock uppe på fjället som förgyller detta unika tillfälle. Oavsätt var du väljer så är möjligheterna oändliga"
-        />
-        <Card
-          image={hostOchVar}
-          title="Höst & Vår"
-          link=""
-          description="Upptäck våren med en topptur i t-shirt och gräv er en solgrop. Kanske har ni en kock som lagar er mat ? Hösten erbjuder 1000 färger och mycket i skogen går att äta vid denna tidpunkt. "
-        />
+        <div className="flex flex-col flex-grow">
+          <Card
+            image={vinter}
+            title="Vinter"
+            link="/topptur/vinter"
+            description="Ett äventyr både uppför och nerför - Upptäck vårt fantastiska vinterlandskap och följ med på en topptur där du slipper folkmassan. Detta är lika mycket en naturupplevelse som ett äventyr."
+          />
+        </div>
+        <div className="flex flex-col flex-grow">
+          <Card
+            image={sommar}
+            title="Sommar"
+            link="/topptur/sommar"
+            description="Här finns inga gränser. Vill du bara njuta av naturen eller springa dig trött? Kanske ha en personlig kock uppe på fjället som förgyller detta unika tillfälle. Oavsett var du väljer så är möjligheterna oändliga."
+          />
+        </div>
+        <div className="flex flex-col flex-grow">
+          <Card
+            image={hostOchVar}
+            title="Höst & Vår"
+            link="/topptur/host&var"
+            description="Upptäck våren med en topptur i t-shirt och gräv er en solgrop. Kanske har ni en kock som lagar er mat? Hösten erbjuder 1000 färger och mycket i skogen går att äta vid denna tidpunkt."
+          />
+        </div>
       </div>
-      <footer className="text-center mb-10 p-5 md:w-[80%]">
-        <p>
-          Boka din upplevelse redan idag.{" "}
-          <span className="font-extrabold">
-            070123456 - takmatotur@gmail.com.
-          </span>
-          <br />
-          Märk mailet med #topptur
-        </p>
-      </footer>
+
+      <div className="text-center mb-10 p-5 md:w-[80%]">
+        <button
+          className="bg-blue-500 text-white font-bold py-2 px-4 rounded md:py-3 md:px-6 md:text-lg lg:py-4 lg:px-8 lg:text-xl md:mt-5"
+          onClick={openBookingForm}
+        >
+          Bokningsförfrågan
+        </button>
+      </div>
+
+      {isBookingFormOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <BookingForm closeBookingForm={closeBookingForm} />
+        </div>
+      )}
     </section>
   );
 };
+
 export default Tour;

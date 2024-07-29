@@ -46,6 +46,12 @@ const Header = () => {
         return `url(${headerCamp})`;
       case "/topptur":
         return `url(${headerTour})`;
+      case "/topptur/vinter":
+        return `url(${headerTour})`;
+      case "/topptur/sommar":
+        return `url(${headerTour})`;
+      case "/topptur/host&var":
+        return `url(${headerTour})`;
       case "/boende":
         return `url(${headerAcco})`;
       default:

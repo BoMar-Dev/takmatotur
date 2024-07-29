@@ -1,4 +1,7 @@
-// Import img
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Import images
 import backgroundImg from "../img/about/background.svg";
 import boende1 from "../img/accommodation/boende1.jpg";
 import boende2 from "../img/accommodation/boende2.jpg";
@@ -7,7 +10,20 @@ import boende4 from "../img/accommodation/boende4.jpg";
 import boende5 from "../img/accommodation/boende5.jpg";
 import boende6 from "../img/accommodation/boende6.jpg";
 
+// Import component
+import AccomodationForm from "../components/AccomodationForm";
+
 const Accommodation = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  function openForm() {
+    setIsFormOpen(true);
+  }
+
+  function closeForm() {
+    setIsFormOpen(false);
+  }
+
   return (
     <section className="relative flex flex-col items-center p-5 mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
       <div
@@ -133,19 +149,27 @@ const Accommodation = () => {
         </section>
       </article>
 
-      <section className="flex flex-col w-full md:w-[80%] lg:w-[75%] xl:w-[90%] p-3">
-        <h3 className="mb-2 mt-4 font-semibold">Grupper/Större sällskap</h3>
-        <p>Är ni ett större sällskap?</p>
-        <p className="mt-1">
-          Vi har samarbetsparters som ser till att ni kan bo hela sällskapet
-          tillsammans.
-        </p>
-        <p className="mt-2 font-bold">
-          BOKA - skicka ett mail till takmatotur@gmail.com <br /> ange "Boende
-          lägenhet eller Boende grupp samt önskat datum och antal personer"{" "}
-          <br /> Det går också bra att ringa 070123456
-        </p>
-      </section>
+      <div className="text-center mb-10 p-5 md:w-[80%]">
+        <button
+          className="bg-blue-500 text-white font-bold py-2 px-4 rounded md:py-3 md:px-6 md:text-lg lg:py-4 lg:px-8 lg:text-xl md:mt-5"
+          onClick={openForm}
+        >
+          Bokningsförfrågan
+        </button>
+      </div>
+      <AnimatePresence>
+        {isFormOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <AccomodationForm closeForm={closeForm} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
