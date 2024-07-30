@@ -1,6 +1,21 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+
+// import conponent
+import JoinMondayRunningForm from "../components/forms/MondayForm";
 
 const MandagsLopning = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  function openForm() {
+    setIsFormOpen(true);
+  }
+
+  function closeForm() {
+    setIsFormOpen(false);
+  }
+
   return (
     <section className="relative flex flex-col items-center p-5 mb-10">
       <header className="flex flex-col items-center justify-center mb-6 text-center">
@@ -49,9 +64,30 @@ const MandagsLopning = () => {
             </p>
           </div>
         </section>
-        <div className="button-holder flex justify-center mt-5 mb-5">
-          <Link to="/coach" className="inline-flex bg-slate-800 rounded-md">
-            <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
+        <div className="text-center flex justify-center p-5">
+          <button
+            onClick={openForm}
+            className="custom-button bg-amber-600 text-white "
+          >
+            <span className="relative z-10">Gå med</span>
+          </button>
+        </div>
+        <AnimatePresence>
+          {isFormOpen && (
+            <motion.div
+              className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+            >
+              <JoinMondayRunningForm closeForm={closeForm} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <div className="button-holder flex justify-center mb-5">
+          <Link to="/coach" className="inline-flex">
+            <button className="custom-button bg-slate-800 text-white hover:shadow-sky-700">
               <span className="relative z-10">Bakåt</span>
             </button>
           </Link>

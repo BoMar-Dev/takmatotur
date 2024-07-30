@@ -1,17 +1,19 @@
+//This form is used when book tours on the "Topptur" page
+
 //Import icons
 import { IoClose } from "react-icons/io5";
 
 // eslint-disable-next-line react/prop-types
 const BookingForm = ({ closeForm }) => {
   return (
-    <div className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[500px] relative overflow-y-auto">
+    <div className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[450px] md:h-[550px] lg:h-[600px] relative overflow-y-auto">
       <button
         className="absolute top-2 left-2 p-2 text-3xl text-gray-700"
         onClick={closeForm}
       >
         <IoClose />
       </button>
-      <h2 className="text-2xl font-bold text-center p-4 mb-4">
+      <h2 className="text-3xl font-bold text-center mt-8 p-4 mb-4">
         Bokningsförfrågan
       </h2>
       <form>
@@ -39,8 +41,9 @@ const BookingForm = ({ closeForm }) => {
         <div className="mb-4">
           <label className="block mb-2 font-bold">Ämne</label>
           <select className="w-full p-2 border border-gray-300 rounded">
-            <option value="Sommar">Lägenhet</option>
-            <option value="Vinter">Större sällskap</option>
+            <option value="Sommar">Sommar</option>
+            <option value="Vinter">Vinter</option>
+            <option value="Höst & Vår">Höst & Vår</option>
           </select>
         </div>
         <div className="mb-4">
@@ -51,14 +54,7 @@ const BookingForm = ({ closeForm }) => {
           />
         </div>
         <div className="mb-4">
-          <label className="block mb-2 font-bold">Önskat datum FRÅN</label>
-          <input
-            type="date"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block mb-2 font-bold">Önskat datum TILL</label>
+          <label className="block mb-2 font-bold">Önskat datum</label>
           <input
             type="date"
             className="w-full p-2 border border-gray-300 rounded"

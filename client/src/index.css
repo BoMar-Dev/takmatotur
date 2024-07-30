@@ -39,5 +39,28 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
   } */
 }
+@layer base {
+  .custom-button {
+    @apply relative flex h-[50px] w-[170px] items-center justify-center overflow-hidden bg-slate-800 text-white shadow-2xl transition-all rounded-md;
+  }
 
+  .custom-button::before {
+    @apply absolute h-0 w-0 rounded-full bg-sky-700 duration-500 ease-out;
+    content: '';
+  }
+
+  .custom-button:hover::before {
+    @apply h-56 w-56;
+  }
+
+  .custom-button:hover {
+    @apply shadow-sky-700;
+  }
+
+  .custom-button span {
+    @apply relative z-10;
+  }
+
+
+}
 

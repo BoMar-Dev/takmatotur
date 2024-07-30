@@ -11,7 +11,7 @@ import boende5 from "../img/accommodation/boende5.jpg";
 import boende6 from "../img/accommodation/boende6.jpg";
 
 // Import component
-import AccomodationForm from "../components/AccomodationForm";
+import AccomodationForm from "../components/forms/AccomodationForm";
 
 const Accommodation = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -50,6 +50,27 @@ const Accommodation = () => {
           naturen som bästa grannen.
         </p>
       </div>
+      <div className="text-center flex justify-center p-5">
+        <button
+          onClick={openForm}
+          className="custom-button bg-amber-600 text-white "
+        >
+          <span className="relative z-10">Bokningsförfrågan</span>
+        </button>
+      </div>
+      <AnimatePresence>
+        {isFormOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <AccomodationForm closeForm={closeForm} />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
         <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
@@ -149,12 +170,12 @@ const Accommodation = () => {
         </section>
       </article>
 
-      <div className="text-center mb-10 p-5 md:w-[80%]">
+      <div className="text-center flex justify-center p-5">
         <button
-          className="bg-blue-500 text-white font-bold py-2 px-4 rounded md:py-3 md:px-6 md:text-lg lg:py-4 lg:px-8 lg:text-xl md:mt-5"
           onClick={openForm}
+          className="custom-button bg-amber-600 text-white "
         >
-          Bokningsförfrågan
+          <span className="relative z-10">Bokningsförfrågan</span>
         </button>
       </div>
       <AnimatePresence>

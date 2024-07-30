@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Card from "../components/Card";
-import BookingForm from "../components/BookingForm.jsx";
+import BookingForm from "../components/forms/BookingForm.jsx";
 
 // import images
 import vinter from "../img/tour/vinter.jpg";
@@ -13,7 +13,7 @@ const Tour = () => {
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
 
   const openBookingForm = () => setIsBookingFormOpen(true);
-  const closeBookingForm = () => setIsBookingFormOpen(false);
+  const closeForm = () => setIsBookingFormOpen(false);
 
   return (
     <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto">
@@ -28,9 +28,17 @@ const Tour = () => {
           transform: "translateX(-30%)",
         }}
       ></div>
-      <header className="text-center mb-5">
+      <header className="text-center mb-2">
         <h1 className="text-2xl font-bold">Topptur - för alla årstider</h1>
       </header>
+      <div className="text-center flex justify-center p-5 md:w-[80%]">
+        <button
+          className="custom-button  bg-amber-600"
+          onClick={openBookingForm}
+        >
+          <span className="relative z-10">Bokningsförfrågan</span>
+        </button>
+      </div>
       <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
         <article className="p-5 xl:w-2/3 m-auto">
           <p className="mb-5">
@@ -77,18 +85,18 @@ const Tour = () => {
         </div>
       </div>
 
-      <div className="text-center mb-10 p-5 md:w-[80%]">
+      <div className="text-center flex justify-center mb-10 p-5 md:w-[80%]">
         <button
-          className="bg-blue-500 text-white font-bold py-2 px-4 rounded md:py-3 md:px-6 md:text-lg lg:py-4 lg:px-8 lg:text-xl md:mt-5"
+          className="custom-button bg-amber-600"
           onClick={openBookingForm}
         >
-          Bokningsförfrågan
+          <span className="relative z-10">Bokningsförfrågan</span>
         </button>
       </div>
 
       {isBookingFormOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <BookingForm closeBookingForm={closeBookingForm} />
+          <BookingForm closeForm={closeForm} />
         </div>
       )}
     </section>

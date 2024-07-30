@@ -115,7 +115,8 @@ const Contact = () => {
             />
           </a>
         </div>
-        <form onSubmit={handleSubmit} className="p-5 mt-5">
+        {/* form börjar här  */}
+        <form onSubmit={handleSubmit} className="p-5 mt-5 xl:w-[50%] ">
           <div className="flex flex-col mb-5">
             <label htmlFor="name" className="mb-2 font-bold">
               Namn

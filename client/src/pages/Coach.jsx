@@ -1,4 +1,6 @@
 import Card from "../components/Card";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 // import images
 import profil2 from "../img/coach/profil2.jpg";
@@ -7,7 +9,20 @@ import privatCoach from "../img/coach/personlig.jpg";
 import mondayRun from "../img/home/monday.jpg";
 import backgroundImg from "../img/about/background.svg";
 
+// import components
+import GeneralRunningForm from "../components/forms/GeneralRunningForm";
+
 const Coach = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  function openForm() {
+    setIsFormOpen(true);
+  }
+
+  function closeForm() {
+    setIsFormOpen(false);
+  }
+
   return (
     <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto">
       <div
@@ -25,6 +40,27 @@ const Coach = () => {
       <header className="text-center mb-5">
         <h1 className="text-2xl font-bold">Löpcoach – Martin Gillgren</h1>
       </header>
+      <div className="text-center flex justify-center mb-10 p-2">
+        <button
+          onClick={openForm}
+          className="custom-button bg-amber-600 text-white "
+        >
+          <span className="relative z-10">Kontakta löpcoach</span>
+        </button>
+      </div>
+      <AnimatePresence>
+        {isFormOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <GeneralRunningForm closeForm={closeForm} />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
         <article className="p-5 xl:w-1/2">
           <p className="mb-5">
@@ -71,7 +107,7 @@ const Coach = () => {
         <Card
           image={mondayRun}
           title="Måndagslöpning"
-          link="/coach/mandaglopning"
+          link="/coach/mandagslopning"
           description="Upptäck magin med Jämtlands härligaste löpargrupp! Under sex måndagar får du chansen att vara med i en inspirerande gemenskap och utveckla din löpning på bästa sätt."
         />
         <Card
@@ -87,16 +123,37 @@ const Coach = () => {
           description="Privat löpcoachning från Tak Mat o Tur erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken"
         />
       </div>
-      <footer className="text-center mb-10 p-5 md:w-[80%]">
+      <footer className="text-center  p-5 md:w-[80%]">
         <p>
-          Kom igång redan idag. Kontakta mig.{" "}
-          <span className="font-extrabold">
-            070123456 - takmatotur@gmail.com.
-          </span>
+          Kom igång att springa redan idag{" "}
+          <span className="font-extrabold"></span>
           <br />
-          Märk gärna mailet med den rubriken du/ni önskar
+          Kontakta mig så ser vi till att göra en rolig strukturerad plan som
+          passar just dig eller er
         </p>
       </footer>
+
+      <div className="text-center flex justify-center mb-10 p-2">
+        <button
+          onClick={openForm}
+          className="custom-button bg-amber-600 text-white "
+        >
+          <span className="relative z-10">Kontakta löpcoach</span>
+        </button>
+      </div>
+      <AnimatePresence>
+        {isFormOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <GeneralRunningForm closeForm={closeForm} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

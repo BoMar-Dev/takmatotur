@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 // import icons
 import { IoIosArrowDown } from "react-icons/io";
@@ -32,21 +33,25 @@ const Home = () => {
 
   return (
     <main className="bg-white p-5 pb-10 relative">
-      <header
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:text-xl font-bold text-PrimaryColor z-10"
-        style={{ top: "-250px" }}
+      <motion.header
+        className="absolute top-[-200px] xl:top-[-250px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:text-xl font-bold text-PrimaryColor z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3, ease: "easeOut" }}
       >
-        <div className="ml-5 xl:ml-1 font-semibold text-emerald-800">
-          <h1 className=" ">Trail Camp 2024</h1>
+        <div className="relative bg-black bg-opacity-50 p-4 md:p-6 rounded-md text-center">
+          <div className="ml-2 md:ml-5 xl:ml-1 font-semibold text-white">
+            <h1 className="text-xl md:text-2xl xl:text-4xl">Trail Camp 2024</h1>
+          </div>
+          <div className="mt-2 md:mt-4 flex justify-center">
+            <Link to="/trailcamp">
+              <button className="custom-button bg-emerald-500 text-white hover:shadow-sky-700">
+                <span className="relative z-10">Boka / Info</span>
+              </button>
+            </Link>
+          </div>
         </div>
-        <div className="mt-2">
-          <Link to="/trailcamp">
-            <button className="relative h-12 w-40 overflow-hidden border border-PrimaryColor shadow-2xl rounded-sm bg-emerald-800 hover:bg-sky-700">
-              <span className="relative z-10 text-white">Boka / Info</span>
-            </button>
-          </Link>
-        </div>
-      </header>
+      </motion.header>
 
       {/* Company description section */}
       <section className="p-5 rounded-md md:w-[80%] lg:w-[60%] xl:w-[55%] md:m-auto text-center lg:mb-10">

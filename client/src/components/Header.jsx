@@ -38,7 +38,7 @@ const Header = () => {
         return `url(${headerCoach})`;
       case "/coach/foretag":
         return `url(${headerCoach})`;
-      case "/coach/mandaglopning":
+      case "/coach/mandagslopning":
         return `url(${headerCoach})`;
       case "/coach/personlig":
         return `url(${headerCoach})`;
