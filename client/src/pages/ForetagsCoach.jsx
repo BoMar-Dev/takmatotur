@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // import components
 import OfferForm from "../components/forms/OfferForm";
-
 const ForetagsCoach = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 

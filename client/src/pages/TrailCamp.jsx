@@ -133,7 +133,7 @@ const TrailCamp = () => {
           Utan övernattning: Löpguidning, 2 luncher och 2 middagar samt
           föreläsning: 2950 kr.
         </p>
-        <p className="mt-2 font-bold">
+        <p className="mt-2 font-bold mb-10">
           BOKA - info@mullfjallet.se <br /> ange "Trail camp Åre 2024"
         </p>
       </section>

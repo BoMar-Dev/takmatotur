@@ -51,6 +51,7 @@ const Contact = () => {
       </header>
 
       <div className="p-5 mb-10 md:w-[80%] m-auto relative 3xl:w-[50%] lg:rounded-lg shadow-xl bg-white">
+        {/* This div is hidden on screens smaller than xl */}
         <div className="hidden xl:flex xl:space-x-10 items-center p-5">
           <div className="flex-1 xl:order-1 text-center">
             <div className="text-2xl font-bold m-auto">
@@ -86,10 +87,11 @@ const Contact = () => {
             </a>
           </div>
         </div>
+        {/* This div is shown on screens smaller than xl */}
         <div className="xl:hidden">
           <div className="text-container text-center">
             <div className="text-2xl font-bold m-auto">
-              <h2>Vi svara så fort vi kan</h2>
+              <h2>Vi svarar så fort vi kan</h2>
             </div>
             <p className="p-5">
               Är det någon ni funderar över som inte står på vår hemsida så är
@@ -119,7 +121,7 @@ const Contact = () => {
             />
           </a>
         </div>
-        {/* form börjar här  */}
+        {/* Form starts here */}
         <form onSubmit={handleSubmit} className="p-5 mt-5 xl:w-[50%]">
           <div className="flex flex-col mb-5">
             <label htmlFor="name" className="mb-2 font-bold">

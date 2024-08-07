@@ -24,7 +24,7 @@ const About = () => {
       </header>
 
       <div className="p-5 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%] g">
-        <section className="mb-5 font-semibold text-center">
+        <section className="mb-10 font-semibold text-center">
           <p>
             Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
             komfort, gastronomi och äventyr för att skapa oförglömliga
@@ -44,11 +44,13 @@ const About = () => {
               Gillgren. Vi har alltid haft en längtan efter att bo på en plats
               med närhet till natur och äventyr och där vår kärlek till löpning
               och skidåkning kan få bli vardag. Allt det och mer har flytten
-              till Duved för några år sedan inneburit. Att få arbeta med att
-              erbjuda detta till andra är en dröm som gått i upplevelse. Tak Mat
-              o Tur är en möjlighet för oss att i egen regi kombinera det som
-              livet gjort oss bra på; löpning, skidåkning, gästupplevelser och
-              mat.
+              till Duved för några år sedan inneburit.
+              <p className="mt-5">
+                Att få arbeta med att erbjuda detta till andra är en dröm som
+                gått i upplevelse. Tak Mat o Tur är en möjlighet för oss att i
+                egen regi kombinera det som livet gjort oss bra på; löpning,
+                skidåkning, gästupplevelser och mat.
+              </p>
             </p>
             <p className="mt-5">
               Duved är mer än bara en plats – det är en gemenskap och en port
@@ -70,24 +72,26 @@ const About = () => {
 
         {/* Image and text section for lg and below */}
         <section className="xl:hidden">
-          <figure className="img-div">
+          <figure className="img-div mt-10">
             <img
               className="rounded-full xl:rounded-xl shadow-xl w-full md:w-3/4 lg:w-3/5 m-auto"
               src={portraitImg}
               alt="bild på grundarna av Tak Mat O Tur"
             />
           </figure>
-          <div className="relative mt-5">
+          <div className="relative mt-10">
             <p>
               Tak Mat o Tur är ett familjeföretag som drivs av Martin och Emma
               Gillgren. Vi har alltid haft en längtan efter att bo på en plats
               med närhet till natur och äventyr och där vår kärlek till löpning
               och skidåkning kan få bli vardag. Allt det och mer har flytten
-              till Duved för några år sedan inneburit. Att få arbeta med att
-              erbjuda detta till andra är en dröm som gått i upplevelse. Tak Mat
-              o Tur är en möjlighet för oss att i egen regi kombinera det som
-              livet gjort oss bra på; löpning, skidåkning, gästupplevelser och
-              mat.
+              till Duved för några år sedan inneburit.
+              <p className="mt-5">
+                Att få arbeta med att erbjuda detta till andra är en dröm som
+                gått i upplevelse. Tak Mat o Tur är en möjlighet för oss att i
+                egen regi kombinera det som livet gjort oss bra på; löpning,
+                skidåkning, gästupplevelser och mat.
+              </p>
             </p>
           </div>
           <div className="relative mt-5">

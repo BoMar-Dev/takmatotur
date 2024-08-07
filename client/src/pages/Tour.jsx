@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Card from "../components/Card";
 import BookingForm from "../components/forms/BookingForm.jsx";
 
@@ -58,7 +59,7 @@ const Tour = () => {
           Olika äventyr för olika årstider
         </h2>
       </header>
-      <div className="card-container md:w-[80%] flex flex-col xl:flex-row xl:space-x-5">
+      <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-5">
         <div className="flex flex-col flex-grow">
           <Card
             image={vinter}
@@ -85,7 +86,7 @@ const Tour = () => {
         </div>
       </div>
 
-      <div className="text-center flex justify-center mb-10 p-5 mt-5 md:w-[80%]">
+      <div className="text-center flex justify-center mb-12 p-5 mt-10 md:w-[80%]">
         <button
           className="custom-button bg-amber-600"
           onClick={openBookingForm}
@@ -94,11 +95,19 @@ const Tour = () => {
         </button>
       </div>
 
-      {isBookingFormOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <BookingForm closeForm={closeForm} />
-        </div>
-      )}
+      <AnimatePresence>
+        {isBookingFormOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <BookingForm closeForm={closeForm} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

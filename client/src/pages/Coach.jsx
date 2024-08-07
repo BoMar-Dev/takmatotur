@@ -103,7 +103,7 @@ const Coach = () => {
       <header className="text-center my-10">
         <h2 className="text-xl font-medium">Vad jag erbjuder</h2>
       </header>
-      <div className="card-container md:w-[80%] flex flex-col xl:flex-row xl:space-x-5">
+      <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-5 mb-10">
         <Card
           image={mondayRun}
           title="Måndagslöpning"

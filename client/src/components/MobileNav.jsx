@@ -12,8 +12,8 @@ const MobileNav = () => {
   const [key, setKey] = useState(0); // State to hold a key to force re-render
 
   const variants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "-100%" },
+    open: { opacity: 1, y: 0, zIndex: 50 },
+    closed: { opacity: 0, y: "-100%", zIndex: -10 },
   };
 
   const toggleMenu = () => {
@@ -22,7 +22,7 @@ const MobileNav = () => {
   };
 
   const resetAnimationClasses = () => {
-    setOpenMenu(!openMenu);
+    setOpenMenu(false);
     setKey((prevKey) => prevKey + 1); // Increment key to force re-render
   };
 
@@ -39,11 +39,12 @@ const MobileNav = () => {
         initial="closed"
         animate={openMenu ? "open" : "closed"}
         variants={variants}
-        className="bg-white shadow-2xl absolute w-full top-0 right-0 max-w-xs h-screen z-50"
+        className="bg-white shadow-2xl fixed w-full top-0 right-0 max-w-xs h-screen z-50"
+        style={{ transition: "z-index 0.3s, opacity 0.3s" }} // Ensure z-index transitions smoothly
       >
         <div
           onClick={resetAnimationClasses}
-          className="text-4xl absolute z-30 left-5 top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold animate-jump-in animate-once animate-delay-1000"
+          className="text-4xl absolute z-50 left-5 top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold"
         >
           <IoClose />
         </div>

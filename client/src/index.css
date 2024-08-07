@@ -64,6 +64,9 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     @apply text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[44px] font-bold;
   }
   
+  .pt-form label {
+    text-align: left;
+  }
 
 
 }

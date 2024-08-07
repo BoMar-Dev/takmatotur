@@ -177,7 +177,7 @@ const Accommodation = () => {
         </section>
       </article>
 
-      <div className="text-center flex justify-center p-5">
+      <div className="text-center flex justify-center xl:mt-10  mb-10">
         <button
           onClick={openForm}
           className="custom-button bg-amber-600 text-white "

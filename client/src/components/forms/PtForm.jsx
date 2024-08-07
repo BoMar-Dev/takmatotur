@@ -1,12 +1,12 @@
-//This form is used when book tours on the "Topptur" page
+// This form is used on the personal coaching "Personlig coachning" page
 
-//Import icons
+// Import icons
 import { IoClose } from "react-icons/io5";
 
 // eslint-disable-next-line react/prop-types
-const BookingForm = ({ closeForm }) => {
+const PtForm = ({ closeForm }) => {
   return (
-    <form className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[450px] md:h-[550px] lg:h-[600px] relative overflow-y-auto">
+    <form className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[450px] md:h-[550px] lg:h-[600px] relative overflow-y-auto pt-form">
       <button
         className="absolute top-2 left-2 p-2 text-3xl text-gray-700"
         onClick={closeForm}
@@ -14,7 +14,7 @@ const BookingForm = ({ closeForm }) => {
         <IoClose />
       </button>
       <h2 className="text-3xl font-bold text-center mt-8 p-4 mb-4">
-        Bokningsförfrågan
+        Personlig Coachning
       </h2>
       <form>
         <div className="mb-4">
@@ -39,22 +39,16 @@ const BookingForm = ({ closeForm }) => {
           />
         </div>
         <div className="mb-4">
-          <label className="block mb-2 font-bold">Ämne</label>
+          <label className="block mb-2 font-bold">Typ av Coachning</label>
           <select className="w-full p-2 border border-gray-300 rounded">
-            <option value="Sommar">Sommar</option>
-            <option value="Vinter">Vinter</option>
-            <option value="Höst & Vår">Höst & Vår</option>
+            <option value="Löpteknik">Löpteknik</option>
+            <option value="Träningsprogram">Träningsprogram</option>
+            <option value="Paketlösning">Paketlösning</option>
+            <option value="Annat">Annat</option>
           </select>
         </div>
         <div className="mb-4">
-          <label className="block mb-2 font-bold">Antal personer</label>
-          <input
-            type="number"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block mb-2 font-bold">Önskat datum</label>
+          <label className="block mb-2 font-bold">Önskat startdatum</label>
           <input
             type="date"
             className="w-full p-2 border border-gray-300 rounded"
@@ -62,22 +56,26 @@ const BookingForm = ({ closeForm }) => {
         </div>
         <div className="mb-4">
           <label className="block mb-2 font-bold">
-            Övrig information så som utrustning eller annat vi behöver veta
+            Övrig information (mål, tidigare erfarenhet, etc.)
           </label>
           <textarea
             className="w-full p-2 border border-gray-300 rounded"
             rows="4"
           ></textarea>
         </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-        >
-          Skicka
-        </button>
+        <div className="text-left">
+          {" "}
+          {/* Ensure this div is styled to align content to the left */}
+          <button
+            type="submit"
+            className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+          >
+            Skicka
+          </button>
+        </div>
       </form>
     </form>
   );
 };
 
-export default BookingForm;
+export default PtForm;
