@@ -4,14 +4,17 @@ const TourHostVar = () => {
   return (
     <section className="relative flex flex-col items-center p-5 mb-10">
       <header className="flex flex-col items-center justify-center mb-6 text-center">
-        <h1 className="mb-2 text-2xl font-bold">Topptur höst & vår</h1>
-        <p>
-          Sen topptur på våren när liftarna stängt eller lås av hösten alla
-          fantastiska färger
-          <br /> Derssa årstider är fantastiska. Åk skidor i t-shirt när
-          liftarna stängt vid 21-tiden på kvällen. Vandra och se fjällets alla
-          färger på hösten
-        </p>
+        <h1 className="mb-2 font-bold">Topptur höst & vår</h1>
+        <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
+          <article className="p-5 xl:w-2/3 m-auto">
+            <p className="mb-5">
+              Sen topptur på våren när liftarna stängt eller lås av hösten alla
+              fantastiska färger. Dessa årstider är fantastiska. Åk skidor i
+              t-shirt när liftarna stängt vid 21-tiden på kvällen. Vandra och se
+              fjällets alla färger på hösten
+            </p>
+          </article>
+        </div>
       </header>
 
       <article className="flex flex-col p-5 w-full max-w-4xl bg-white rounded-lg shadow-md">
@@ -51,7 +54,7 @@ const TourHostVar = () => {
         </section>
         <div className="button-holder flex justify-center mt-5 mb-5"></div>
       </article>
-      <div className="button-holder flex justify-center mt-5 mb-5">
+      <div className="button-holder flex justify-center mt-10 mb-5">
         <Link to="/topptur" className="inline-flex bg-slate-800 rounded-md">
           <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
             <span className="relative z-10">Bakåt</span>

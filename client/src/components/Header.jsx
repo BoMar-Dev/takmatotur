@@ -18,7 +18,7 @@ import MobileNav from "./MobileNav"; // Your mobile navigation component
 import Logo from "../img/header/logoo.svg"; // The logo
 
 // import icons
-import { LiaMountainSolid } from "react-icons/lia";
+import { IoRemoveOutline } from "react-icons/io5";
 
 // Import Link
 import { Link } from "react-router-dom";
@@ -106,10 +106,7 @@ const Header = () => {
                 {link.label}
               </Link>
               {isActiveLink(link.path) && (
-                <LiaMountainSolid
-                  className="text-PrimaryColor text-3xl "
-                  style={{ transform: "rotate(180deg)" }}
-                />
+                <IoRemoveOutline className="text-PrimaryColor" />
               )}
             </div>
           ))}

@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6, p, a, li {
   .custom-button span {
     @apply relative z-10;
   }
+  h1 {
+    @apply text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[44px] font-bold;
+  }
+  
 
 
 }

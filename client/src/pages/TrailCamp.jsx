@@ -19,8 +19,10 @@ const TrailCamp = () => {
         }}
       ></div>
       <header className="flex flex-col items-center justify-center mb-6 text-center">
-        <h1 className="mb-2 text-2xl font-bold">Trail Camp 2024</h1>
-        <h2 className="text-lg font-bold">30/8 - 1/9</h2>
+        <h1 className="mb-2  font-bold">Trail Camp 2024</h1>
+        <h2 className=" text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] text-lg font-bold mb-5">
+          30/8 - 1/9
+        </h2>
       </header>
 
       <div className="mb-6 text-center font-semibold md:w-[80%] xl:w-[70%]">
@@ -40,7 +42,9 @@ const TrailCamp = () => {
             alt="Trail Camp"
           />
           <div className="w-full xl:w-[50%] xl:ml-0 p-4">
-            <h3 className="mb-2 font-semibold">Vad ingår?</h3>
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
+              Vad ingår?
+            </h3>
             <ul className="list-inside list-disc">
               <li className="mb-1 list-none">
                 4 löppass: Våra erfarna ledare tar dig med på storslagna
@@ -66,7 +70,7 @@ const TrailCamp = () => {
             alt="föreläsare Marcus Torgeby"
           />
           <div className="w-full xl:w-[50%] xl:mr-0 p-4">
-            <h3 className="mb-2 font-semibold">
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
               Föreläsning med Markus Torgeby
             </h3>
             <p>
@@ -93,7 +97,9 @@ const TrailCamp = () => {
             alt="Trail Camp Group"
           />
           <div className="w-full xl:w-[50%] xl:ml-0 p-4">
-            <h3 className="mb-2 font-semibold">Varför ska du delta?</h3>
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
+              Varför ska du delta?
+            </h3>
             <p>
               Trail Camp Åre är mer än bara ett träningsläger – det är en
               möjlighet att koppla bort från vardagens stress och återknyta
@@ -108,7 +114,7 @@ const TrailCamp = () => {
         </section>
       </article>
 
-      <section className="flex flex-col w-full md:w-[80%] lg:w-[75%] xl:w-[90%] p-3">
+      <section className="flex flex-col w-full md:w-[80%] lg:w-[75%] xl:w-[90%] mt-5 p-3">
         <p className="xl:w-[70%] xl:text-center xl:m-auto">
           Boka din plats idag och TÄVLA om att få hela helgen gratis tillsammans
           med en vän. Platserna är begränsade, så se till att boka din plats
@@ -116,7 +122,9 @@ const TrailCamp = () => {
           Av de 10 första betalande anmälda lottar vi ut hela helgen gratis plus
           att du får ta med en vän utan extra kostnad!!
         </p>
-        <h3 className="mb-2 mt-4 font-semibold">Priser</h3>
+        <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold mt-5">
+          Priser
+        </h3>
         <p>
           Boende med helpension, löpguidning och föreläsning med Markus Torgeby:
           4900 kr.

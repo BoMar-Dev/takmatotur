@@ -56,7 +56,7 @@ const Home = () => {
       {/* Company description section */}
       <section className="p-5 rounded-md md:w-[80%] lg:w-[60%] xl:w-[55%] md:m-auto text-center lg:mb-10">
         <a href="/om">
-          <h2 className="text-xl font-medium mb-2 cursor-pointer">
+          <h2 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-medium mb-2 cursor-pointer">
             Tak Mat O Tur
           </h2>
         </a>

@@ -38,18 +38,17 @@ const Accommodation = () => {
         }}
       ></div>
       <header className="flex flex-col items-center justify-center mb-6 text-center">
-        <h1 className="mb-2 text-2xl font-bold">Boende</h1>
-        <h2 className="text-lg font-bold">
-          Bo med fjällen, naturen, lugnet och äventyret runt knuten.
-        </h2>
+        <h1 className="mb-2  font-bold">Boende</h1>
       </header>
-
-      <div className="mb-6 text-center font-semibold md:w-[80%] xl:w-[70%]">
-        <p>
-          Oavsätt antal personer så erbjuder vi ett boende i fjällnära miljö med
-          naturen som bästa grannen.
+      <article className="p-5 xl:w-2/3 m-auto font-semibold">
+        <p className="">
+          Bo med fjällen, naturen, lugnet och äventyret runt knuten. Oavsätt
+          antal personer så erbjuder vi ett boende i fjällnära miljö med naturen
+          som bästa grannen.
         </p>
-      </div>
+      </article>
+
+      <div className="mb-6 text-center font-semibold md:w-[80%] xl:w-[70%]"></div>
       <div className="text-center flex justify-center p-5">
         <button
           onClick={openForm}
@@ -80,7 +79,9 @@ const Accommodation = () => {
             alt="Trail Camp"
           />
           <div className="w-full xl:w-[50%] xl:ml-0 p-4">
-            <h3 className="mb-2 font-semibold">Värdparet</h3>
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
+              Värdparet
+            </h3>
             <ul className="list-inside list-disc">
               <li className="list-none">
                 Bo i vår lägenhet med fjällen som utsikt och äventyret bara ett
@@ -98,8 +99,8 @@ const Accommodation = () => {
             alt="föreläsare Marcus Torgeby"
           />
           <div className="w-full xl:w-[50%] xl:mr-0 p-4">
-            <h3 className="mb-2 font-semibold">
-              Egen ingång med stor altan och gratis parkering
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
+              Egen ingång med gratis parkering
             </h3>
             <p>Här kan ni känna er som hemma efter en dag full av äventyr</p>
           </div>
@@ -112,7 +113,9 @@ const Accommodation = () => {
             alt="Trail Camp Group"
           />
           <div className="w-full xl:w-[50%] xl:ml-0 p-4">
-            <h3 className="mb-2 font-semibold">Ett kök som har allt</h3>
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
+              Ett kök som har allt
+            </h3>
             <p>
               Vad är viktigt för ert kök? Ni kan vara lugna, vårt kök har alla
               vardagliga bekvämligheter.
@@ -127,7 +130,7 @@ const Accommodation = () => {
             alt="föreläsare Marcus Torgeby"
           />
           <div className="w-full xl:w-[50%] xl:mr-0 p-4">
-            <h3 className="mb-2 font-semibold">
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
               Sovplats för upp mot 4 personer
             </h3>
             <p>
@@ -144,7 +147,9 @@ const Accommodation = () => {
             alt="Trail Camp Group"
           />
           <div className="w-full xl:w-[50%] xl:ml-0 p-4">
-            <h3 className="mb-2 font-semibold">Slå sig ner</h3>
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
+              Slå sig ner
+            </h3>
             <p>
               Vare sig det är att slå sig ner till middagen eller luta sig
               tillbaka i soffan med ett sällskapsspel så lovar vi ett trivsamt
@@ -160,7 +165,9 @@ const Accommodation = () => {
             alt="föreläsare Marcus Torgeby"
           />
           <div className="w-full xl:w-[50%] xl:mr-0 p-4">
-            <h3 className="mb-2 font-semibold">Gångavstånd till äventyret</h3>
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
+              Gångavstånd till äventyret
+            </h3>
             <p>
               Vattenfall, skidåkning i backen eller i längdspåret eller kanske
               springa sig svettig på fjället. Alla dessa möjligheter finner ni

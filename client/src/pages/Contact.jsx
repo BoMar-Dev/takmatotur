@@ -45,13 +45,17 @@ const Contact = () => {
   };
 
   return (
-    <section className="section flex flex-col p-5 bg-red">
+    <section className="section flex flex-col p-5 bg-red mb-10">
+      <header className="text-center mb-5">
+        <h1 className=" font-bold">Kontakta oss</h1>
+      </header>
+
       <div className="p-5 mb-10 md:w-[80%] m-auto relative 3xl:w-[50%] lg:rounded-lg shadow-xl bg-white">
         <div className="hidden xl:flex xl:space-x-10 items-center p-5">
           <div className="flex-1 xl:order-1 text-center">
-            <header className="text-2xl font-bold m-auto">
-              <h1>Kontakta oss!</h1>
-            </header>
+            <div className="text-2xl font-bold m-auto">
+              <h2>Vi svarar så fort vi kan</h2>
+            </div>
             <p className="p-5">
               Är det någon ni funderar över som inte står på vår hemsida så är
               ni varmt välkommen att kontakta oss via telefon eller epost. Vi
@@ -84,9 +88,9 @@ const Contact = () => {
         </div>
         <div className="xl:hidden">
           <div className="text-container text-center">
-            <header className="text-2xl font-bold m-auto">
-              <h1>Kontakta oss!</h1>
-            </header>
+            <div className="text-2xl font-bold m-auto">
+              <h2>Vi svara så fort vi kan</h2>
+            </div>
             <p className="p-5">
               Är det någon ni funderar över som inte står på vår hemsida så är
               ni varmt välkommen att kontakta oss via telefon eller epost. Vi
@@ -116,7 +120,7 @@ const Contact = () => {
           </a>
         </div>
         {/* form börjar här  */}
-        <form onSubmit={handleSubmit} className="p-5 mt-5 xl:w-[50%] ">
+        <form onSubmit={handleSubmit} className="p-5 mt-5 xl:w-[50%]">
           <div className="flex flex-col mb-5">
             <label htmlFor="name" className="mb-2 font-bold">
               Namn

@@ -19,7 +19,7 @@ const ForetagsCoach = () => {
   return (
     <section className="relative flex flex-col items-center p-5 mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto 3xl:mb-16">
       <header className="flex flex-col items-center justify-center mb-6 text-center">
-        <h1 className="mb-2 text-2xl font-bold">Företagscoachning</h1>
+        <h1 className="mb-2  font-bold">Företagscoachning</h1>
       </header>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%] bg-white rounded-lg shadow-md">

@@ -38,7 +38,7 @@ const Coach = () => {
         }}
       ></div>
       <header className="text-center mb-5">
-        <h1 className="text-2xl font-bold">Löpcoach – Martin Gillgren</h1>
+        <h1 className=" font-bold">Löpcoach – Martin Gillgren</h1>
       </header>
       <div className="text-center flex justify-center mb-10 p-2">
         <button

@@ -29,7 +29,7 @@ const Tour = () => {
         }}
       ></div>
       <header className="text-center mb-2">
-        <h1 className="text-2xl font-bold">Topptur - för alla årstider</h1>
+        <h1 className=" font-bold">Topptur - för alla årstider</h1>
       </header>
       <div className="text-center flex justify-center p-5 md:w-[80%]">
         <button
@@ -40,7 +40,7 @@ const Tour = () => {
         </button>
       </div>
       <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
-        <article className="p-5 xl:w-2/3 m-auto">
+        <article className="p-5 xl:w-2/3 m-auto font-semibold">
           <p className="mb-5">
             Oavsett om det är höst, vinter, vår eller sommar så erbjuder vi
             toppturer som passar era önskemål. Våran vision är att blanda
@@ -85,7 +85,7 @@ const Tour = () => {
         </div>
       </div>
 
-      <div className="text-center flex justify-center mb-10 p-5 md:w-[80%]">
+      <div className="text-center flex justify-center mb-10 p-5 mt-5 md:w-[80%]">
         <button
           className="custom-button bg-amber-600"
           onClick={openBookingForm}
