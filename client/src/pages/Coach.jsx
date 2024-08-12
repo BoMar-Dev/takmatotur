@@ -32,7 +32,7 @@ const Coach = () => {
           backgroundSize: "700%",
           backgroundPosition: "",
           backgroundRepeat: "no-repeat",
-          opacity: 0.1,
+          opacity: 0.08,
           zIndex: -1,
           transform: "translateX(-30%)",
         }}

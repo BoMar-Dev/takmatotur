@@ -56,7 +56,7 @@ const Home = () => {
       {/* Company description section */}
       <section className="p-3 rounded-md md:w-[80%] lg:w-[60%] xl:w-[55%] m-auto lg:mb-10">
         <a href="/om">
-          <h2 className="text-center text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-medium mb-2 cursor-pointer font-semibold">
+          <h2 className="text-center text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] mb-2 cursor-pointer font-semibold">
             Tak Mat O Tur
           </h2>
         </a>
@@ -67,7 +67,7 @@ const Home = () => {
         >
           <IoIosArrowDown className="fixed bottom-12 left-1/2 transform -translate-x-1/2 w-8 h-8 animate-bounce opacity-45" />
         </div>
-        <p className="">
+        <p className="max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto">
           Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
           gastronomi och äventyr för oförglömliga upplevelser. Drivna av vår
           passion för löpning, skidåkning och gästupplevelser, strävar vi efter
@@ -77,7 +77,7 @@ const Home = () => {
       </section>
 
       {/* Cards section */}
-      <section className="card-container grid grid-cols-1 lg:grid-cols-2 xl:w-[80%] m-auto gap-10 md:w-[80%] mb-12">
+      <section className="card-container grid grid-cols-1 lg:grid-cols-2 xl:w-[80%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">
         <Card
           image={mondayRun}
           title="Måndagslöpning"
