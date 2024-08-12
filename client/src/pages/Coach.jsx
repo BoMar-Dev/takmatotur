@@ -77,11 +77,14 @@ const Coach = () => {
           <p className="mb-5">
             När gnistan för att tävla på löparbanor började avta övergick jag
             till längre distanser och påbörjade också en satsning mot triathlon
-            parallellt. Att få utveckla nya färdigheter som simning och cykling
-            i kombination med löpningen var fantastiskt kul och inspirerande.
-            Mina främsta distanser blev inte helt oväntat de med lite mer fart
-            i, men jag tog mig också igenom ett par långdistanser och Ironmans,
-            men då mest för äventyret och festen som större evenemang innebär.
+            parallellt.
+          </p>
+          <p className="mb-5">
+            Att få utveckla nya färdigheter som simning och cykling i
+            kombination med löpningen var fantastiskt kul och inspirerande. Mina
+            främsta distanser blev inte helt oväntat de med lite mer fart i, men
+            jag tog mig också igenom ett par långdistanser och Ironmans, men då
+            mest för äventyret och festen som större evenemang innebär.
           </p>
           <p>
             I och med vår flytt till Jämtland slutade jag tävla i triathlon men

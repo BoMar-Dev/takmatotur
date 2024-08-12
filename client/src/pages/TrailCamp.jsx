@@ -41,17 +41,17 @@ const TrailCamp = () => {
             src={welcome}
             alt="Trail Camp"
           />
-          <div className="w-full xl:w-[50%] xl:ml-0 p-4">
+          <div className="w-full lg:w-[50%] lg:ml-0 lg:p-8 mt-3 lg:mt-0">
             <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
               Vad ingår?
             </h3>
             <ul className="list-inside list-disc">
-              <li className="mb-1 list-none">
+              <li className="mb-1 ">
                 4 löppass: Våra erfarna ledare tar dig med på storslagna
                 löpturer genom Åres fantastiska landskap – från tät skog till
                 vidsträckta fjällvidder.
               </li>
-              <li className="list-none">
+              <li className="mt-3">
                 Boende med helpension: Bo bekvämt på fantastiska{" "}
                 <a href="https://mullfjallet.se/" className="font-extrabold">
                   Pensionat Mullfjället
@@ -69,7 +69,7 @@ const TrailCamp = () => {
             src={torgeby}
             alt="föreläsare Marcus Torgeby"
           />
-          <div className="w-full xl:w-[50%] xl:mr-0 p-4">
+          <div className="w-full lg:w-[50%] lg:ml-0 mr-8 mt-3 lg:mt-0">
             <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
               Föreläsning med Markus Torgeby
             </h3>
@@ -96,7 +96,7 @@ const TrailCamp = () => {
             src={group}
             alt="Trail Camp Group"
           />
-          <div className="w-full xl:w-[50%] xl:ml-0 p-4">
+          <div className="w-full lg:w-[50%] lg:ml-0 lg:pl-8 mt-3 lg:mt-0">
             <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
               Varför ska du delta?
             </h3>
