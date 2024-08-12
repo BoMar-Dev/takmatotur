@@ -38,7 +38,7 @@ const PersonligCoach = () => {
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
         <section className="mb-10">
           <div className="text-left">
-            <p className="font-semibold mb-2 text-xl">
+            <p className="font-semibold mb-2 text-lg">
               Vill du komma igång, slå personliga rekord eller bara få ett
               bättre löpsteg - Då har du kommit helt rätt! Jag erbjuder
               personlig coachning oavsett önskemål anpassat efter just dina

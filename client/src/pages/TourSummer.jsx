@@ -23,7 +23,7 @@ const TourSummer = () => {
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
         <section className="mb-10">
           <div className="text-left">
-            <p className="mb-5 text-xl font-semibold">
+            <p className="mb-5 text-lg font-semibold">
               Upptäck magin med Jämtlands härligaste sommarvandring. Kom upp på
               höjd och skåda utsikter som häpnar. Bada i en fjällsjö eller
               vandra ner för Åreskutan, kanske till mer tystare platser där

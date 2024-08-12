@@ -23,7 +23,7 @@ const TourWinter = () => {
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
         <section className="mb-10">
           <div className="text-left">
-            <p className="mb-5 text-xl font-semibold">
+            <p className="mb-5 text-lg font-semibold">
               Upptäck magin med Jämtlands härligaste topptur! En tur som passar
               alla, med inspirerande gemenskap, vacker natur och skidåkning som
               är väldigt fritt.

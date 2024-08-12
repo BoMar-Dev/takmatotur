@@ -40,7 +40,7 @@ const Accommodation = () => {
       <header className="flex flex-col items-center justify-center mb-6 text-center">
         <h1 className="mb-2  font-bold">Boende</h1>
       </header>
-      <article className="p-5 xl:w-2/3 m-auto font-semibold text-xl">
+      <article className="p-3 xl:w-2/3 m-auto font-semibold text-lg">
         <p className="">
           Bo med fjällen, naturen, lugnet och äventyret runt knuten. Oavsätt
           antal personer så erbjuder vi ett boende i fjällnära miljö med naturen

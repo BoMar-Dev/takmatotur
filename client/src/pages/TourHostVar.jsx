@@ -23,7 +23,7 @@ const TourHostVar = () => {
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
         <section className="mb-10">
           <div className="text-left">
-            <p className="mb-5 text-xl font-semibold">
+            <p className="mb-5 text-lx font-semibold">
               Sen topptur på våren när liftarna stängt eller låt höstens alla
               fantastiska färger förtrolla dig. Dessa årstider är fantastiska.
               Åk skidor i t-shirt när liftarna stängt vid 21-tiden på kvällen.

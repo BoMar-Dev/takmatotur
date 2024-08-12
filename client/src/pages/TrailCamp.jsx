@@ -25,8 +25,8 @@ const TrailCamp = () => {
         </h2>
       </header>
 
-      <div className="mb-6 font-semibold md:w-[80%] xl:w-[70%] m-auto text-xl">
-        <p className="text-left">
+      <div className="mb-6 p-3 font-semibold md:w-[80%] xl:w-[70%] m-auto text-lg">
+        <p className="">
           Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse i
           hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
           september bjuder vi in dig till tre dagar fyllda med inspiration,

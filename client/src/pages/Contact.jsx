@@ -67,7 +67,7 @@ const Contact = () => {
         {/* This div is hidden on screens smaller than xl */}
         <div className="hidden xl:flex xl:space-x-10 items-center p-5">
           <div className="flex-1 xl:order-1 text-center">
-            <div className="text-2xl font-bold m-auto">
+            <div className="text-lg font-bold m-auto">
               <h2>Vi svarar så fort vi kan</h2>
             </div>
             <p className="p-5">
@@ -88,7 +88,7 @@ const Contact = () => {
           </div>
           <div className="flex-1 xl:order-2">
             <a
-              href="https://maps.app.goo.gl/tYdew3KzjveoTA33A"
+              href="https://maps.app.goo.gl/1q72xMDJvq3WwuQu8"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -103,7 +103,7 @@ const Contact = () => {
         {/* This div is shown on screens smaller than xl */}
         <div className="xl:hidden">
           <div className="text-container text-center">
-            <div className="text-2xl font-bold m-auto">
+            <div className="text-lg font-bold m-auto">
               <h2>Vi svarar så fort vi kan</h2>
             </div>
             <p className="p-5">
@@ -135,7 +135,7 @@ const Contact = () => {
           </a>
         </div>
         {/* Form starts here */}
-        <form onSubmit={handleSubmit} className="p-5 mt-5 xl:w-[50%]">
+        <form onSubmit={handleSubmit} className="p-4 mt-5 xl:w-[50%]">
           <div className="flex flex-col mb-5">
             <label htmlFor="name" className="mb-2 font-bold">
               Namn
@@ -146,7 +146,7 @@ const Contact = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="p-2 border-2 rounded" // Added border-2 for thicker borders
+              className="p-2 border-2 rounded" // Made border thicker with border-2
               required
             />
           </div>
@@ -160,7 +160,7 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="p-2 border-2 rounded" // Added border-2 for thicker borders
+              className="p-2 border-2 rounded" // Made border thicker with border-2
               required
             />
           </div>
@@ -174,7 +174,7 @@ const Contact = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="p-2 border-2 rounded" // Added border-2 for thicker borders
+              className="p-2 border-2 rounded" // Made border thicker with border-2
               required
             />
           </div>
@@ -187,7 +187,7 @@ const Contact = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="p-2 border-2 rounded" // Added border-2 for thicker borders
+              className="p-2 border-2 rounded" // Made border thicker with border-2
               required
             />
           </div>

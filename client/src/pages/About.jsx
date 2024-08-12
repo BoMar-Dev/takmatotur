@@ -23,8 +23,8 @@ const About = () => {
         <h1 className="font-bold">Tak Mat O Tur</h1>
       </header>
 
-      <div className="p-5 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%]">
-        <section className="mb-10 font-semibold text-xl">
+      <div className="p-2 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%]">
+        <section className="mb-10 font-semibold text-lg">
           <p className="text-left">
             Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
             komfort, gastronomi och äventyr för att skapa oförglömliga

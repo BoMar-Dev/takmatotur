@@ -36,7 +36,7 @@ const MandagsLopning = () => {
       </header>
 
       <div className="p-5 mb-2 md:w-[80%] m-auto relative xl:w-[60%] 3xl:w-[50%]">
-        <section className="mb-10 font-semibold text-xl">
+        <section className="mb-10 font-semibold text-lg">
           <p className="text-left">
             Upptäck magin med Jämtlands härligaste löpargrupp! Under sex
             måndagar får du chansen att vara med i en inspirerande gemenskap och
