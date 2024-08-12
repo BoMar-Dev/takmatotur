@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // import component
 import JoinMondayRunningForm from "../components/forms/MondayForm";
-import backgroundImg from "../img/about/background.svg"; // Import the background image
+// Import the background image
+import backgroundImg from "../img/about/background.svg";
 
 const MandagsLopning = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -23,11 +24,11 @@ const MandagsLopning = () => {
         className="absolute bottom-[-200px] right-[-150px] w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "150%", // Adjust the size to be smaller
+          backgroundSize: "150%",
           backgroundRepeat: "no-repeat",
-          opacity: 0.08, // Slightly different opacity
+          opacity: 0.08,
           zIndex: -1,
-          transform: "translateX(1%) translateY(20%)", // Positioned down to the right
+          transform: "translateX(1%) translateY(20%)",
         }}
       ></div>
 
@@ -35,17 +36,17 @@ const MandagsLopning = () => {
         <h1 className="mb-5 font-bold">Måndagslöpning</h1>
       </header>
 
-      <div className="p-3 mb-2 md:w-[80%] m-auto relative xl:w-[60%] 3xl:w-[50%]">
-        <section className="mb-10 font-semibold text-lg">
-          <p className="text-left">
-            Upptäck magin med Jämtlands härligaste löpargrupp! Under sex
-            måndagar får du chansen att vara med i en inspirerande gemenskap och
-            utveckla din löpning på bästa möjliga sätt.
-          </p>
-        </section>
-      </div>
-
       <article className="flex flex-col p-5 w-full max-w-4xl rounded-lg">
+        <section className="mb-10">
+          <div className="text-left">
+            <p className="font-semibold mb-2 text-lg">
+              Upptäck magin med Jämtlands härligaste löpargrupp! Under sex
+              måndagar får du chansen att vara med i en inspirerande gemenskap
+              och utveckla din löpning på bästa möjliga sätt.
+            </p>
+          </div>
+        </section>
+
         <section className="mb-6">
           <div className="p-4">
             <h2 className="mb-2 font-semibold text-xl">Vad ingår?</h2>
@@ -72,7 +73,7 @@ const MandagsLopning = () => {
           </div>
         </section>
 
-        <section>
+        <section className="mb-6">
           <div className="p-4">
             <h2 className="mb-2 font-semibold text-xl">Priser</h2>
             <p>
@@ -82,6 +83,7 @@ const MandagsLopning = () => {
             </p>
           </div>
         </section>
+
         <div className="text-center flex justify-center p-5">
           <button
             onClick={openForm}
@@ -90,6 +92,7 @@ const MandagsLopning = () => {
             <span className="relative z-10">Gå med</span>
           </button>
         </div>
+
         <AnimatePresence>
           {isFormOpen && (
             <motion.div
@@ -103,9 +106,10 @@ const MandagsLopning = () => {
             </motion.div>
           )}
         </AnimatePresence>
+
         <div className="button-holder flex justify-center mb-5">
-          <Link to="/coach" className="inline-flex">
-            <button className="custom-button bg-slate-800 text-white hover:shadow-sky-700">
+          <Link to="/coach" className="inline-flex bg-slate-800 rounded-md">
+            <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
               <span className="relative z-10">Bakåt</span>
             </button>
           </Link>

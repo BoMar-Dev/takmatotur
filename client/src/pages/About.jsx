@@ -1,6 +1,8 @@
 // This is the nav named Tak Mat o Tur in the UI
 
 import { Link } from "react-router-dom";
+
+// import images
 import portraitImg from "../img/about/portrait.jpg";
 import backgroundImg from "../img/about/background.svg";
 

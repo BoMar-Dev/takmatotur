@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 
-// import img
+// import images
 import map from "../img/contact/map.jpg";
-import backgroundImg from "../img/about/background.svg"; // Import the background image
+// Import the background image
+import backgroundImg from "../img/about/background.svg";
 
 // import icons
 import { BsFillTelephoneFill } from "react-icons/bs";

@@ -81,8 +81,8 @@ const Header = () => {
           <img
             src={Logo}
             alt="logotype"
-            className="max-w-[200px] cursor-pointer" // Ensuring the image behaves like a button
-            style={{ width: "98px", height: "auto" }}
+            className="cursor-pointer max-w-[90px] mt-2 lg:mt-0 lg:max-w-[100px]" // 90px on sm and md, 100px on lg and above
+            style={{ height: "auto" }}
           />
         </Link>
         {/* nav - base style is hidden - show on desktop and larger */}

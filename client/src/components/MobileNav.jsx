@@ -2,8 +2,10 @@ import { useState } from "react";
 // Import framer-motion
 import { motion } from "framer-motion";
 // import icons
-import { SlMenu } from "react-icons/sl";
+// import { SlMenu } from "react-icons/sl"; // bakup icon
 import { IoClose } from "react-icons/io5";
+import { CiMenuBurger } from "react-icons/ci";
+
 // import Link
 import { Link } from "react-router-dom";
 
@@ -30,9 +32,9 @@ const MobileNav = () => {
     <nav className="text-PrimaryColor lg:hidden xl:hidden">
       <div
         onClick={toggleMenu}
-        className="text-5xl font-extrabold cursor-pointer mt-12"
+        className="cursor-pointer mt-12 text-[50px] md:text-[60px] md:font- font-extrabold"
       >
-        <SlMenu />
+        <CiMenuBurger />
       </div>
       <motion.div
         key={key} // Using the key here to force re-render
@@ -44,7 +46,7 @@ const MobileNav = () => {
       >
         <div
           onClick={resetAnimationClasses}
-          className="text-4xl absolute z-50 left-5 top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold"
+          className="text-4xl absolute z-30 left-5 top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold animate-jump-in animate-once animate-delay-1000"
         >
           <IoClose />
         </div>

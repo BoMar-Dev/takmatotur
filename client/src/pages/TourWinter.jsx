@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import backgroundImg from "../img/about/background.svg"; // Import the background image
+
+// Import the background image
+import backgroundImg from "../img/about/background.svg";
 
 const TourWinter = () => {
   return (
@@ -8,11 +10,11 @@ const TourWinter = () => {
         className="absolute top-[-150px] left-[-150px] w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "160%", // Adjust the size of the background image
+          backgroundSize: "160%",
           backgroundRepeat: "no-repeat",
-          opacity: 0.08, // Set opacity to make it subtle
+          opacity: 0.08,
           zIndex: -1,
-          transform: "translateX(20%) translateY(60%)", // Adjust positioning
+          transform: "translateX(20%) translateY(60%)",
         }}
       ></div>
 

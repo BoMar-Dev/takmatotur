@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 // import icons
-import { IoIosArrowDown } from "react-icons/io";
+// import { IoIosArrowDown } from "react-icons/io";
 
 // import Link
 import { Link } from "react-router-dom";
 
-// import img
+// import images
 import mondayRun from "../img/home/monday.jpg";
 import topptur from "../img/home/topptur.jpg";
 
@@ -65,7 +65,7 @@ const Home = () => {
             isFaded ? "opacity-0" : "opacity-100"
           } transition-opacity duration-1000`}
         >
-          <IoIosArrowDown className="fixed bottom-12 left-1/2 transform -translate-x-1/2 w-8 h-8 animate-bounce opacity-45" />
+          {/* <IoIosArrowDown className="fixed bottom-12 left-1/2 transform -translate-x-1/2 w-8 h-8 animate-bounce opacity-45" />  // function to hint that your supposed to scroll down */}
         </div>
         <p className="max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto">
           Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
