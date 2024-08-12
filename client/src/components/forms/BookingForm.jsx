@@ -13,9 +13,7 @@ const BookingForm = ({ closeForm }) => {
       >
         <IoClose />
       </button>
-      <h2 className="text-3xl font-bold text-center mt-8 p-4 mb-4">
-        Bokningsförfrågan
-      </h2>
+      <h2 className="text-3xl font-bold mt-10 p-2  mb-4">Bokningsförfrågan</h2>
       <form>
         <div className="mb-4">
           <label className="block mb-2 font-bold">Namn</label>

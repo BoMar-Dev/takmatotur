@@ -35,7 +35,7 @@ const MandagsLopning = () => {
         <h1 className="mb-5 font-bold">Måndagslöpning</h1>
       </header>
 
-      <div className="p-5 mb-2 md:w-[80%] m-auto relative xl:w-[60%] 3xl:w-[50%]">
+      <div className="p-3 mb-2 md:w-[80%] m-auto relative xl:w-[60%] 3xl:w-[50%]">
         <section className="mb-10 font-semibold text-lg">
           <p className="text-left">
             Upptäck magin med Jämtlands härligaste löpargrupp! Under sex
@@ -50,7 +50,7 @@ const MandagsLopning = () => {
           <div className="p-4">
             <h2 className="mb-2 font-semibold text-xl">Vad ingår?</h2>
             <ul className="list-disc list-inside">
-              <li className="mb-1">
+              <li className="mb-5">
                 Professionellt ledda löppass fyllda med glädje och gemenskap.
                 Varje pass är unikt och varierar med fokus på olika aspekter av
                 löpning, från teknikträning och intervaller till långdistans och
@@ -58,12 +58,12 @@ const MandagsLopning = () => {
                 din löpteknik och ger dig konkreta tips för att förbättra din
                 prestation och undvika skador.
               </li>
-              <li className="mb-1">
+              <li className="mb-5">
                 Ett personligt träningsprogram skräddarsytt efter dina mål och
                 förutsättningar, med löpcoachning som hjälper dig att nå nya
                 höjder oavsett om du är nybörjare eller erfaren löpare.
               </li>
-              <li className="mb-1">
+              <li className="mb-5">
                 Ett personligt träningsprogram skräddarsytt efter dina mål och
                 förutsättningar, med löpcoachning som hjälper dig att nå nya
                 höjder oavsett om du är nybörjare eller erfaren löpare.

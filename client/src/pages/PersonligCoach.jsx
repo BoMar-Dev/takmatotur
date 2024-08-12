@@ -52,7 +52,7 @@ const PersonligCoach = () => {
             Vad innebär personlig coachning?
           </h2>
           <ul className="list-disc list-inside">
-            <li className="mb-3">
+            <li className="mb-5">
               <strong>
                 Skräddarsydd träning för alla nivåer med feedback:
               </strong>{" "}
@@ -60,28 +60,28 @@ const PersonligCoach = () => {
               nybörjare till erfarna löpare. Vi säkerställer att alla utvecklas
               i sin egen takt samtidigt som ni bygger en starkare teamkänsla.
             </li>
-            <li className="mb-3">
+            <li className="mb-5">
               <strong>Videoanalys och personlig programmering:</strong> Att
               träna tillsammans som ett team skapar en unik dynamik. Ni kommer
               att uppleva styrkan i att jobba mot gemensamma mål, stötta
               varandra och fira framgångar tillsammans. Detta stärker inte bara
               kroppen utan även banden mellan kollegorna.
             </li>
-            <li className="mb-3">
+            <li className="mb-5">
               <strong>Holistisk träningsfilosofi:</strong> Vi fokuserar på en
               helhetssyn på träning som inkluderar löpteknik, styrketräning,
               rörlighet och mental träning. Detta för att säkerställa att era
               medarbetare inte bara blir bättre löpare utan också mår bättre i
               sin helhet.
             </li>
-            <li className="mb-3">
+            <li className="mb-5">
               <strong>Personlig feedback och uppföljning:</strong> Under dessa
               10 veckor får varje deltagare personlig feedback från våra
               coacher, vilket hjälper dem att utvecklas optimalt. Regelbundna
               uppföljningar ser till att alla håller sig på rätt spår och når
               sina mål.
             </li>
-            <li className="mb-3">
+            <li className="mb-5">
               <strong>Inspirerande miljöer:</strong> Vi tränar i varierande och
               inspirerande miljöer. Att springa ute i naturen ger både fysisk
               och mental energi som kan överföras till arbetsplatsen.

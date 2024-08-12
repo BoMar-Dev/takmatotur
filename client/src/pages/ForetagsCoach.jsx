@@ -34,6 +34,9 @@ const ForetagsCoach = () => {
       </div>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto rounded-lg">
+        <header className="flex justify-center mb-6">
+          <h1 className="mb-5 font-bold">Företagscoaching</h1>
+        </header>
         <section className="mb-10">
           <div className="">
             <p className="text-lg font-semibold mb-2">
@@ -47,8 +50,8 @@ const ForetagsCoach = () => {
           </div>
         </section>
 
-        <section className="p-4 md:w-[80%] xl:w-[70%] m-auto">
-          <h2 className="mb-2 font-semibold text-xl">
+        <section className=" md:w-[80%] xl:w-[80%] m-auto">
+          <h2 className="mb-3 font-semibold text-xl">
             Varför välja vår löpcoaching för företagsgrupper?
           </h2>
           <ul className="list-disc list-inside">
@@ -87,8 +90,8 @@ const ForetagsCoach = () => {
           </ul>
         </section>
 
-        <section className="p-4 md:w-[80%] xl:w-[70%] m-auto">
-          <h2 className="mb-2 font-semibold text-xl">
+        <section className="mt-10 md:w-[80%] xl:w-[80%] m-auto">
+          <h2 className="mb-3 font-semibold text-xl ">
             Vad ni kan förvänta er:
           </h2>
           <ul className="list-disc list-inside">
