@@ -54,9 +54,9 @@ const Home = () => {
       </motion.header>
 
       {/* Company description section */}
-      <section className="p-5 rounded-md md:w-[80%] lg:w-[60%] xl:w-[55%] md:m-auto text-center lg:mb-10">
+      <section className="p-5 rounded-md md:w-[80%] lg:w-[60%] xl:w-[55%] m-auto lg:mb-10">
         <a href="/om">
-          <h2 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-medium mb-2 cursor-pointer">
+          <h2 className="text-center text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-medium mb-2 cursor-pointer font-semibold">
             Tak Mat O Tur
           </h2>
         </a>
@@ -67,7 +67,7 @@ const Home = () => {
         >
           <IoIosArrowDown className="fixed bottom-12 left-1/2 transform -translate-x-1/2 w-8 h-8 animate-bounce opacity-45" />
         </div>
-        <p>
+        <p className="text-left">
           Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
           gastronomi och äventyr för oförglömliga upplevelser. Drivna av vår
           passion för löpning, skidåkning och gästupplevelser, strävar vi efter

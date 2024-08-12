@@ -30,17 +30,17 @@ const Accommodation = () => {
         className="absolute top-[-700px] left-0 w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "100%",
-          backgroundRepeat: "repeat-x",
-          opacity: 0.15,
+          backgroundSize: "200%",
+          backgroundRepeat: "repeat-y",
+          opacity: 0.08,
           zIndex: -1,
-          transform: "translateX(-30%)",
+          transform: "translateX(-20%)",
         }}
       ></div>
       <header className="flex flex-col items-center justify-center mb-6 text-center">
         <h1 className="mb-2  font-bold">Boende</h1>
       </header>
-      <article className="p-5 xl:w-2/3 m-auto font-semibold">
+      <article className="p-5 xl:w-2/3 m-auto font-semibold text-xl">
         <p className="">
           Bo med fjällen, naturen, lugnet och äventyret runt knuten. Oavsätt
           antal personer så erbjuder vi ett boende i fjällnära miljö med naturen
@@ -72,7 +72,7 @@ const Accommodation = () => {
       </AnimatePresence>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between  rounded-lg  mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={boende1}
@@ -92,7 +92,7 @@ const Accommodation = () => {
           </div>
         </section>
 
-        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between b rounded-lg  mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={boende2}
@@ -106,7 +106,7 @@ const Accommodation = () => {
           </div>
         </section>
 
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between  rounded-lg  mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={boende3}
@@ -123,7 +123,7 @@ const Accommodation = () => {
           </div>
         </section>
 
-        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between  rounded-lg  mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={boende4}
@@ -140,7 +140,7 @@ const Accommodation = () => {
           </div>
         </section>
 
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between  rounded-lg  mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={boende5}
@@ -158,7 +158,7 @@ const Accommodation = () => {
           </div>
         </section>
 
-        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between  rounded-lg  mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={boende6}

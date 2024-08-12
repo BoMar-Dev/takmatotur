@@ -13,20 +13,20 @@ const TrailCamp = () => {
           backgroundImage: `url(${backgroundImg})`,
           backgroundSize: "100%",
           backgroundRepeat: "repeat-x",
-          opacity: 0.15,
+          opacity: 0.08,
           zIndex: -1,
           transform: "translateX(-30%)",
         }}
       ></div>
       <header className="flex flex-col items-center justify-center mb-6 text-center">
-        <h1 className="mb-2  font-bold">Trail Camp 2024</h1>
-        <h2 className=" text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] text-lg font-bold mb-5">
+        <h1 className="mb-2 font-bold">Trail Camp 2024</h1>
+        <h2 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] text-lg font-bold mb-5">
           30/8 - 1/9
         </h2>
       </header>
 
-      <div className="mb-6 text-center font-semibold md:w-[80%] xl:w-[70%]">
-        <p>
+      <div className="mb-6 font-semibold md:w-[80%] xl:w-[70%] m-auto text-xl">
+        <p className="text-left">
           Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse i
           hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
           september bjuder vi in dig till tre dagar fyllda med inspiration,
@@ -35,7 +35,7 @@ const TrailCamp = () => {
       </div>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-betweenmb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={welcome}
@@ -63,7 +63,7 @@ const TrailCamp = () => {
           </div>
         </section>
 
-        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={torgeby}
@@ -90,7 +90,7 @@ const TrailCamp = () => {
           </div>
         </section>
 
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between bg-white rounded-lg shadow-md mb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={group}

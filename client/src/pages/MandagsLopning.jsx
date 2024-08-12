@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-// import conponent
+// import component
 import JoinMondayRunningForm from "../components/forms/MondayForm";
+import backgroundImg from "../img/about/background.svg"; // Import the background image
 
 const MandagsLopning = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -17,24 +18,37 @@ const MandagsLopning = () => {
   }
 
   return (
-    <section className="relative flex flex-col items-center p-5 mb-10">
-      <header className="flex flex-col items-center justify-center mb-6 text-center">
-        <h1 className="mb-5  font-bold">Måndagslöpning</h1>
-        <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
-          <article className="p-5 xl:w-2/3 m-auto">
-            <p className="mb-5">
-              Upptäck magin med Jämtlands härligaste löpargrupp! Under sex
-              måndagar får du chansen att vara med i en inspirerande gemenskap
-              och utveckla din löpning på bästa möjliga sätt.
-            </p>
-          </article>
-        </div>
+    <section className="relative flex flex-col items-center p-5 mb-10 overflow-hidden">
+      <div
+        className="absolute bottom-[-200px] right-[-150px] w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${backgroundImg})`,
+          backgroundSize: "150%", // Adjust the size to be smaller
+          backgroundRepeat: "no-repeat",
+          opacity: 0.08, // Slightly different opacity
+          zIndex: -1,
+          transform: "translateX(1%) translateY(20%)", // Positioned down to the right
+        }}
+      ></div>
+
+      <header className="flex justify-center mb-6">
+        <h1 className="mb-5 font-bold">Måndagslöpning</h1>
       </header>
 
-      <article className="flex flex-col p-5 w-full max-w-4xl bg-white rounded-lg shadow-md">
+      <div className="p-5 mb-2 md:w-[80%] m-auto relative xl:w-[60%] 3xl:w-[50%]">
+        <section className="mb-10 font-semibold text-xl">
+          <p className="text-left">
+            Upptäck magin med Jämtlands härligaste löpargrupp! Under sex
+            måndagar får du chansen att vara med i en inspirerande gemenskap och
+            utveckla din löpning på bästa möjliga sätt.
+          </p>
+        </section>
+      </div>
+
+      <article className="flex flex-col p-5 w-full max-w-4xl rounded-lg">
         <section className="mb-6">
           <div className="p-4">
-            <h2 className="mb-2 font-semibold">Vad ingår?</h2>
+            <h2 className="mb-2 font-semibold text-xl">Vad ingår?</h2>
             <ul className="list-disc list-inside">
               <li className="mb-1">
                 Professionellt ledda löppass fyllda med glädje och gemenskap.
@@ -60,7 +74,7 @@ const MandagsLopning = () => {
 
         <section>
           <div className="p-4">
-            <h2 className="mb-2 font-semibold">Priser</h2>
+            <h2 className="mb-2 font-semibold text-xl">Priser</h2>
             <p>
               6 måndagar med löpning och aktivitet samt individuellt program för
               6 veckor: 800 kr <br />

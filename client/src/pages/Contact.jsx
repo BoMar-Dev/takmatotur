@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 // import img
 import map from "../img/contact/map.jpg";
+import backgroundImg from "../img/about/background.svg"; // Import the background image
 
 // import icons
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -45,12 +46,24 @@ const Contact = () => {
   };
 
   return (
-    <section className="section flex flex-col p-5 bg-red mb-10">
+    <section className="section flex flex-col p-5 bg-red mb-10 relative">
+      <div
+        className="absolute top-[-400px] left-[-100px] w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${backgroundImg})`,
+          backgroundSize: "120%", // Slightly larger size
+          backgroundRepeat: "repeat-x",
+          opacity: 0.08,
+          zIndex: -1,
+          transform: "translateX(-20%) translateY(20%)", // Adjusted position
+        }}
+      ></div>
+
       <header className="text-center mb-5">
-        <h1 className=" font-bold">Kontakta oss</h1>
+        <h1 className="font-bold">Kontakta oss</h1>
       </header>
 
-      <div className="p-5 mb-10 md:w-[80%] m-auto relative 3xl:w-[50%] lg:rounded-lg shadow-xl bg-white">
+      <div className="p-5 mb-10 md:w-[80%] m-auto relative 3xl:w-[50%] lg:rounded-lg ">
         {/* This div is hidden on screens smaller than xl */}
         <div className="hidden xl:flex xl:space-x-10 items-center p-5">
           <div className="flex-1 xl:order-1 text-center">
@@ -75,7 +88,7 @@ const Contact = () => {
           </div>
           <div className="flex-1 xl:order-2">
             <a
-              href="https://maps.app.goo.gl/1q72xMDJvq3WwuQu8"
+              href="https://maps.app.goo.gl/tYdew3KzjveoTA33A"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -133,7 +146,7 @@ const Contact = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="p-2 border rounded"
+              className="p-2 border-2 rounded" // Added border-2 for thicker borders
               required
             />
           </div>
@@ -147,7 +160,7 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="p-2 border rounded"
+              className="p-2 border-2 rounded" // Added border-2 for thicker borders
               required
             />
           </div>
@@ -161,7 +174,7 @@ const Contact = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="p-2 border rounded"
+              className="p-2 border-2 rounded" // Added border-2 for thicker borders
               required
             />
           </div>
@@ -174,7 +187,7 @@ const Contact = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="p-2 border rounded"
+              className="p-2 border-2 rounded" // Added border-2 for thicker borders
               required
             />
           </div>

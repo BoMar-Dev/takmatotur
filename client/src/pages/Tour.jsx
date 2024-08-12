@@ -17,20 +17,24 @@ const Tour = () => {
   const closeForm = () => setIsBookingFormOpen(false);
 
   return (
-    <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto">
+    <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto text-PrimaryColor">
       <div
         className="absolute inset-0 h-full w-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImg})`,
           backgroundSize: "300%",
           backgroundRepeat: "no-repeat",
-          opacity: 0.15,
+          opacity: 0.08,
           zIndex: -1,
           transform: "translateX(-30%)",
         }}
       ></div>
       <header className="text-center mb-2">
-        <h1 className=" font-bold">Topptur - för alla årstider</h1>
+        <h1 className="font-bold">
+          Topptur
+          <span className="block sm:hidden">för alla årstider</span>
+          <span className="hidden sm:inline"> – för alla årstider</span>
+        </h1>
       </header>
       <div className="text-center flex justify-center p-5 md:w-[80%]">
         <button
@@ -40,7 +44,7 @@ const Tour = () => {
           <span className="relative z-10">Bokningsförfrågan</span>
         </button>
       </div>
-      <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
+      <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%] text-xl">
         <article className="p-5 xl:w-2/3 m-auto font-semibold">
           <p className="mb-5">
             Oavsett om det är höst, vinter, vår eller sommar så erbjuder vi

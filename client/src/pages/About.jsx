@@ -14,18 +14,18 @@ const About = () => {
           backgroundSize: "140%",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 0.15,
+          opacity: 0.1,
           zIndex: -1,
         }}
       ></div>
 
       <header className="flex justify-center mb-6">
-        <h1 className=" font-bold">Tak Mat O Tur</h1>
+        <h1 className="font-bold">Tak Mat O Tur</h1>
       </header>
 
-      <div className="p-5 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%] g">
-        <section className="mb-10 font-semibold text-center">
-          <p>
+      <div className="p-5 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%]">
+        <section className="mb-10 font-semibold text-xl">
+          <p className="text-left">
             Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
             komfort, gastronomi och äventyr för att skapa oförglömliga
             upplevelser. Vi specialiserar oss på att erbjuda personliga
@@ -35,9 +35,8 @@ const About = () => {
             hittat rätt.
           </p>
         </section>
-
         {/* Image and text section for xl and above */}
-        <section className="hidden xl:flex xl:space-x-10 items-center bg-white shadow-xl rounded-lg p-5">
+        <section className="hidden xl:flex xl:space-x-10 items-center rounded-lg p-5">
           <div className="flex-1 xl:order-1">
             <p>
               Tak Mat o Tur är ett familjeföretag som drivs av Martin och Emma

@@ -24,7 +24,7 @@ const Coach = () => {
   }
 
   return (
-    <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto">
+    <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto mb-5">
       <div
         className="absolute top-[-700px] left-0 h-full w-full bg-cover bg-center"
         style={{
@@ -32,13 +32,17 @@ const Coach = () => {
           backgroundSize: "700%",
           backgroundPosition: "",
           backgroundRepeat: "no-repeat",
-          opacity: 0.15,
+          opacity: 0.1,
           zIndex: -1,
           transform: "translateX(-30%)",
         }}
       ></div>
       <header className="text-center mb-5">
-        <h1 className=" font-bold">Löpcoach – Martin Gillgren</h1>
+        <h1 className="font-bold">
+          Löpcoach
+          <span className="block sm:hidden">Martin Gillgren</span>
+          <span className="hidden sm:inline"> – Martin Gillgren</span>
+        </h1>
       </header>
       <div className="text-center flex justify-center mb-10 p-2">
         <button
@@ -101,7 +105,7 @@ const Coach = () => {
       </div>
 
       <header className="text-center my-10">
-        <h2 className="text-xl font-medium">Vad jag erbjuder</h2>
+        <h2 className="text-xl font-semibold">Vad jag erbjuder :</h2>
       </header>
       <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-5 mb-10">
         <Card
@@ -133,7 +137,7 @@ const Coach = () => {
         </p>
       </footer>
 
-      <div className="text-center flex justify-center mb-10 p-2">
+      <div className="text-center flex justify-center mb-10 p-2 mb">
         <button
           onClick={openForm}
           className="custom-button bg-amber-600 text-white "

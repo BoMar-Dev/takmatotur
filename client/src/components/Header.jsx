@@ -86,7 +86,10 @@ const Header = () => {
           />
         </Link>
         {/* nav - base style is hidden - show on desktop and larger */}
-        <nav className="hidden lg:flex space-x-12 pt-12">
+        <nav
+          className="hidden lg:flex space-x-12 pt-12 ml-10"
+          style={{ marginLeft: "100px" }}
+        >
           {[
             { path: "/om", label: "Tak Mat O Tur" },
             { path: "/trailcamp", label: "Trail Camp" },
@@ -101,7 +104,7 @@ const Header = () => {
             >
               <Link
                 to={link.path}
-                className={`text-PrimaryColor hover:text-slate-950 hover:scale-110 hover:font-extrabold transition font-semibold ${
+                className={`text-PrimaryColor whitespace-nowrap hover:text-slate-950 hover:scale-110 hover:font-extrabold transition font-semibold ${
                   isActiveLink(link.path) ? "text-bold scale-110" : ""
                 }`}
               >
