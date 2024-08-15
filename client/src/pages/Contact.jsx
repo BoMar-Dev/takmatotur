@@ -2,14 +2,18 @@ import { useState, useEffect } from "react";
 
 // import images
 import map from "../img/contact/map.jpg";
-// Import the background image
 import backgroundImg from "../img/about/background.svg";
+import { MdOutlineDisabledByDefault } from "react-icons/md";
 
 // import icons
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
+import { GiConfirmed } from "react-icons/gi";
 
 const Contact = () => {
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -32,7 +36,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch("http://localhost:5000/kontakt", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,9 +44,17 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
       const data = await response.text();
-      alert(data);
+      if (response.ok) {
+        setEmailSent(true);
+        setEmailError(false);
+      } else {
+        setEmailSent(false);
+        setEmailError(true);
+      }
     } catch (error) {
       console.error("There was an error submitting the form!", error);
+      setEmailSent(false);
+      setEmailError(true);
     }
   };
 
@@ -72,9 +84,9 @@ const Contact = () => {
               <h2>Vi svarar så fort vi kan</h2>
             </div>
             <p className="p-5">
-              Är det någon ni funderar över som inte står på vår hemsida så är
+              Är det något ni funderar över som inte står på vår hemsida så är
               ni varmt välkommen att kontakta oss via telefon eller epost. Vi
-              finns tillgängliga för att ni ska få bästa tänka bara service.
+              finns tillgängliga för att ni ska få bästa tänkbara service.
             </p>
             <div className="flex flex-col font-bold p-5 mb-5">
               <div className="flex items-center space-x-2">
@@ -108,9 +120,9 @@ const Contact = () => {
               <h2>Vi svarar så fort vi kan</h2>
             </div>
             <p className="p-5">
-              Är det någon ni funderar över som inte står på vår hemsida så är
+              Är det något ni funderar över som inte står på vår hemsida så är
               ni varmt välkommen att kontakta oss via telefon eller epost. Vi
-              finns tillgängliga för att ni ska få bästa tänka bara service.
+              finns tillgängliga för att ni ska få bästa tänkbara service.
             </p>
             <div className="flex flex-col font-bold p-5 mb-5">
               <div className="flex items-center space-x-2">
@@ -170,7 +182,7 @@ const Contact = () => {
               Telefon
             </label>
             <input
-              type="phone"
+              type="tel"
               id="phone"
               name="phone"
               value={formData.phone}
@@ -195,6 +207,18 @@ const Contact = () => {
           <button type="submit" className="p-2 bg-blue-500 text-white rounded">
             Skicka
           </button>
+          {emailSent && (
+            <p className="text-green-500 text-sm mt-2">
+              <GiConfirmed /> Skickat
+            </p>
+          )}
+          {emailError && (
+            <p className="text-red-500 text-sm mt-2">
+              <MdOutlineDisabledByDefault /> Inte skickat - något gick fel.
+              Vänligen skicka ett manuellt mail till takmatotur@gmail.com. Tack
+              för er förståelse.
+            </p>
+          )}
         </form>
       </div>
     </section>
