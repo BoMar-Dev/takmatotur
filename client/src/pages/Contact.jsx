@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useFormDefaults } from "../useFormDefaults";
 
 // import images
 import map from "../img/contact/map.jpg";
@@ -11,27 +12,19 @@ import { IoMdMail } from "react-icons/io";
 import { GiConfirmed } from "react-icons/gi";
 
 const Contact = () => {
-  const [emailSent, setEmailSent] = useState(false);
-  const [emailError, setEmailError] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const [formData, setFormData] = useState({
+  const { defaults, formData } = useFormDefaults({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,11 +39,11 @@ const Contact = () => {
       const data = await response.text();
 
       if (response.ok) {
-        console.log("Server response:", data); // Using 'data' to log the response
+        console.log("Server response:", data);
         setEmailSent(true);
         setEmailError(false);
       } else {
-        console.log("Error response from server:", data); // Logging the error response
+        console.log("Error response from server:", data);
         setEmailSent(false);
         setEmailError(true);
       }
@@ -67,11 +60,11 @@ const Contact = () => {
         className="absolute top-[-400px] left-[-100px] w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "120%", // Slightly larger size
+          backgroundSize: "120%",
           backgroundRepeat: "repeat-x",
           opacity: 0.08,
           zIndex: -1,
-          transform: "translateX(-20%) translateY(20%)", // Adjusted position
+          transform: "translateX(-20%) translateY(20%)",
         }}
       ></div>
 
@@ -80,7 +73,6 @@ const Contact = () => {
       </header>
 
       <div className="p-5 mb-10 md:w-[80%] m-auto relative 3xl:w-[50%] lg:rounded-lg ">
-        {/* This div is hidden on screens smaller than xl */}
         <div className="hidden xl:flex xl:space-x-10 items-center p-5">
           <div className="flex-1 xl:order-1 text-center">
             <div className="text-lg font-bold m-auto">
@@ -116,7 +108,6 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        {/* This div is shown on screens smaller than xl */}
         <div className="xl:hidden">
           <div className="text-container text-center">
             <div className="text-lg font-bold m-auto">
@@ -157,13 +148,10 @@ const Contact = () => {
               Namn
             </label>
             <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="p-2 border-2 rounded" // Made border thicker with border-2
-              required
+              {...defaults("name", "", {
+                placeholder: "",
+                className: "p-2 border border-gray-300 rounded",
+              })}
             />
           </div>
           <div className="flex flex-col mb-5">
@@ -171,13 +159,11 @@ const Contact = () => {
               Email
             </label>
             <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="p-2 border-2 rounded" // Made border thicker with border-2
-              required
+              {...defaults("email", "", {
+                type: "email",
+                placeholder: "",
+                className: "p-2 border border-gray-300 rounded",
+              })}
             />
           </div>
           <div className="flex flex-col mb-5">
@@ -185,13 +171,11 @@ const Contact = () => {
               Telefon
             </label>
             <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="p-2 border-2 rounded" // Made border thicker with border-2
-              required
+              {...defaults("phone", "", {
+                type: "tel",
+                placeholder: "",
+                className: "p-2 border border-gray-300 rounded",
+              })}
             />
           </div>
           <div className="flex flex-col mb-5">
@@ -199,13 +183,12 @@ const Contact = () => {
               Meddelande
             </label>
             <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="p-2 border-2 rounded" // Made border thicker with border-2
-              required
-            />
+              {...defaults("message", "", {
+                rows: 4,
+                placeholder: "",
+                className: "p-2 border border-gray-300 rounded",
+              })}
+            ></textarea>
           </div>
           <button type="submit" className="p-2 bg-blue-500 text-white rounded">
             Skicka

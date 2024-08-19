@@ -15,13 +15,8 @@ import GeneralRunningForm from "../components/forms/GeneralRunningForm";
 const Coach = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  function openForm() {
-    setIsFormOpen(true);
-  }
-
-  function closeForm() {
-    setIsFormOpen(false);
-  }
+  const openForm = () => setIsFormOpen(true);
+  const closeForm = () => setIsFormOpen(false);
 
   return (
     <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto mb-5">
@@ -30,13 +25,12 @@ const Coach = () => {
         style={{
           backgroundImage: `url(${backgroundImg})`,
           backgroundSize: "700%",
-          backgroundPosition: "",
-          backgroundRepeat: "no-repeat",
           opacity: 0.08,
           zIndex: -1,
           transform: "translateX(-30%)",
         }}
       ></div>
+
       <header className="text-center mb-5">
         <h1 className="font-bold">
           Löpcoach
@@ -44,14 +38,16 @@ const Coach = () => {
           <span className="hidden sm:inline"> – Martin Gillgren</span>
         </h1>
       </header>
+
       <div className="text-center flex justify-center mb-10 p-2">
         <button
           onClick={openForm}
-          className="custom-button bg-amber-600 text-white "
+          className="custom-button bg-amber-600 text-white"
         >
           <span className="relative z-10">Kontakta löpcoach</span>
         </button>
       </div>
+
       <AnimatePresence>
         {isFormOpen && (
           <motion.div
@@ -65,6 +61,7 @@ const Coach = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
       <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
         <article className="p-5 xl:w-1/2">
           <p className="mb-5">
@@ -110,6 +107,7 @@ const Coach = () => {
       <header className="text-center my-10">
         <h2 className="text-xl font-semibold">Vad jag erbjuder :</h2>
       </header>
+
       <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-5 mb-10">
         <Card
           image={mondayRun}
@@ -130,7 +128,8 @@ const Coach = () => {
           description="Privat löpcoachning från Tak Mat o Tur erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken"
         />
       </div>
-      <footer className="text-center  p-5 md:w-[80%]">
+
+      <footer className="text-center p-5 md:w-[80%]">
         <p>
           Kom igång att springa redan idag{" "}
           <span className="font-extrabold"></span>
@@ -140,14 +139,15 @@ const Coach = () => {
         </p>
       </footer>
 
-      <div className="text-center flex justify-center mb-10 p-2 mb">
+      <div className="text-center flex justify-center mb-10 p-2">
         <button
           onClick={openForm}
-          className="custom-button bg-amber-600 text-white "
+          className="custom-button bg-amber-600 text-white"
         >
           <span className="relative z-10">Kontakta löpcoach</span>
         </button>
       </div>
+
       <AnimatePresence>
         {isFormOpen && (
           <motion.div

@@ -1,13 +1,63 @@
-// Form that suits all three categories of Företagscoachning, Måndagslöpning and Personlig coachning
-
-//Import icons
+import { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import { MdOutlineDisabledByDefault } from "react-icons/md";
+import { GiConfirmed } from "react-icons/gi";
 
 // eslint-disable-next-line react/prop-types
 const GeneralRunningForm = ({ closeForm }) => {
+  const [formData, setFormData] = useState({
+    company: "",
+    name: "",
+    phone: "",
+    email: "",
+    subject: "Måndagslöpning",
+    peopleCount: "",
+    message: "",
+  });
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:5000/coach", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.text();
+
+      if (response.ok) {
+        console.log("Server response:", data);
+        setEmailSent(true);
+        setEmailError(false);
+      } else {
+        console.log("Error response from server:", data);
+        setEmailSent(false);
+        setEmailError(true);
+      }
+    } catch (error) {
+      console.error("There was an error submitting the form!", error);
+      setEmailSent(false);
+      setEmailError(true);
+    }
+  };
+
   return (
-    <form className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[450px] md:h-[550px] lg:h-[600px] relative overflow-y-auto">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[450px] md:h-[550px] lg:h-[600px] relative overflow-y-auto"
+    >
       <button
+        type="button"
         className="absolute top-2 left-2 p-2 text-3xl text-gray-700"
         onClick={closeForm}
       >
@@ -16,77 +66,108 @@ const GeneralRunningForm = ({ closeForm }) => {
       <h2 className="text-3xl font-bold text-center mt-8 p-4 mb-4">
         Dags att springa
       </h2>
-      <form>
-        <div className="mb-4">
-          <label className="block mb-2 font-bold">
-            Företag <span className="text-sm text-gray-500">(frivilligt)</span>
-          </label>
-          <input
-            type="text"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
-        </div>
+      <div className="mb-4">
+        <label className="block mb-2 font-bold">
+          Företag <span className="text-sm text-gray-500">(frivilligt)</span>
+        </label>
+        <input
+          type="text"
+          name="company"
+          className="w-full p-2 border border-gray-300 rounded"
+          value={formData.company}
+          onChange={handleChange}
+        />
+      </div>
 
-        <div className="mb-4">
-          <label className="block mb-2 font-bold">Namn</label>
-          <input
-            type="text"
-            className="w-full p-2 border border-gray-300 rounded"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block mb-2 font-bold">Telefon</label>
-          <input
-            type="tel"
-            className="w-full p-2 border border-gray-300 rounded"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block mb-2 font-bold">Email</label>
-          <input
-            type="email"
-            className="w-full p-2 border border-gray-300 rounded"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block mb-2 font-bold">Ämne</label>
-          <select
-            className="w-full p-2 border border-gray-300 rounded"
-            required
-          >
-            <option value="Måndagslöpning">Måndagslöpning</option>
-            <option value="Företagscoachning">Företagscoachning</option>
-            <option value="Personlig coachning">Personlig coachning</option>
-          </select>
-        </div>
-        <div className="mb-4">
-          <label className="block mb-2 font-bold">Antal personer</label>
-          <input
-            type="number"
-            className="w-full p-2 border border-gray-300 rounded"
-            required
-          />
-        </div>
-
-        <div className="mb-4">
-          <label className="block mb-2 font-bold">
-            Övriga information/önskemål/fokus/mål
-          </label>
-          <textarea
-            className="w-full p-2 border border-gray-300 rounded"
-            rows="4"
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+      <div className="mb-4">
+        <label className="block mb-2 font-bold">Namn</label>
+        <input
+          type="text"
+          name="name"
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+          value={formData.name}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block mb-2 font-bold">Telefon</label>
+        <input
+          type="tel"
+          name="phone"
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+          value={formData.phone}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block mb-2 font-bold">Email</label>
+        <input
+          type="email"
+          name="email"
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+          value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block mb-2 font-bold">Ämne</label>
+        <select
+          name="subject"
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+          value={formData.subject}
+          onChange={handleChange}
         >
-          Skicka
-        </button>
-      </form>
+          <option value="Måndagslöpning">Måndagslöpning</option>
+          <option value="Företagscoachning">Företagscoachning</option>
+          <option value="Personlig coachning">Personlig coachning</option>
+        </select>
+      </div>
+      <div className="mb-4">
+        <label className="block mb-2 font-bold">Antal personer</label>
+        <input
+          type="number"
+          name="peopleCount"
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+          value={formData.peopleCount}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="mb-4">
+        <label className="block mb-2 font-bold">
+          Övriga information/önskemål/fokus/mål
+        </label>
+        <textarea
+          name="message"
+          className="w-full p-2 border border-gray-300 rounded"
+          rows="4"
+          value={formData.message}
+          onChange={handleChange}
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+      >
+        Skicka
+      </button>
+      {emailSent && (
+        <p className="text-green-500 text-sm mt-2 flex items-center">
+          <GiConfirmed className="mr-2" /> Skickat
+        </p>
+      )}
+      {emailError && (
+        <p className="text-red-500 text-sm mt-2 flex items-center">
+          <MdOutlineDisabledByDefault className="mr-2" /> Inte skickat - något
+          gick fel. Vänligen skicka ett manuellt mail till takmatotur@gmail.com.
+          Tack för er förståelse.
+        </p>
+      )}
     </form>
   );
 };
