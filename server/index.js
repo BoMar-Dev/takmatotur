@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
-import cors from "cors"; // Import the cors package
+import cors from "cors";
 import { dirname, join as pathJoin } from "path";
 import { fileURLToPath } from "url";
 
@@ -14,7 +14,11 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors()); // Enable CORS
+app.use(cors());
+
+// Serve static files from the 'client/src/img' directory
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.use("/img", express.static(pathJoin(__dirname, "../client/src/img")));
 
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
@@ -29,9 +33,10 @@ const transporter = nodemailer.createTransport({
 app.post("/kontakt", (req, res) => {
   const { name, email, message, phone } = req.body;
 
+  // The message sent to Tak Mat O Tur from the user who wrote in the form
   const mailOptionsToOwner = {
     from: email,
-    to: process.env.EMAIL_USER, // Your email where you want to receive the messages
+    to: process.env.EMAIL_USER,
     subject: `Nytt e-postmeddelande från: ${name}`,
     text: `
     Nytt meddelande från: ${name}
@@ -46,9 +51,15 @@ app.post("/kontakt", (req, res) => {
     `,
   };
 
-  // Get the directory name
-  const __dirname = dirname(fileURLToPath(import.meta.url));
+  // Inline SVG example (simplified)
+  const svgLogo = `
+    <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="20" fill="black" />
+      <text x="10" y="25" font-size="20" fill="white">Logo</text>
+    </svg>
+  `;
 
+  // Information message that goes out to the person who filled in the form
   const mailOptionsToUser = {
     from: `"Tak Mat O Tur" <${process.env.EMAIL_USER}>`,
     to: email,
@@ -58,17 +69,12 @@ app.post("/kontakt", (req, res) => {
       <div style="border:#DACA88; border-width:2px; border-style:solid; padding:10px; text-align:center; width:400px; border-radius:8px; font-size:16px;">
         <h2 style="color:black;">Vad roligt att du kontaktat oss på Tak Mat O Tur.</h2> 
         <p>Vi svarar på ert önskemål så fort vi bara kan.</p>
-        <br><img width="40px" src="cid:takmatturlogo">
+        <br><img width="40px" src="data:image/svg+xml;base64,${Buffer.from(
+          svgLogo
+        ).toString("base64")}" alt="Tak Mat O Tur Logo">
         <br>
         <p>Med vänliga hälsningar,<br>Tak Mat O Tur</p> 
       </div>`,
-    attachments: [
-      {
-        filename: "logoo.svg",
-        path: pathJoin(__dirname, "../img/header/logoo.svg"),
-        cid: "takmatturlogo",
-      },
-    ],
   };
 
   // Send the email to the owner first

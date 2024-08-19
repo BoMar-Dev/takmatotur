@@ -44,10 +44,13 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
       const data = await response.text();
+
       if (response.ok) {
+        console.log("Server response:", data); // Using 'data' to log the response
         setEmailSent(true);
         setEmailError(false);
       } else {
+        console.log("Error response from server:", data); // Logging the error response
         setEmailSent(false);
         setEmailError(true);
       }
