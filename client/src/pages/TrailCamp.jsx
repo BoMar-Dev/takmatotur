@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 //import img
 import backgroundImg from "../img/about/background.svg";
 import torgeby from "../img/trailcamp/marcustorgeby.jpg";
@@ -24,6 +25,21 @@ const TrailCamp = () => {
           30/8 - 1/9
         </h2>
       </header>
+
+      <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 p-4 rounded-lg mb-6 text-center w-full max-w-xl mx-auto">
+        <p className="font-semibold">
+          Trail camp har fått en uppdatering. Gå in på våran
+          <a
+            href="https://www.facebook.com/profile.php?id=61558195943539"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline ml-1 mr-2"
+          >
+            Facebook,
+          </a>
+          klicka vidare till "kommande event" för senaste uppdateringen.
+        </p>
+      </div>
 
       <div className="mb-6 p-3 font-semibold md:w-[80%] xl:w-[70%] m-auto text-lg">
         <p className="">

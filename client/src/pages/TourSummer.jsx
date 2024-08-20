@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 // Import the background image
-import backgroundImg from "../img/about/background.svg"; 
+import backgroundImg from "../img/about/background.svg";
 
 const TourSummer = () => {
   return (
@@ -10,26 +10,39 @@ const TourSummer = () => {
         className="absolute top-[-150px] left-[-150px] w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "300%", 
+          backgroundSize: "300%",
           backgroundRepeat: "no-repeat",
-          opacity: 0.08, 
+          opacity: 0.08,
           zIndex: -1,
-          transform: "translateX(10%) translateY(10%)", 
+          transform: "translateX(10%) translateY(10%)",
         }}
       ></div>
 
       <header className="flex justify-center mb-6">
-        <h1 className="mb-2 font-bold">Topptur sommar</h1>
+        <h1 className="mb-2 font-bold">Vandra</h1>
       </header>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
-        <section className="mb-10">
+        <section className="mb-5">
           <div className="text-left">
             <p className="mb-5 text-lg font-semibold">
-              Upptäck magin med Jämtlands härligaste sommarvandring. Kom upp på
-              höjd och skåda utsikter som häpnar. Bada i en fjällsjö eller
-              vandra ner för Åreskutan, kanske till mer tystare platser där
-              lugnet står i fokus?
+              Upptäck magin i Jämtlands sommarvandringar där naturens skönhet
+              tar andan ur dig. Följ med oss upp på höjder som erbjuder hisnande
+              utsikter, svalka dig i en fjällsjö eller vandra ner för Åreskutan
+              till tystare platser där lugnet råder.
+            </p>
+            <p className="mb-5 text-lg font-semibold">
+              Med vår djupa lokalkännedom och känsla för det unika, leder vi dig
+              genom Åres sagolika natur och visar dig dolda pärlor som få har
+              sett. Varje steg blir en upplevelse utöver det vanliga, oavsett om
+              du söker äventyr eller stillhet. Låt oss skapa en skräddarsydd
+              vandring för dig, där din upplevelse står i fokus, oavsett din
+              erfarenhetsnivå.
+            </p>
+            <p className="mb-5 text-lg font-semibold">
+              Välj mellan en halvdagstur, heldagsvandring, tur med övernattning
+              eller om ni har helt andra idéer? Vi ser till att ert önskemål
+              blir till verklighet!
             </p>
           </div>
         </section>
@@ -43,8 +56,6 @@ const TourSummer = () => {
               <li className="mb-1">
                 En guide som guidar dig till unika miljöer
               </li>
-              <li className="mb-1">Ryggsäck som passar dagens aktivitet</li>
-              <li className="mb-1">Enkare lunch</li>
             </ul>
           </div>
         </section>
@@ -56,7 +67,7 @@ const TourSummer = () => {
               <li className="mb-1">
                 Eventuella liftkort för att komma upp på höjd
               </li>
-              <li className="mb-1">Middag</li>
+              <li className="mb-1">måltider</li>
             </ul>
           </div>
         </section>
@@ -64,10 +75,7 @@ const TourSummer = () => {
         <section>
           <div className="p-4">
             <h2 className="mb-2 font-semibold text-xl">Priser</h2>
-            <p>
-              Halvdag 750:- / person <br />
-              Heldag 1800:- / person
-            </p>
+            <p>Priser från 495 kr</p>
           </div>
         </section>
       </article>

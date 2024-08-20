@@ -23,12 +23,28 @@ const TourWinter = () => {
       </header>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
-        <section className="mb-10">
+        <section className="mb-5">
           <div className="text-left">
             <p className="mb-5 text-lg font-semibold">
-              Upptäck magin med Jämtlands härligaste topptur! En tur som passar
-              alla, med inspirerande gemenskap, vacker natur och skidåkning som
-              är väldigt fritt.
+              Upplev ett oförglömligt topptursäventyr i Årefjällen! Med vår
+              gedigna erfarenhet kan vi erbjuda dig en upplevelse utöver det
+              vanliga. Vi skräddarsyr ert äventyr anpassat efter era önskemål.
+            </p>
+          </div>
+          <div className="text-left">
+            <p className="mb-5 text-lg font-semibold">
+              Topptur är det perfekta valet för dig som vill ta din skidåkning
+              till nästa nivå och prova något nytt och spännande. Skitouring är
+              en snabbt växande trend inom skidvärlden vilket från första turen
+              är lätt att förstå. Följ med oss upp på fjället och upptäck
+              spektakulära vyer och fantastisk skidåkning! Missa inte chansen
+              att uppleva fjällen på riktigt!
+            </p>
+          </div>
+          <div className="text-left">
+            <p className="mb-1 text-lg font-semibold">
+              Kontakta oss med era önskemål så återkommer vi snabbt med ett
+              prisförslag.
             </p>
           </div>
         </section>
@@ -46,7 +62,6 @@ const TourWinter = () => {
               <li className="mb-1">
                 Hjälp att hyra bra och korrekt utrustning för det vi ska göra
               </li>
-              <li className="mb-1">Enkare lunch</li>
             </ul>
           </div>
         </section>
@@ -68,11 +83,8 @@ const TourWinter = () => {
 
         <section>
           <div className="p-4">
-            <h2 className="mb-2 font-semibold">Priser</h2>
-            <p>
-              Halvdag 1000:- / person <br />
-              Heldag 2000:- / person
-            </p>
+            <h2 className="mb-2 font-semibold">Pris</h2>
+            <p>Pris från: 900 kr / person</p>
           </div>
         </section>
       </article>

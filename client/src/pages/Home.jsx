@@ -66,7 +66,7 @@ const Home = () => {
       </section>
 
       {/* Cards section */}
-      <section className="card-container grid grid-cols-1 lg:grid-cols-2 xl:w-[80%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">
+      <section className="card-container grid grid-cols-1 lg:grid-cols-2 xl:w-[70%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">
         <Card
           image={mondayRun}
           title="Måndagslöpning"

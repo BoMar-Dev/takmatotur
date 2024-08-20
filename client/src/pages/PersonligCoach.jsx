@@ -32,17 +32,18 @@ const PersonligCoach = () => {
       ></div>
 
       <header className="flex justify-center mb-6">
-        <h1 className="mb-2 font-bold">Personlig coachning</h1>
+        <h1 className="mb-2 font-bold">Personlig Löpcoachning</h1>
       </header>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
         <section className="mb-10">
           <div className="text-left">
             <p className="font-semibold mb-2 text-lg">
-              Vill du komma igång, slå personliga rekord eller bara få ett
-              bättre löpsteg - Då har du kommit helt rätt! Jag erbjuder
-              personlig coachning oavsett önskemål anpassat efter just dina
-              förutsättningar.
+              Att löpträna på egen hand kan vara både utmanande och ibland
+              ensamt. Oavsett om du är en nybörjare som vill komma igång eller
+              en erfaren löpare som siktar på nya personliga rekord, kan privat
+              löpcoachning från oss vara nyckeln till att ta ditt löpande till
+              nästa nivå. Inspiration, stöd och motivation varje steg på vägen.
             </p>
           </div>
         </section>
@@ -51,92 +52,55 @@ const PersonligCoach = () => {
       <article className="flex flex-col p-5 w-full max-w-4xl">
         <section className="mb-6">
           <div className="p-4">
+            <h2 className="mb-2 font-semibold text-xl">Personlig Anpassning</h2>
+            <p className="mb-5">
+              En av de största fördelarna med privat löpcoachning från Tak Mat o
+              Tur är den individuella anpassningen. Vi skapar träningsprogram
+              som är exakt anpassade efter dina mål, din nuvarande form och dina
+              personliga förutsättningar. Har du en dröm om att springa ditt
+              första maraton? Eller kanske vill du bara förbättra din kondition
+              och springa för nöjes skull? Vi hjälper dig att sätta realistiska
+              och uppnåeliga mål och ger dig verktygen för att nå dem.
+            </p>
+
+            <h2 className="mb-2 font-semibold text-xl">Teknisk Expertis</h2>
+            <p className="mb-5">
+              Att ha någon som kan analysera din löpteknik och ge dig konkreta
+              råd är ovärderligt. Som en del av individuellt program ingår
+              filmning och analys av din löpteknik. Genom att arbeta med din
+              hållning, steglängd och fotisättning optimeras varje löpsteg.
+            </p>
+
+            <h2 className="mb-2 font-semibold text-xl">Motivation och Stöd</h2>
+            <p className="mb-5">
+              Löpning kan vara en mental utmaning lika mycket som en fysisk. Jag
+              fungerar som din personliga hejaklack och stöttepelare, särskilt
+              när motivationen sviktar. Genom regelbundna check-ins och feedback
+              kommer du att känna dig peppad och påmind om varför du startade
+              din löparresa. Den personliga relationen du bygger med din coach
+              ger dig ett tryggt och motiverande stöd som håller dig på rätt
+              spår. Inledningsvis kommer vi ha ett möte där vi pratar nuläge,
+              mål men också mycket motivation.
+            </p>
+
             <h2 className="mb-2 font-semibold text-xl">
-              Vad innebär personlig coachning?
+              Resultat och Framgångar
             </h2>
-            <ul className="list-disc list-inside">
-              <li className="mb-5">
-                <strong>
-                  Skräddarsydd träning för alla nivåer med feedback:
-                </strong>{" "}
-                Träningsprogram anpassas efter varje deltagares nivå och mål,
-                från nybörjare till erfarna löpare. Vi säkerställer att alla
-                utvecklas i sin egen takt samtidigt som ni bygger en starkare
-                teamkänsla.
-              </li>
-              <li className="mb-5">
-                <strong>Videoanalys och personlig programmering:</strong> Att
-                träna tillsammans som ett team skapar en unik dynamik. Ni kommer
-                att uppleva styrkan i att jobba mot gemensamma mål, stötta
-                varandra och fira framgångar tillsammans. Detta stärker inte
-                bara kroppen utan även banden mellan kollegorna.
-              </li>
-              <li className="mb-5">
-                <strong>Holistisk träningsfilosofi:</strong> Vi fokuserar på en
-                helhetssyn på träning som inkluderar löpteknik, styrketräning,
-                rörlighet och mental träning. Detta för att säkerställa att era
-                medarbetare inte bara blir bättre löpare utan också mår bättre i
-                sin helhet.
-              </li>
-              <li className="mb-5">
-                <strong>Personlig feedback och uppföljning:</strong> Under dessa
-                10 veckor får varje deltagare personlig feedback från våra
-                coacher, vilket hjälper dem att utvecklas optimalt. Regelbundna
-                uppföljningar ser till att alla håller sig på rätt spår och når
-                sina mål.
-              </li>
-              <li className="mb-5">
-                <strong>Inspirerande miljöer:</strong> Vi tränar i varierande
-                och inspirerande miljöer. Att springa ute i naturen ger både
-                fysisk och mental energi som kan överföras till arbetsplatsen.
-              </li>
-            </ul>
+            <p className="mb-3">
+              Ingenting är mer inspirerande än att se resultat från ditt hårda
+              arbete. Genom strukturerad träning och dedikerad coaching kommer
+              du att märka förbättringar i din uthållighet, hastighet och
+              övergripande hälsa. Vi hjälper dig att följa dina framsteg och
+              justerar programmet efter behov.
+            </p>
           </div>
         </section>
 
-        <section className="mb-6">
-          <div className="p-4">
-            <h2 className="mb-2 font-semibold text-xl">
-              Vad ni kan förvänta er:
-            </h2>
-            <ul className="list-disc list-inside">
-              <li className="mb-3">
-                <strong>Veckovisa träningspass:</strong> Inspirerande och
-                utmanande träningspass varje vecka ledda av våra erfarna
-                coacher.
-              </li>
-              <li className="mb-3">
-                <strong>Personliga träningsprogram:</strong> Anpassade program
-                som hjälper varje deltagare att nå sina personliga mål.
-              </li>
-              <li className="mb-3">
-                <strong>Stöd och gemenskap:</strong> Ett starkt team som
-                motiverar och stöttar varandra genom varje steg på vägen.
-              </li>
-              <li className="mb-3">
-                <strong>Mål och belöningar:</strong> Klara av delmål och fira
-                framgångarna tillsammans som ett team, med en avslutande
-                gemensam utmaning.
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section className="p-4 text-center">
+        <section className="p-3 text-center">
           <p className="text-center md:w-[80%] lg:w-[60%] xl:w-[70%] md:m-auto">
             Gör er redo att snöra på skorna och följ med oss på en resa mot
-            bättre hälsa, ökad arbetsglädje och starkare teamkänsla. Tillsammans
-            tar vi stegen mot framgång – både på arbetsplatsen och i
-            löparspåret!
+            bättre hälsa, ökad arbetsglädje och snabbare löpsteg! löparspåret!
           </p>
-          {/* <div className="text-center flex justify-center p-5 mt-10">
-            <button
-              onClick={openForm}
-              className="custom-button bg-amber-600 text-white "
-            >
-              <span className="relative z-10">Boka coachning</span>
-            </button>
-          </div> */}
           <AnimatePresence>
             {isFormOpen && (
               <motion.div
@@ -152,7 +116,7 @@ const PersonligCoach = () => {
           </AnimatePresence>
         </section>
 
-        <div className="button-holder flex justify-center  mb-5 mt-5">
+        <div className="button-holder flex justify-center mb-5 mt-5">
           <Link to="/coach" className="inline-flex bg-slate-800 rounded-md">
             <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
               <span className="relative z-10">Bakåt</span>

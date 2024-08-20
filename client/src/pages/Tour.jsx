@@ -63,7 +63,7 @@ const Tour = () => {
           Olika äventyr för olika årstider
         </h2>
       </header>
-      <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-5">
+      <div className="card-container md:w-[70%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-5">
         <div className="flex flex-col flex-grow">
           <Card
             image={vinter}
@@ -75,17 +75,9 @@ const Tour = () => {
         <div className="flex flex-col flex-grow">
           <Card
             image={sommar}
-            title="Sommar"
+            title="Sommar / Höst / vår"
             link="/topptur/sommar"
             description="Här finns inga gränser. Vill du bara njuta av naturen eller springa dig trött? Kanske ha en personlig kock uppe på fjället som förgyller detta unika tillfälle. Oavsett var du väljer så är möjligheterna oändliga."
-          />
-        </div>
-        <div className="flex flex-col flex-grow">
-          <Card
-            image={hostOchVar}
-            title="Höst & Vår"
-            link="/topptur/host&var"
-            description="Upptäck våren med en topptur i t-shirt och gräv er en solgrop. Kanske har ni en kock som lagar er mat? Hösten erbjuder 1000 färger och mycket i skogen går att äta vid denna tidpunkt."
           />
         </div>
       </div>
