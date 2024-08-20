@@ -152,7 +152,7 @@ const GeneralRunningForm = ({ closeForm }) => {
       </div>
       <button
         type="submit"
-        className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+        className="bg-blue-500 text-white font-bold py-2 px-4 rounded mb-10"
       >
         Skicka
       </button>

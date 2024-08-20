@@ -191,7 +191,7 @@ const Accommodation = () => {
         </section>
       </article>
 
-      <article className="p-3 xl:w-2/3 m-auto font-semibold text-lg">
+      <article className="p-3 xl:w-2/3 m-auto  text-md">
         <li className="mt-3">
           Duved Centralstation för buss / tåg : 20 min promenad eller 5 min med
           bil{" "}
