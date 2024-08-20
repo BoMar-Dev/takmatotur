@@ -199,10 +199,10 @@ const Contact = () => {
             </p>
           )}
           {emailError && (
-            <p className="text-red-500 text-sm mt-2">
-              <MdOutlineDisabledByDefault /> Inte skickat - något gick fel.
-              Vänligen skicka ett manuellt mail till takmatotur@gmail.com. Tack
-              för er förståelse.
+            <p className="text-red-500 text-[12px] mt-2 flex flex-col items-center w-[80%] m-auto">
+              <MdOutlineDisabledByDefault className="mr-2 text-xl" />
+              Inte skickat - något gick fel. Vänligen skicka ett manuellt mail
+              till takmatotur@gmail.com. Tack för er förståelse.
             </p>
           )}
         </form>

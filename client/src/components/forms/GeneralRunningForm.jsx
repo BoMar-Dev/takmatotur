@@ -152,7 +152,7 @@ const GeneralRunningForm = ({ closeForm }) => {
       </div>
       <button
         type="submit"
-        className="bg-blue-500 text-white font-bold py-2 px-4 rounded mb-10"
+        className="bg-blue-500 text-white font-bold py-2 px-4 rounded mb-"
       >
         Skicka
       </button>
@@ -162,10 +162,10 @@ const GeneralRunningForm = ({ closeForm }) => {
         </p>
       )}
       {emailError && (
-        <p className="text-red-500 text-sm mt-2 flex items-center">
-          <MdOutlineDisabledByDefault className="mr-2" /> Inte skickat - något
-          gick fel. Vänligen skicka ett manuellt mail till takmatotur@gmail.com.
-          Tack för er förståelse.
+        <p className="text-red-500 text-[12px] mt-2 flex flex-col items-center w-[80%] m-auto">
+          <MdOutlineDisabledByDefault className="mr-2 text-xl" />
+          Inte skickat - något gick fel. Vänligen skicka ett manuellt mail till
+          takmatotur@gmail.com. Tack för er förståelse.
         </p>
       )}
     </form>
