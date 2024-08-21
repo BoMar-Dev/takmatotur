@@ -129,7 +129,7 @@ const Coach = () => {
         />
       </div>
 
-      <footer className="text-center p-5 md:w-[80%]">
+      <section className="text-center p-5 md:w-[80%]">
         <p>
           Kom igång att springa redan idag{" "}
           <span className="font-extrabold"></span>
@@ -137,7 +137,7 @@ const Coach = () => {
           Kontakta mig så ser vi till att göra en rolig strukturerad plan som
           passar just dig eller er
         </p>
-      </footer>
+      </section>
 
       <div className="text-center flex justify-center mb-10 p-2">
         <button

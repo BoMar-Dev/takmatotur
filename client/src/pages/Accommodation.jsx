@@ -211,6 +211,18 @@ const Accommodation = () => {
 
         <br />
       </article>
+
+      {/* New Encouragement Section */}
+      <div className="text-center p-5 md:w-[80%] mb-10">
+        <p>
+          Planera din vistelse hos oss redan idag!{" "}
+          <span className="font-extrabold"></span>
+          <br />
+          Kontakta oss så ser vi till att skapa en minnesvärd upplevelse för dig
+          eller er, med allt från fjällaktiviteter till matupplevelser.
+        </p>
+      </div>
+
       <div className="text-center flex justify-center xl:mt-10  mb-10">
         <button
           onClick={openForm}

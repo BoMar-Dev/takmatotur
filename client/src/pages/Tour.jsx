@@ -6,7 +6,7 @@ import BookingForm from "../components/forms/BookingForm.jsx";
 // import images
 import vinter from "../img/tour/vinter.jpg";
 import sommar from "../img/tour/sommar.jpg";
-import hostOchVar from "../img/tour/ovriga.jpg";
+// import hostOchVar from "../img/tour/ovriga.jpg";
 
 import backgroundImg from "../img/about/background.svg";
 
@@ -75,11 +75,30 @@ const Tour = () => {
         <div className="flex flex-col flex-grow">
           <Card
             image={sommar}
-            title="Sommar / Höst / vår"
+            title="Sommar / Höst / Vår"
             link="/topptur/sommar"
             description="Här finns inga gränser. Vill du bara njuta av naturen eller springa dig trött? Kanske ha en personlig kock uppe på fjället som förgyller detta unika tillfälle. Oavsett var du väljer så är möjligheterna oändliga."
           />
         </div>
+        {/* <div className="flex flex-col flex-grow">
+          <Card
+            image={hostOchVar}
+            title="Höst & Vår"
+            link="/topptur/host&var"
+            description="Upptäck våren med en topptur i t-shirt och gräv er en solgrop. Kanske har ni en kock som lagar er mat? Hösten erbjuder 1000 färger och mycket i skogen går att äta vid denna tidpunkt."
+          />
+        </div> */}
+      </div>
+
+      {/* New Section for Touring Encouragement */}
+      <div className="text-center p-5 md:w-[80%] my-10">
+        <p>
+          Börja ditt äventyr redan idag!{" "}
+          <span className="font-extrabold"></span>
+          <br />
+          Kontakta oss så hjälper vi dig att planera en oförglömlig topptur som
+          passar just dina eller era önskemål.
+        </p>
       </div>
 
       <div className="text-center flex justify-center mb-12 p-5 mt-10 md:w-[80%]">

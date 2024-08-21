@@ -6,41 +6,39 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const router = express.Router();
 
-router.post("/boende", (req, res) => {
-  const { name, email, message, phone, peopleCount, dateFrom, dateTo } =
-    req.body;
+router.post("/topptur", (req, res) => {
+  const { name, email, message, phone, subject, peopleCount, date } = req.body;
 
   const mailOptionsToOwner = {
     from: email,
-    to: process.env.EMAIL_USER,
-    subject: `Nytt e-postmeddelande från: ${name}`,
+    to: process.env.EMAIL_USER, // Owner's email address
+    subject: `Ny bokningsförfrågan från: ${name}`,
     text: `
-    Nytt meddelande från: ${name}
+    Ny bokningsförfrågan från: ${name}
   
     Kontaktuppgifter:
     Namn: ${name}
     Telefon: ${phone}
     E-post: ${email}
+    Ämne: ${subject}
     Antal personer: ${peopleCount}
-    Datum FRÅN: ${dateFrom}
-    Datum TILL: ${dateTo}
+    Önskat datum: ${date}
 
-     Meddelandet/övrig info :
+    Meddelande/övrig information:
     "${message}"
-
     `,
   };
 
   const mailOptionsToUser = {
     from: `"Tak Mat O Tur" <${process.env.EMAIL_USER}>`,
     to: email,
-    subject: "Tack för att du kontaktade oss!",
-    text: `Vad roligt att du kontaktat oss på Tak Mat O Tur.\n\nVi svarar på ert önskemål så fort vi bara kan.\n\nMed vänliga hälsningar,\nTak Mat O Tur`,
+    subject: "Tack för din bokningsförfrågan!",
+    text: `Tack för din bokningsförfrågan hos Tak Mat O Tur.\n\nVi kommer att återkomma med mer information så snart som möjligt.\n\nMed vänliga hälsningar,\nTak Mat O Tur`,
     html: `
       <div style="background-color:#ffffff; color:#000000; padding:10px; text-align:center; width:400px; border-radius:8px; font-size:16px; font-family: 'Montserrat', sans-serif;">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
-        <h2 style="color:black;">Vad roligt att du kontaktat oss på Tak Mat O Tur.</h2> 
-        <p style="color:black;">Vi svarar på ert önskemål så fort vi bara kan.</p>
+        <h2 style="color:black;">Tack för din bokningsförfrågan hos Tak Mat O Tur.</h2> 
+        <p style="color:black;">Vi kommer att återkomma med mer information så snart som möjligt.</p>
         <br><img width="100px" src="cid:takmatturlogo" alt="Tak Mat O Tur Logo">
         <br>
         <p style="color:black;">Med vänliga hälsningar,<br>Tak Mat O Tur</p> 

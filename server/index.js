@@ -5,6 +5,7 @@ import cors from "cors";
 import contactRoute from "./routes/contactRoute.js";
 import coachRoute from "./routes/coachRoute.js";
 import accomodationRoute from "./routes/accomodationRoute.js";
+import tourRoute from "./routes/tourRoute.js";
 
 // Load environment variables
 dotenv.config();
@@ -23,8 +24,9 @@ app.use("/img", express.static("client/src/img"));
 app.use(contactRoute);
 app.use(coachRoute);
 app.use(accomodationRoute);
+app.use(tourRoute);
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Well hello there server. You are running on port ${PORT}`);
 });
