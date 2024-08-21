@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 // import images
-import portraitImg from "../img/about/portrait.jpg";
+import portraitImg from "../img/about/portrait.webp";
 import backgroundImg from "../img/about/background.svg";
 
 const About = () => {

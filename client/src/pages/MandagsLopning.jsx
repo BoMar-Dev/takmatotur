@@ -1,23 +1,8 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-
-// import component
-import JoinMondayRunningForm from "../components/forms/MondayForm";
 // Import the background image
 import backgroundImg from "../img/about/background.svg";
 
 const MandagsLopning = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
-  function openForm() {
-    setIsFormOpen(true);
-  }
-
-  function closeForm() {
-    setIsFormOpen(false);
-  }
-
   return (
     <section className="relative flex flex-col items-center p-5 mb-10 overflow-hidden">
       <div
@@ -83,29 +68,6 @@ const MandagsLopning = () => {
             </p>
           </div>
         </section>
-
-        {/* <div className="text-center flex justify-center p-5">
-          <button
-            onClick={openForm}
-            className="custom-button bg-amber-600 text-white "
-          >
-            <span className="relative z-10">Gå med</span>
-          </button>
-        </div> */}
-
-        <AnimatePresence>
-          {isFormOpen && (
-            <motion.div
-              className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.3 }}
-            >
-              <JoinMondayRunningForm closeForm={closeForm} />
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         <div className="button-holder flex justify-center mb-5 mt-5">
           <Link to="/coach" className="inline-flex bg-slate-800 rounded-md">

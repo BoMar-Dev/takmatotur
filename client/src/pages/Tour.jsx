@@ -4,8 +4,8 @@ import Card from "../components/Card";
 import BookingForm from "../components/forms/BookingForm.jsx";
 
 // import images
-import vinter from "../img/tour/vinter.jpg";
-import sommar from "../img/tour/sommar.jpg";
+import vinter from "../img/tour/vinter.webp";
+import sommar from "../img/tour/sommar.webp";
 // import hostOchVar from "../img/tour/ovriga.jpg";
 
 import backgroundImg from "../img/about/background.svg";

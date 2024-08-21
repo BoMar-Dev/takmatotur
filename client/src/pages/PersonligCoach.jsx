@@ -1,22 +1,10 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
 
 // import components
-import PtForm from "../components/forms/PtForm";
+
 import backgroundImg from "../img/about/background.svg"; // Import the background image
 
 const PersonligCoach = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
-  function openForm() {
-    setIsFormOpen(true);
-  }
-
-  function closeForm() {
-    setIsFormOpen(false);
-  }
-
   return (
     <section className="relative flex flex-col items-center p-5 mb-10 overflow-hidden">
       <div
@@ -101,19 +89,6 @@ const PersonligCoach = () => {
             Gör er redo att snöra på skorna och följ med oss på en resa mot
             bättre hälsa, ökad arbetsglädje och snabbare löpsteg! löparspåret!
           </p>
-          <AnimatePresence>
-            {isFormOpen && (
-              <motion.div
-                className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
-              >
-                <PtForm closeForm={closeForm} />
-              </motion.div>
-            )}
-          </AnimatePresence>
         </section>
 
         <div className="button-holder flex justify-center mb-5 mt-5">

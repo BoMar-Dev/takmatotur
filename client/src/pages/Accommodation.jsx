@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Import images
 import backgroundImg from "../img/about/background.svg";
-import boende1 from "../img/accommodation/boende1.jpg";
-import boende2 from "../img/accommodation/boende2.jpg";
-import boende3 from "../img/accommodation/boende3.jpg";
-import boende4 from "../img/accommodation/boende4.jpg";
-import boende5 from "../img/accommodation/boende5.jpg";
-import boende6 from "../img/accommodation/boende6.jpg";
+import boende1 from "../img/accommodation/boende1.webp";
+import boende2 from "../img/accommodation/boende2.webp";
+import boende3 from "../img/accommodation/boende3.webp";
+import boende4 from "../img/accommodation/boende4.webp";
+import boende5 from "../img/accommodation/boende5.webp";
+import boende6 from "../img/accommodation/boende6.webp";
 
 // Import component
 import AccomodationForm from "../components/forms/AccomodationForm";

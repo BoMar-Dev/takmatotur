@@ -96,9 +96,9 @@ const Contact = () => {
           </div>
           <div className="flex-1 xl:order-2">
             <a
-              href="https://maps.app.goo.gl/1q72xMDJvq3WwuQu8"
+              href="https://www.google.com/maps/place/Tegebacken+5,+837+71+Duved,+Sweden"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="_blank"
             >
               <img
                 className="rounded-lg shadow-xl w-full cursor-pointer"

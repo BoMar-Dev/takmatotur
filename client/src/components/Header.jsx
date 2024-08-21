@@ -1,21 +1,20 @@
 import { useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
-// ALL HEADER IMG FOR EACH PAGE
 // Import images
-import headerLandingPage from "../img/header/landing.jpg"; // Example image for the home page
-import headerAbout from "../img/header/about.jpg"; // Example image for the about page
-import headerContact from "../img/contact/contactHeader.jpg"; // Example image for the contact page
-import headerCoach from "../img/coach/coachHeader.jpg"; // Example image for the coach page
-import headerCamp from "../img/trailcamp/campHeader.jpg"; // Example image for the trail camp page
-import headerTour from "../img/tour/tourHeader.jpg"; // Example image for the topptur page
-import headerAcco from "../img/accommodation/accoHeader.jpg"; // Example image for the accommodation page
+import headerLandingPage from "../img/header/landing.webp";
+import headerAbout from "../img/header/about.webp";
+import headerContact from "../img/contact/contactHeader.webp";
+import headerCoach from "../img/coach/coachHeader.webp";
+import headerCamp from "../img/trailcamp/campHeader.webp";
+import headerTour from "../img/tour/tourHeader.webp";
+import headerAcco from "../img/accommodation/accoHeader.webp";
 
 // Import components
-import MobileNav from "./MobileNav"; // Your mobile navigation component
+import MobileNav from "./MobileNav";
 
 // Import Tak Mat O Tur logotype
-import Logo from "../img/header/logoo.svg"; // The logo
+import Logo from "../img/header/logoo.svg";
 
 import { Link } from "react-router-dom";
 
@@ -26,33 +25,32 @@ const Header = () => {
   const getImageForPath = (pathname) => {
     switch (pathname) {
       case "/":
-        return `url(${headerLandingPage})`; // Landing page image
+        return `url(${headerLandingPage})`;
       case "/om":
-        return `url(${headerAbout})`; // About page image
+        return `url(${headerAbout})`;
       case "/kontakt":
-        return `url(${headerContact})`; // Contact page image
+        return `url(${headerContact})`;
       case "/coach":
       case "/coach/foretag":
       case "/coach/mandagslopning":
       case "/coach/personlig":
-        return `url(${headerCoach})`; // Coach pages image
+        return `url(${headerCoach})`;
       case "/trailcamp":
-        return `url(${headerCamp})`; // Trail camp page image
+        return `url(${headerCamp})`;
       case "/topptur":
       case "/topptur/vinter":
       case "/topptur/sommar":
       case "/topptur/host&var":
-        return `url(${headerTour})`; // Topptur pages image
+        return `url(${headerTour})`;
       case "/boende":
-        return `url(${headerAcco})`; // Accommodation page image
+        return `url(${headerAcco})`;
       default:
-        return `url(${headerLandingPage})`; // Default image
+        return `url(${headerLandingPage})`;
     }
   };
 
   const currentImage = getImageForPath(location.pathname);
 
-  // Function to determine if a link is active
   const isActiveLink = (path) => {
     // For "Löpcoach", check if the path starts with "/coach"
     if (path === "/coach" && location.pathname.startsWith("/coach")) {
@@ -70,8 +68,8 @@ const Header = () => {
     <header
       style={{
         backgroundImage: currentImage,
-        backgroundSize: "cover", // Ensure the image covers the header
-        backgroundPosition: "center 70%", // Shifts the image slightly upwards
+        backgroundSize: "cover",
+        backgroundPosition: "center 70%",
       }}
       className="px-8 3xl:px-[850px] lg:px-[100px] z-30 flex w-full h-[400px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[550px] 3xl:h-[1000px]"
     >
@@ -81,7 +79,7 @@ const Header = () => {
           <img
             src={Logo}
             alt="logotype"
-            className="cursor-pointer max-w-[90px] mt-2 lg:mt-0 lg:max-w-[100px]" // 90px on sm and md, 100px on lg and above
+            className="cursor-pointer max-w-[90px] mt-2 lg:mt-0 lg:max-w-[100px]"
             style={{ height: "auto" }}
           />
         </Link>
@@ -110,19 +108,18 @@ const Header = () => {
               >
                 {link.label}
               </Link>
-              <AnimatePresence>
-                {isActiveLink(link.path) && (
-                  <motion.div
-                    className="w-full bg-PrimaryColor mt-1"
-                    style={{ height: "2px" }} // Adjust this value to make the line thinner
-                    layoutId="underline"
-                    initial={{ opacity: 0, width: 0 }}
-                    animate={{ opacity: 1, width: "100%" }}
-                    exit={{ opacity: 0, width: 0 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-              </AnimatePresence>
+
+              {isActiveLink(link.path) && (
+                <motion.div
+                  className="w-full bg-PrimaryColor mt-1"
+                  style={{ height: "2px" }}
+                  layoutId="underline"
+                  initial={{ opacity: 0, width: 0 }}
+                  animate={{ opacity: 1, width: "100%" }}
+                  exit={{ opacity: 0, width: 0 }}
+                  transition={{ duration: 0.3 }}
+                />
+              )}
             </div>
           ))}
         </nav>

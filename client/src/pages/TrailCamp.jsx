@@ -1,13 +1,40 @@
-/* eslint-disable react/no-unescaped-entities */
-//import img
+import { Helmet } from "react-helmet";
+// Import images
 import backgroundImg from "../img/about/background.svg";
-import torgeby from "../img/trailcamp/marcustorgeby.jpg";
-import group from "../img/trailcamp/group.jpg";
-import welcome from "../img/trailcamp/welcome.jpg";
+import torgeby from "../img/trailcamp/marcustorgeby.webp";
+import group from "../img/trailcamp/group.webp";
+import welcome from "../img/trailcamp/welcome.webp";
 
 const TrailCamp = () => {
   return (
     <section className="relative flex flex-col items-center p-5 mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
+      {/* Helmet for SEO */}
+      <Helmet>
+        <title>Trail Camp Åre 2024 | Tak Mat O Tur</title>
+        <meta
+          name="description"
+          content="Join us for Trail Camp Åre 2024, a three-day running experience in the heart of Åre's magnificent mountains. From August 30th to September 1st, immerse yourself in nature, challenge yourself, and connect with like-minded runners."
+        />
+        <meta
+          name="keywords"
+          content="Trail Camp, Åre 2024, running camp, trail running, Markus Torgeby, Mullfjället, running experience, Tak Mat O Tur"
+        />
+        <meta
+          property="og:title"
+          content="Trail Camp Åre 2024 | Tak Mat O Tur"
+        />
+        <meta
+          property="og:description"
+          content="Join us for Trail Camp Åre 2024, a three-day running experience in the heart of Åre's magnificent mountains. Connect with nature and fellow runners."
+        />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/path-to-image.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourwebsite.com/trailcamp" />
+      </Helmet>
+
       <div
         className="absolute top-[-700px] left-0 w-full h-full bg-cover bg-center"
         style={{
@@ -19,6 +46,7 @@ const TrailCamp = () => {
           transform: "translateX(-30%)",
         }}
       ></div>
+
       <header className="flex flex-col items-center justify-center mb-6 text-center">
         <h1 className="mb-2 font-bold">Trail Camp 2024</h1>
         <h2 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] text-lg font-bold mb-5">
@@ -42,7 +70,7 @@ const TrailCamp = () => {
       </div>
 
       <div className="mb-6 p-3 font-semibold md:w-[80%] xl:w-[70%] m-auto text-lg">
-        <p className="">
+        <p>
           Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse i
           hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
           september bjuder vi in dig till tre dagar fyllda med inspiration,
@@ -51,18 +79,21 @@ const TrailCamp = () => {
       </div>
 
       <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-betweenmb-5 md:mb-5 lg:mb-5 xl:mb-0">
+        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between mb-5 md:mb-5 lg:mb-5 xl:mb-0">
           <img
             className="w-full xl:w-[50%] rounded-none"
             src={welcome}
-            alt="Trail Camp"
+            alt="Trail Camp Welcome"
+            loading="lazy"
+            width="800"
+            height="400"
           />
           <div className="w-full lg:w-[50%] lg:ml-0 lg:p-8 mt-3 lg:mt-0">
             <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
               Vad ingår?
             </h3>
             <ul className="list-inside list-disc">
-              <li className="mb-1 ">
+              <li className="mb-1">
                 4 löppass: Våra erfarna ledare tar dig med på storslagna
                 löpturer genom Åres fantastiska landskap – från tät skog till
                 vidsträckta fjällvidder.
@@ -84,6 +115,9 @@ const TrailCamp = () => {
             className="w-full xl:w-[50%] rounded-none"
             src={torgeby}
             alt="föreläsare Marcus Torgeby"
+            loading="lazy"
+            width="800"
+            height="400"
           />
           <div className="w-full lg:w-[50%] lg:ml-0 mr-8 mt-3 lg:mt-0">
             <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
@@ -111,6 +145,9 @@ const TrailCamp = () => {
             className="w-full xl:w-[50%] rounded-none"
             src={group}
             alt="Trail Camp Group"
+            loading="lazy"
+            width="800"
+            height="400"
           />
           <div className="w-full lg:w-[50%] lg:ml-0 lg:pl-8 mt-3 lg:mt-0">
             <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">

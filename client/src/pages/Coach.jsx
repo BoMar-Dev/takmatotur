@@ -1,12 +1,13 @@
 import Card from "../components/Card";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 // import images
-import profil2 from "../img/coach/profil2.jpg";
-import corporateCoach from "../img/coach/foretag.jpg";
-import privatCoach from "../img/coach/personlig.jpg";
-import mondayRun from "../img/home/monday.jpg";
+import profil2 from "../img/coach/profil2.webp";
+import corporateCoach from "../img/coach/foretag.webp";
+import privatCoach from "../img/coach/personlig.webp";
+import mondayRun from "../img/home/monday.webp";
 import backgroundImg from "../img/about/background.svg";
 
 // import components
@@ -20,6 +21,24 @@ const Coach = () => {
 
   return (
     <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto mb-5">
+      <Helmet>
+        <title>Löpcoach | Tak Mat O Tur</title>
+        <meta
+          name="description"
+          content="Privat löpcoachning och företagsträning från Tak Mat o Tur. Vi erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken."
+        />
+        <meta property="og:title" content="Löpcoach | Tak Mat O Tur" />
+        <meta
+          property="og:description"
+          content="Privat löpcoachning och företagsträning från Tak Mat o Tur. Vi erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken."
+        />
+        <meta
+          property="og:image"
+          content={profil2} // Replace with a relevant image URL for sharing
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <div
         className="absolute top-[-700px] left-0 h-full w-full bg-cover bg-center"
         style={{
@@ -99,6 +118,9 @@ const Coach = () => {
             src={profil2}
             alt="profilbild på Martin Gillgren löpcoach tak mat o tur"
             className="w-full rounded-3xl object-cover xl:w-[80%] 3xl:w-[50%]"
+            loading="lazy" 
+            width="400" 
+            height="600" 
             style={{ height: "auto", maxHeight: "100%" }}
           />
         </aside>

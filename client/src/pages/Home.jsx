@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet"; // Import Helmet
 
 // import Link
 import { Link } from "react-router-dom";
 
 // import images
-import mondayRun from "../img/home/monday.jpg";
-import topptur from "../img/home/topptur.jpg";
+import mondayRun from "../img/home/monday.webp";
+import topptur from "../img/home/topptur.webp";
 
 // import component
 import Card from "../components/Card";
@@ -26,6 +27,25 @@ const Home = () => {
 
   return (
     <main className="bg-white p-5 pb-10 relative">
+      <Helmet>
+        <title>Home | Tak Mat O Tur</title>
+        <meta
+          name="description"
+          content="Välkommen till Tak Mat o Tur i Duved. Vi kombinerar komfort, gastronomi och äventyr för oförglömliga upplevelser i fantastiska Jämtland."
+        />
+        <meta property="og:title" content="Home | Tak Mat O Tur" />
+        <meta
+          property="og:description"
+          content="Välkommen till Tak Mat o Tur i Duved. Vi kombinerar komfort, gastronomi och äventyr för oförglömliga upplevelser i fantastiska Jämtland."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://takmatotur.se/" />
+        <meta
+          property="og:image"
+          content="https://takmatotur.se/path-to-image.jpg"
+        />
+      </Helmet>
+
       <motion.header
         className="absolute top-[-200px] xl:top-[-250px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:text-xl font-bold text-PrimaryColor z-10"
         initial={{ opacity: 0 }}
