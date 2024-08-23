@@ -42,7 +42,7 @@ router.post("/kontakt", (req, res) => {
       </div>`,
     attachments: [
       {
-        filename: "logooo.jpg",
+        filename: "takmatotur.jpg",
         path: pathJoin(__dirname, "../../client/src/img/header/takmatotur.jpg"),
         cid: "takmatturlogo",
       },

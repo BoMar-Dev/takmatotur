@@ -12,7 +12,7 @@ export default {
       },
       colors: {
         primary: "#363636", // Set your custom primary color
-        PrimaryColor: "#363636", // Keeping the custom color as defined originally
+
         black: "#363636", // Override the default black color with your custom primary color
         lightGray: "#f0f0f0",
       },

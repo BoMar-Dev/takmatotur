@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet"; // Import Helmet
-
-// import Link
 import { Link } from "react-router-dom";
 
-// import images
+// Import images
 import mondayRun from "../img/home/monday.webp";
 import topptur from "../img/home/topptur.webp";
+import boende3 from "../img/accommodation/boende3.webp";
 
-// import component
+// Import component
 import Card from "../components/Card";
+import SEOHelmet from "../components/SEOHelment";
 
 const Home = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [, setIsActive] = useState(false);
 
   useEffect(() => {
     setIsActive(true);
@@ -27,24 +26,13 @@ const Home = () => {
 
   return (
     <main className="bg-white p-5 pb-10 relative">
-      <Helmet>
-        <title>Home | Tak Mat O Tur</title>
-        <meta
-          name="description"
-          content="Välkommen till Tak Mat o Tur i Duved. Vi kombinerar komfort, gastronomi och äventyr för oförglömliga upplevelser i fantastiska Jämtland."
-        />
-        <meta property="og:title" content="Home | Tak Mat O Tur" />
-        <meta
-          property="og:description"
-          content="Välkommen till Tak Mat o Tur i Duved. Vi kombinerar komfort, gastronomi och äventyr för oförglömliga upplevelser i fantastiska Jämtland."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://takmatotur.se/" />
-        <meta
-          property="og:image"
-          content="https://takmatotur.se/path-to-image.jpg"
-        />
-      </Helmet>
+      <SEOHelmet
+        title="Home | Tak Mat O Tur"
+        description="Välkommen till Tak Mat o Tur i Duved. Vi kombinerar komfort, gastronomi och äventyr för oförglömliga upplevelser i fantastiska Jämtland."
+        keywords="Tak Mat o Tur, Duved, äventyr, komfort, gastronomi"
+        url="https://takmatotur.se/"
+        image="https://takmatotur.se/path-to-image.jpg"
+      />
 
       <motion.header
         className="absolute top-[-200px] xl:top-[-250px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:text-xl font-bold text-PrimaryColor z-10"
@@ -58,7 +46,7 @@ const Home = () => {
           </div>
           <div className="mt-2 md:mt-4 flex justify-center">
             <Link to="/trailcamp">
-              <button className="custom-button bg-emerald-500 text-white hover:shadow-sky-700">
+              <button className="custom-button bg-emerald-600 text-white hover:shadow-sky-700">
                 <span className="relative z-10">Boka / Info</span>
               </button>
             </Link>
@@ -67,26 +55,23 @@ const Home = () => {
       </motion.header>
 
       {/* Company description section */}
-      <section className="p-3 rounded-md md:w-[80%] lg:w-[60%] xl:w-[55%] m-auto lg:mb-10">
-        <a href="/om">
-          <h2 className="text-center text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] mb-2 cursor-pointer font-semibold">
-            Tak Mat O Tur
-          </h2>
-        </a>
-        <div className="scroll-icon opacity-100 transition-opacity duration-1000">
-          {/* Scroll icon JSX could go here */}
-        </div>
-        <p className="max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto">
-          Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
-          gastronomi och äventyr för oförglömliga upplevelser. Drivna av vår
-          passion för löpning, skidåkning och gästupplevelser, strävar vi efter
-          att ge dig det bästa av Duved med omnejd. Vi erbjuder en unik och
-          genuin vistelse fylld med äventyr, god mat och fantastisk natur.
-        </p>
+      <section className="relative flex flex-col items-center mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
+        <header className="flex flex-col items-center justify-center mb-6 text-center">
+          <h1 className="mb-2 font-bold">Välkommen</h1>
+        </header>
+        <article className="p-3 md:px-20 md:mt-5 xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
+          <p>
+            Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
+            gastronomi och äventyr för oförglömliga upplevelser. Drivna av vår
+            passion för löpning, skidåkning och gästupplevelser, strävar vi
+            efter att ge dig det bästa av Duved med omnejd. Vi erbjuder en unik
+            och genuin vistelse fylld med äventyr, god mat och fantastisk natur.
+          </p>
+        </article>
       </section>
 
       {/* Cards section */}
-      <section className="card-container grid grid-cols-1 lg:grid-cols-2 xl:w-[70%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">
+      <section className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:w-[70%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">
         <Card
           image={mondayRun}
           title="Måndagslöpning"
@@ -99,6 +84,14 @@ const Home = () => {
           link="/topptur"
           description="Vare sig det är sommar, vår, höst eller vinter så kan vi erbjuda toppturer som passar alla. Vi försöker ta oss ifrån folkmängden och tar er till platser där ni får känna av lugnet och äventyret på samma gång."
         />
+        <div className="md:col-span-2 lg:col-span-1 flex justify-center">
+          <Card
+            image={boende3}
+            title="Boende i Duved"
+            link="/boende"
+            description="Njut av ett bekvämt och mysigt boende i hjärtat av Duved. Med fjällen som utsikt och äventyret bara ett stenkast bort, erbjuder vi en perfekt bas för din fjällupplevelse."
+          />
+        </div>
       </section>
     </main>
   );

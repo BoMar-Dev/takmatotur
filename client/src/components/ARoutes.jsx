@@ -12,7 +12,6 @@ import PersonligCoach from "../pages/PersonligCoach";
 import MandagsLopning from "../pages/MandagsLopning";
 import TourWinter from "../pages/TourWinter";
 import TourSummer from "../pages/TourSummer";
-import TourHostVar from "../pages/TourHostVar";
 
 // Import routes, route and useLocation
 import { Routes, Route } from "react-router-dom";
@@ -25,7 +24,6 @@ const ARoutes = () => {
       <Route path="/topptur" element={<Tour />} />
       <Route path="/topptur/sommar" element={<TourSummer />} />
       <Route path="/topptur/vinter" element={<TourWinter />} />
-      <Route path="/topptur/host&var" element={<TourHostVar />} />
       <Route path="/coach" element={<Coach />} />
       <Route path="/coach/foretag" element={<ForetagsCoach />} />
       <Route path="/coach/personlig" element={<PersonligCoach />} />

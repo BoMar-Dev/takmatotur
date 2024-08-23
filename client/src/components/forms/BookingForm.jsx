@@ -18,9 +18,19 @@ const BookingForm = ({ closeForm }) => {
 
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [dateError, setDateError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const today = new Date().toISOString().split("T")[0];
+
+    if (formData.date < today) {
+      setDateError("Datumet måste vara idag eller senare.");
+      return;
+    }
+
+    setDateError(""); // Clear any previous date errors
 
     try {
       const response = await fetch("http://localhost:5000/topptur", {
@@ -107,6 +117,7 @@ const BookingForm = ({ closeForm }) => {
           className="w-full p-2 border border-gray-300 rounded"
         />
       </div>
+      {dateError && <p className="text-red-500 text-sm mt-2">{dateError}</p>}
       <div className="mb-4">
         <label className="block mb-2 font-bold">
           Övrig information så som utrustning eller annat vi behöver veta

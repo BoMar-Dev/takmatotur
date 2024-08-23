@@ -2,7 +2,7 @@ import { useState } from "react";
 // Import framer-motion
 import { motion } from "framer-motion";
 // import icons
-// import { SlMenu } from "react-icons/sl"; // bakup icon
+
 import { IoClose } from "react-icons/io5";
 import { CiMenuBurger } from "react-icons/ci";
 

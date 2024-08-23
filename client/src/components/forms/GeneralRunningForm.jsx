@@ -12,10 +12,12 @@ const GeneralRunningForm = ({ closeForm }) => {
     email: "",
     subject: "Måndagslöpning",
     peopleCount: "",
+    date: "", // Added date field
     message: "",
   });
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [dateError, setDateError] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,6 +25,15 @@ const GeneralRunningForm = ({ closeForm }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const today = new Date().toISOString().split("T")[0];
+
+    if (formData.date < today) {
+      setDateError("Datumet måste vara idag eller senare.");
+      return;
+    }
+
+    setDateError(""); // Clear any previous date errors
 
     try {
       const response = await fetch("http://localhost:5000/coach", {
@@ -137,7 +148,18 @@ const GeneralRunningForm = ({ closeForm }) => {
           onChange={handleChange}
         />
       </div>
-
+      <div className="mb-4">
+        <label className="block mb-2 font-bold">Önskat datum</label>
+        <input
+          type="date"
+          name="date"
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+          value={formData.date}
+          onChange={handleChange}
+        />
+      </div>
+      {dateError && <p className="text-red-500 text-sm mt-2">{dateError}</p>}
       <div className="mb-4">
         <label className="block mb-2 font-bold">
           Övriga information/önskemål/fokus/mål

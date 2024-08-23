@@ -1,196 +1,159 @@
-import { Helmet } from "react-helmet";
+import SEOHelmet from "../components/SEOHelment";
+
 // Import images
 import backgroundImg from "../img/about/background.svg";
 import torgeby from "../img/trailcamp/marcustorgeby.webp";
 import group from "../img/trailcamp/group.webp";
 import welcome from "../img/trailcamp/welcome.webp";
 
+// Import component
+import GridImgs from "../components/GridImgs"; // Assuming GridImgs is a reusable component for image and text layout
+
 const TrailCamp = () => {
   return (
-    <section className="relative flex flex-col items-center p-5 mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
-      {/* Helmet for SEO */}
-      <Helmet>
-        <title>Trail Camp Åre 2024 | Tak Mat O Tur</title>
-        <meta
-          name="description"
-          content="Join us for Trail Camp Åre 2024, a three-day running experience in the heart of Åre's magnificent mountains. From August 30th to September 1st, immerse yourself in nature, challenge yourself, and connect with like-minded runners."
-        />
-        <meta
-          name="keywords"
-          content="Trail Camp, Åre 2024, running camp, trail running, Markus Torgeby, Mullfjället, running experience, Tak Mat O Tur"
-        />
-        <meta
-          property="og:title"
-          content="Trail Camp Åre 2024 | Tak Mat O Tur"
-        />
-        <meta
-          property="og:description"
-          content="Join us for Trail Camp Åre 2024, a three-day running experience in the heart of Åre's magnificent mountains. Connect with nature and fellow runners."
-        />
-        <meta
-          property="og:image"
-          content="https://yourwebsite.com/path-to-image.jpg"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourwebsite.com/trailcamp" />
-      </Helmet>
+    <>
+      <SEOHelmet
+        title="Trail Camp Åre 2024 | Tak Mat O Tur"
+        description="Join us for Trail Camp Åre 2024, a three-day running experience in the heart of Åre's magnificent mountains. From August 30th to September 1st, immerse yourself in nature, challenge yourself, and connect with like-minded runners."
+        keywords="Trail Camp, Åre 2024, running camp, trail running, Markus Torgeby, Mullfjället, running experience, Tak Mat O Tur"
+        url="https://takmatotur.se/trailcamp"
+        image="https://yourwebsite.com/path-to-image.jpg"
+      />
 
-      <div
-        className="absolute top-[-700px] left-0 w-full h-full bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "100%",
-          backgroundRepeat: "repeat-x",
-          opacity: 0.08,
-          zIndex: -1,
-          transform: "translateX(-30%)",
-        }}
-      ></div>
+      <section className="relative flex flex-col items-center p-5 mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
+        <div
+          className="absolute top-[-700px] left-0 w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${backgroundImg})`,
+            backgroundSize: "200%",
+            backgroundRepeat: "repeat-x",
+            opacity: 0.08,
+            zIndex: -1,
+            transform: "translateX(-20%)",
+          }}
+        ></div>
+        <header className="flex flex-col items-center justify-center mb-6 text-center">
+          <h1 className="mb-2 font-bold">Trail Camp 2024</h1>
+          <h2 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] text-lg font-bold mb-5">
+            30/8 - 1/9
+          </h2>
+        </header>
 
-      <header className="flex flex-col items-center justify-center mb-6 text-center">
-        <h1 className="mb-2 font-bold">Trail Camp 2024</h1>
-        <h2 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] text-lg font-bold mb-5">
-          30/8 - 1/9
-        </h2>
-      </header>
+        <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 p-4 rounded-lg mb-6 text-center w-full max-w-xl mx-auto">
+          <p className="font-semibold">
+            Trail camp har fått en uppdatering. Gå in på våran
+            <a
+              href="https://www.facebook.com/profile.php?id=61558195943539"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline ml-1 mr-2"
+            >
+              Facebook,
+            </a>
+            klicka vidare till "kommande event" för senaste uppdateringen.
+          </p>
+        </div>
 
-      <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 p-4 rounded-lg mb-6 text-center w-full max-w-xl mx-auto">
-        <p className="font-semibold">
-          Trail camp har fått en uppdatering. Gå in på våran
-          <a
-            href="https://www.facebook.com/profile.php?id=61558195943539"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline ml-1 mr-2"
-          >
-            Facebook,
-          </a>
-          klicka vidare till "kommande event" för senaste uppdateringen.
-        </p>
-      </div>
+        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
+          <p>
+            Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse
+            i hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
+            september bjuder vi in dig till tre dagar fyllda med inspiration,
+            utmaning och gemenskap i en av Sveriges mest natursköna miljöer.
+          </p>
+        </article>
 
-      <div className="mb-6 p-3 font-semibold md:w-[80%] xl:w-[70%] m-auto text-lg">
-        <p>
-          Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse i
-          hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
-          september bjuder vi in dig till tre dagar fyllda med inspiration,
-          utmaning och gemenskap i en av Sveriges mest natursköna miljöer.
-        </p>
-      </div>
+        <div className="mb-6 text-center font-semibold md:w-[80%] xl:w-[70%]"></div>
 
-      <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between mb-5 md:mb-5 lg:mb-5 xl:mb-0">
-          <img
-            className="w-full xl:w-[50%] rounded-none"
+        <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
+          <GridImgs
             src={welcome}
             alt="Trail Camp Welcome"
-            loading="lazy"
-            width="800"
-            height="400"
-          />
-          <div className="w-full lg:w-[50%] lg:ml-0 lg:p-8 mt-3 lg:mt-0">
-            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
-              Vad ingår?
-            </h3>
-            <ul className="list-inside list-disc">
-              <li className="mb-1">
+            title="Vad ingår?"
+            description={
+              <>
                 4 löppass: Våra erfarna ledare tar dig med på storslagna
                 löpturer genom Åres fantastiska landskap – från tät skog till
                 vidsträckta fjällvidder.
-              </li>
-              <li className="mt-3">
+                <br />
                 Boende med helpension: Bo bekvämt på fantastiska{" "}
                 <a href="https://mullfjallet.se/" className="font-extrabold">
                   Pensionat Mullfjället
                 </a>{" "}
                 och njut av näringsrika och välsmakande måltider i den perfekta
                 miljön för att koppla av och umgås mellan passen.
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section className="flex flex-col xl:flex-row-reverse xl:items-center xl:justify-between mb-5 md:mb-5 lg:mb-5 xl:mb-0">
-          <img
-            className="w-full xl:w-[50%] rounded-none"
+              </>
+            }
+            imgProps={{ loading: "lazy" }}
+          />
+          <GridImgs
             src={torgeby}
             alt="föreläsare Marcus Torgeby"
-            loading="lazy"
-            width="800"
-            height="400"
+            title="Föreläsning med Markus Torgeby"
+            description={
+              <>
+                Inspireras av{" "}
+                <a
+                  href="https://www.markustorgeby.com/"
+                  className="font-extrabold"
+                >
+                  Marcus Torgeby
+                </a>
+                , den legendariske löparen och författaren som delar med sig av
+                sina insikter om löpning, livet och att finna sin egen väg genom
+                utmaningar och framgångar.
+                <br /> Vi är såklart lite extra stolta över att ha med Markus
+                här då han i år är en av sommarpratarna i P1.
+              </>
+            }
+            imgProps={{ loading: "lazy" }}
+            reverse
           />
-          <div className="w-full lg:w-[50%] lg:ml-0 mr-8 mt-3 lg:mt-0">
-            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
-              Föreläsning med Markus Torgeby
-            </h3>
-            <p>
-              Inspireras av{" "}
-              <a
-                href="https://www.markustorgeby.com/"
-                className="font-extrabold"
-              >
-                Marcus Torgeby
-              </a>
-              , den legendariske löparen och författaren som delar med sig av
-              sina insikter om löpning, livet och att finna sin egen väg genom
-              utmaningar och framgångar.
-              <br /> Vi är såklart lite extra solt över att ha med Markus här då
-              han i år är en av sommarpratarna i p1.
-            </p>
-          </div>
-        </section>
-
-        <section className="flex flex-col xl:flex-row xl:items-center xl:justify-between mb-5 md:mb-5 lg:mb-5 xl:mb-0">
-          <img
-            className="w-full xl:w-[50%] rounded-none"
+          <GridImgs
             src={group}
             alt="Trail Camp Group"
-            loading="lazy"
-            width="800"
-            height="400"
+            title="Varför ska du delta?"
+            description={
+              <>
+                Trail Camp Åre är mer än bara ett träningsläger – det är en
+                möjlighet att koppla bort från vardagens stress och återknyta
+                kontakten med naturen och din egen kropp. Här får du chansen att
+                utveckla din löpteknik, bygga uthållighet och styrka, samtidigt
+                som du njuter av fantastisk gemenskap och mat med likasinnade
+                löpare. Oavsett om ditt mål är att förbättra din tid, hitta
+                löpglädje eller bara uppleva den svenska fjällvärlden på ett
+                nytt sätt, är detta lägret för dig.
+              </>
+            }
+            imgProps={{ loading: "lazy" }}
           />
-          <div className="w-full lg:w-[50%] lg:ml-0 lg:pl-8 mt-3 lg:mt-0">
-            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold">
-              Varför ska du delta?
-            </h3>
-            <p>
-              Trail Camp Åre är mer än bara ett träningsläger – det är en
-              möjlighet att koppla bort från vardagens stress och återknyta
-              kontakten med naturen och din egen kropp. Här får du chansen att
-              utveckla din löpteknik, bygga uthållighet och styrka, samtidigt
-              som du njuter av fantastisk gemenskap och mat med likasinnade
-              löpare. Oavsett om ditt mål är att förbättra din tid, hitta
-              löpglädje eller bara uppleva den svenska fjällvärlden på ett nytt
-              sätt, är detta lägret för dig.
-            </p>
-          </div>
-        </section>
-      </article>
+        </article>
 
-      <section className="flex flex-col w-full md:w-[80%] lg:w-[75%] xl:w-[90%] mt-5 p-3">
-        <p className="xl:w-[70%] xl:text-center xl:m-auto">
-          Boka din plats idag och TÄVLA om att få hela helgen gratis tillsammans
-          med en vän. Platserna är begränsade, så se till att boka din plats
-          redan idag för att säkra din medverkan i denna unika löparupplevelse.
-          Av de 10 första betalande anmälda lottar vi ut hela helgen gratis plus
-          att du får ta med en vän utan extra kostnad!!
-        </p>
-        <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold mt-5">
-          Priser
-        </h3>
-        <p>
-          Boende med helpension, löpguidning och föreläsning med Markus Torgeby:
-          4900 kr.
-        </p>
-        <p className="mt-1">
-          Utan övernattning: Löpguidning, 2 luncher och 2 middagar samt
-          föreläsning: 2950 kr.
-        </p>
-        <p className="mt-2 font-bold mb-10">
-          BOKA - info@mullfjallet.se <br /> ange "Trail camp Åre 2024"
-        </p>
+        <section className="flex flex-col w-full md:w-[80%] lg:w-[75%] xl:w-[90%] mt-5 p-3">
+          <p className="xl:w-[70%] xl:text-center xl:m-auto">
+            Boka din plats idag och TÄVLA om att få hela helgen gratis
+            tillsammans med en vän. Platserna är begränsade, så se till att boka
+            din plats redan idag för att säkra din medverkan i denna unika
+            löparupplevelse. Av de 10 första betalande anmälda lottar vi ut hela
+            helgen gratis plus att du får ta med en vän utan extra kostnad!!
+          </p>
+          <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold mt-5">
+            Priser
+          </h3>
+          <p>
+            Boende med helpension, löpguidning och föreläsning med Markus
+            Torgeby: 4900 kr.
+          </p>
+          <p className="mt-1">
+            Utan övernattning: Löpguidning, 2 luncher och 2 middagar samt
+            föreläsning: 2950 kr.
+          </p>
+          <p className="mt-2 font-bold mb-10">
+            BOKA - info@mullfjallet.se <br /> ange "Trail camp Åre 2024"
+          </p>
+        </section>
       </section>
-    </section>
+    </>
   );
 };
 

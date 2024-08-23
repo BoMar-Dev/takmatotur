@@ -1,7 +1,5 @@
-import Card from "../components/Card";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 
 // import images
 import profil2 from "../img/coach/profil2.webp";
@@ -12,6 +10,8 @@ import backgroundImg from "../img/about/background.svg";
 
 // import components
 import GeneralRunningForm from "../components/forms/GeneralRunningForm";
+import SEOHelmet from "../components/SEOHelment";
+import Card from "../components/Card";
 
 const Coach = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -21,23 +21,13 @@ const Coach = () => {
 
   return (
     <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto mb-5">
-      <Helmet>
-        <title>Löpcoach | Tak Mat O Tur</title>
-        <meta
-          name="description"
-          content="Privat löpcoachning och företagsträning från Tak Mat o Tur. Vi erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken."
-        />
-        <meta property="og:title" content="Löpcoach | Tak Mat O Tur" />
-        <meta
-          property="og:description"
-          content="Privat löpcoachning och företagsträning från Tak Mat o Tur. Vi erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken."
-        />
-        <meta
-          property="og:image"
-          content={profil2} // Replace with a relevant image URL for sharing
-        />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHelmet
+        title="Löpcoach | Tak Mat O Tur"
+        description="Privat löpcoachning och företagsträning från Tak Mat o Tur. Vi erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken."
+        keywords="Löpcoach, träning, coaching, triathlon, personlig träning"
+        url="http://takmatotur.se/coach"
+        image={profil2} // Image for social sharing
+      />
 
       <div
         className="absolute top-[-700px] left-0 h-full w-full bg-cover bg-center"
@@ -61,7 +51,7 @@ const Coach = () => {
       <div className="text-center flex justify-center mb-10 p-2">
         <button
           onClick={openForm}
-          className="custom-button bg-amber-600 text-white"
+          className="custom-button bg-amber-700 text-white"
         >
           <span className="relative z-10">Kontakta löpcoach</span>
         </button>
@@ -116,11 +106,11 @@ const Coach = () => {
         <aside className="p-5 xl:w-1/2 flex items-center">
           <img
             src={profil2}
-            alt="profilbild på Martin Gillgren löpcoach tak mat o tur"
+            alt="Profilbild på Martin Gillgren löpcoach Tak Mat o Tur"
             className="w-full rounded-3xl object-cover xl:w-[80%] 3xl:w-[50%]"
-            loading="lazy" 
-            width="400" 
-            height="600" 
+            loading="lazy"
+            width="400"
+            height="600"
             style={{ height: "auto", maxHeight: "100%" }}
           />
         </aside>
@@ -136,18 +126,21 @@ const Coach = () => {
           title="Måndagslöpning"
           link="/coach/mandagslopning"
           description="Upptäck magin med Jämtlands härligaste löpargrupp! Under sex måndagar får du chansen att vara med i en inspirerande gemenskap och utveckla din löpning på bästa sätt."
+          loading="lazy"
         />
         <Card
           image={corporateCoach}
           title="Företagsträning"
           link="/coach/foretag"
           description="Vill ni skapa en starkare teamkänsla, öka arbetsglädjen och samtidigt förbättra hälsan hos era medarbetare? – Följ med oss på en 10-veckors Löpcoachingresa för Företagsgrupper!."
+          loading="lazy"
         />
         <Card
           image={privatCoach}
           title="Personlig löpcoachning"
           link="/coach/personlig"
           description="Privat löpcoachning från Tak Mat o Tur erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken"
+          loading="lazy"
         />
       </div>
 
@@ -164,7 +157,7 @@ const Coach = () => {
       <div className="text-center flex justify-center mb-10 p-2">
         <button
           onClick={openForm}
-          className="custom-button bg-amber-600 text-white"
+          className="custom-button bg-amber-700 text-white"
         >
           <span className="relative z-10">Kontakta löpcoach</span>
         </button>
