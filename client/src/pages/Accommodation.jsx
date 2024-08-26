@@ -6,6 +6,9 @@ import AccomodationForm from "../components/forms/AccomodationForm";
 import GridImgs from "../components/GridImgs";
 import SEOHelmet from "../components/SEOHelment";
 
+// import icon
+import { FaInfoCircle } from "react-icons/fa";
+
 // Import images
 import backgroundImg from "../img/about/background.svg";
 import boende1 from "../img/accommodation/boende1.webp";
@@ -14,6 +17,7 @@ import boende3 from "../img/accommodation/boende3.webp";
 import boende4 from "../img/accommodation/boende4.webp";
 import boende5 from "../img/accommodation/boende5.webp";
 import boende6 from "../img/accommodation/boende6.webp";
+import boende7 from "../img/accommodation/boende7.webp";
 
 // Import component
 
@@ -98,20 +102,20 @@ const Accommodation = () => {
         <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
           <GridImgs
             src={boende1}
-            alt="Trail Camp"
+            alt="Bild på Emma & Martin - Tak Mat o Tur"
             title="Värdparet"
             description="Bo i vår lägenhet med fjällen som utsikt och äventyret bara ett stenkast bort."
           />
           <GridImgs
             src={boende2}
-            alt="föreläsare Marcus Torgeby"
+            alt="Bild på Tak Mat o Tur utsida lägenhet"
             title="Egen ingång och gratis parkering"
             description="Känn er som hemma efter en dag fylld av äventyr. Kommer du med elbil? Laddare finns på parkeringen."
             reverse
           />
           <GridImgs
             src={boende3}
-            alt="Trail Camp Group"
+            alt="Bild på Tak Mat o Tur Boende Kök"
             title="Ett kök som har allt"
             description="Köket är fullutrustat med diskmaskin, induktionshäll, ugn, micro, kyl/frys, kaffebryggare, kaffekokare och mycket mer."
           />
@@ -124,20 +128,29 @@ const Accommodation = () => {
           />
           <GridImgs
             src={boende5}
-            alt="Trail Camp Group"
+            alt="Boende Tak Mat o Tur Soffgrupp"
             title="Slå sig ner"
             description="Vare sig det är att slå sig ner till middagen eller luta sig tillbaka i soffan med ett sällskapsspel så lovar vi ett trivsamt boende."
           />
           <GridImgs
             src={boende6}
-            alt="föreläsare Marcus Torgeby"
+            alt="Tak Mat o Tur uppmundrar till äventyret"
             title="Nära till äventyret"
             description="Med gångavstånd från lägenheten hittar ni skidåkning i backe, fantastiska toppturer, längdspår, vandring eller varför inte ett svettigt löppass på fjället. Vi hjälper dig såklart med våra tips!"
             reverse
           />
+          <GridImgs
+            src={boende7}
+            alt="Tak Mat o Tur Gastronomi och matupplevelser"
+            title="Gastronomi"
+            description="Hos oss vill vi ge dig en matupplevelse som stannar kvar långt efter att måltiden är över."
+          />
         </article>
 
         <article className="p-3 xl:w-2/3 m-auto text-md">
+          <div className="m-auto text-5xl text-amber-700">
+            <FaInfoCircle className="" />
+          </div>
           <li className="mt-3">
             Duved Centralstation för buss / tåg: 20 min promenad eller 5 min med
             bil
@@ -156,7 +169,7 @@ const Accommodation = () => {
         </article>
 
         {/* New Encouragement Section */}
-        <div className="text-center p-5 md:w-[80%] mb-10">
+        <div className="text-center p-5 md:w-[80%] mb-10 mt-7">
           <p>
             Planera din vistelse hos oss redan idag!{" "}
             <span className="font-extrabold"></span>

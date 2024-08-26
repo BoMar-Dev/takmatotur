@@ -116,9 +116,11 @@ const Coach = () => {
         </aside>
       </div>
 
-      <header className="text-center my-10">
-        <h2 className="text-xl font-semibold">Vad jag erbjuder :</h2>
-      </header>
+      <div className="text-center my-10">
+        <h2 className="text-xl font-semibold text-amber-700">
+          Vad jag erbjuder :
+        </h2>
+      </div>
 
       <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-5 mb-10">
         <Card

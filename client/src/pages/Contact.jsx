@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useFormDefaults } from "../useFormDefaults";
+import { useFormDefaults } from "../functions/useFormDefaults";
 
 // Import images
 import map from "../img/contact/map.jpg";
@@ -86,7 +86,7 @@ const Contact = () => {
         <div className="p-5 mb-10 md:w-[80%] m-auto relative 3xl:w-[50%] lg:rounded-lg">
           <div className="hidden xl:flex xl:space-x-10 items-center p-5">
             <div className="flex-1 xl:order-1 text-center">
-              <div className="text-lg font-bold text-primary m-auto">
+              <div className="text-lg font-bold text-amber-700 m-auto">
                 <h2>Vi svarar så fort vi kan</h2>
               </div>
               <p className="p-5 text-primary">
@@ -123,7 +123,7 @@ const Contact = () => {
           </div>
           <div className="xl:hidden">
             <div className="text-container text-center">
-              <div className="text-lg font-bold text-primary m-auto">
+              <div className="text-lg font-bold  m-auto text-amber-700">
                 <h2>Vi svarar så fort vi kan</h2>
               </div>
               <p className="p-5 text-primary">

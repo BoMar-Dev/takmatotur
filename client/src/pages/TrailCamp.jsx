@@ -18,28 +18,27 @@ const TrailCamp = () => {
         keywords="Trail Camp, Åre 2024, running camp, trail running, Markus Torgeby, Mullfjället, running experience, Tak Mat O Tur"
         url="https://takmatotur.se/trailcamp"
         image="https://yourwebsite.com/path-to-image.jpg"
+        ogType="website"
+        twitterCard="summary_large_image"
       />
 
       <section className="relative flex flex-col items-center p-5 mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
         <div
-          className="absolute top-[-700px] left-0 w-full h-full bg-cover bg-center"
+          className="absolute left-0 w-full h-full bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImg})`,
-            backgroundSize: "200%",
-            backgroundRepeat: "repeat-x",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             opacity: 0.08,
             zIndex: -1,
-            transform: "translateX(-20%)",
           }}
         ></div>
         <header className="flex flex-col items-center justify-center mb-6 text-center">
-          <h1 className="mb-2 font-bold">Trail Camp 2024</h1>
-          <h2 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] text-lg font-bold mb-5">
-            30/8 - 1/9
-          </h2>
+          <h1 className="mb-2 font-bold ">Trail Camp 2024</h1>
+          <h2 className="text-lg font-bold mb-5">30/8 - 1/9</h2>
         </header>
 
-        <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 p-4 rounded-lg mb-6 text-center w-full max-w-xl mx-auto">
+        <div className="bg-yellow-100 border border-yellow-400 text-black p-4 rounded-lg mb-6 text-center w-full max-w-xl mx-auto">
           <p className="font-semibold">
             Trail camp har fått en uppdatering. Gå in på våran
             <a
@@ -47,8 +46,9 @@ const TrailCamp = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline ml-1 mr-2"
+              aria-label="Besök vår Facebook-sida för senaste uppdateringar om evenemang"
             >
-              Facebook,
+              Facebook
             </a>
             klicka vidare till "kommande event" för senaste uppdateringen.
           </p>
@@ -77,7 +77,11 @@ const TrailCamp = () => {
                 vidsträckta fjällvidder.
                 <br />
                 Boende med helpension: Bo bekvämt på fantastiska{" "}
-                <a href="https://mullfjallet.se/" className="font-extrabold">
+                <a
+                  href="https://mullfjallet.se/"
+                  className="font-extrabold"
+                  aria-label="Besök Pensionat Mullfjällets hemsida"
+                >
                   Pensionat Mullfjället
                 </a>{" "}
                 och njut av näringsrika och välsmakande måltider i den perfekta
@@ -88,7 +92,7 @@ const TrailCamp = () => {
           />
           <GridImgs
             src={torgeby}
-            alt="föreläsare Marcus Torgeby"
+            alt="Föreläsare Marcus Torgeby"
             title="Föreläsning med Markus Torgeby"
             description={
               <>
@@ -96,6 +100,9 @@ const TrailCamp = () => {
                 <a
                   href="https://www.markustorgeby.com/"
                   className="font-extrabold"
+                  aria-label="Besök Markus Torgebys officiella hemsida"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Marcus Torgeby
                 </a>
@@ -137,7 +144,7 @@ const TrailCamp = () => {
             löparupplevelse. Av de 10 första betalande anmälda lottar vi ut hela
             helgen gratis plus att du får ta med en vän utan extra kostnad!!
           </p>
-          <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold mt-5">
+          <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[22px] xl:text-[22px] font-semibold mt-5 text-amber-700">
             Priser
           </h3>
           <p>

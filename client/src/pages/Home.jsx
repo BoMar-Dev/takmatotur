@@ -56,10 +56,10 @@ const Home = () => {
 
       {/* Company description section */}
       <section className="relative flex flex-col items-center mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
-        <header className="flex flex-col items-center justify-center mb-6 text-center">
+        <header className="flex flex-col items-center justify-center mb- text-center">
           <h1 className="mb-2 font-bold">Välkommen</h1>
         </header>
-        <article className="p-3 md:px-20 md:mt-5 xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
+        <article className="p-3 md:px-20 md: xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
           <p>
             Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
             gastronomi och äventyr för oförglömliga upplevelser. Drivna av vår
@@ -69,6 +69,12 @@ const Home = () => {
           </p>
         </article>
       </section>
+
+      <div className="text-center my-10">
+        <h2 className="text-xl font-semibold text-amber-700">
+          Aktiviteter & Utbud:
+        </h2>
+      </div>
 
       {/* Cards section */}
       <section className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:w-[70%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">
@@ -82,7 +88,7 @@ const Home = () => {
           image={topptur}
           title="Topptur för alla årstider"
           link="/topptur"
-          description="Vare sig det är sommar, vår, höst eller vinter så kan vi erbjuda toppturer som passar alla. Vi försöker ta oss ifrån folkmängden och tar er till platser där ni får känna av lugnet och äventyret på samma gång."
+          description="Vi erbjuder toppturer som passar alla önskemål och erfarenheter. Vi försöker ta oss ifrån folkmängden och tar er till platser där ni får känna av lugnet och äventyret på samma gång."
         />
         <div className="md:col-span-2 lg:col-span-1 flex justify-center">
           <Card

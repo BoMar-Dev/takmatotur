@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 // import components
 import Navigation from "./Navigation";
 import MobileNav from "./MobileNav";
-import { getImgLoader } from "../getImgLoader";
+import { getImgLoader } from "../functions/getImgLoader";
 
 const Header = () => {
   const location = useLocation();

@@ -69,11 +69,11 @@ const Tour = () => {
         </article>
 
         <header className="text-center my-10">
-          <h2 className="text-xl font-medium">
+          <h2 className="text-xl  text-amber-700 font-semibold">
             Olika äventyr för olika årstider
           </h2>
         </header>
-        <div className="card-container md:w-[70%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-5">
+        <div className="card-container md:w-[70%] flex flex-col space-y-8 xl:flex-row xl:space-y-0  xl:space-x-12">
           <div className="flex flex-col flex-grow">
             <Card
               image={vinter}

@@ -47,10 +47,14 @@ const About = () => {
               äventyrsfyllt besök på en av Sveriges vackraste platser, har du
               hittat rätt.
             </p>
+
+            <h2 className="text-xl text-center mt-10 font-semibold text-amber-700 m">
+              Emma & Martin
+            </h2>
           </section>
 
           {/* Image and text section for xl and above */}
-          <section className="hidden xl:flex xl:space-x-10 items-center rounded-lg p-5">
+          <section className="hidden xl:flex xl:space-x-10 items-center rounded-lg px-5">
             <div className="flex-1 xl:order-1">
               <p>
                 Tak Mat o Tur är ett familjeföretag som drivs av Martin och Emma
@@ -123,7 +127,7 @@ const About = () => {
 
           {/* button div */}
           <div className="button-holder flex justify-center mt-10 mb-5">
-            <Link to="/kontakt" className="inline-flex bg-slate-800 rounded-md">
+            <Link to="/kontakt" className="inline-flex bg-amber-700 rounded-md">
               <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
                 <span className="relative z-10">Frågor / Kontakt</span>
               </button>
