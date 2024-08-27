@@ -10,7 +10,7 @@ const TourSummer = () => {
   return (
     <>
       <SEOHelmet
-        title="Sommarvandring i Jämtland | Tak Mat o Tur"
+        title="Vandra | Tak Mat o Tur"
         description="Upptäck Jämtlands vackra sommarvandringar med oss. Skräddarsydda upplevelser för alla, från halvdagsturer till flerdagars äventyr."
         keywords="sommarvandring, Jämtland, Åre, fjällvandring, naturupplevelse, guide"
         url="http://takmatotur.se/topptur/sommar"
@@ -35,7 +35,7 @@ const TourSummer = () => {
         </header>
 
         {/* Consistent Article Section */}
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
+        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
           <p>
             Upptäck magin i Jämtlands sommarvandringar där naturens skönhet tar
             andan ur dig. Följ med oss upp på höjder som erbjuder hisnande

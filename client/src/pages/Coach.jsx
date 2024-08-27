@@ -122,7 +122,7 @@ const Coach = () => {
         </h2>
       </div>
 
-      <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-5 mb-10">
+      <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-10 mb-10">
         <Card
           image={mondayRun}
           title="Måndagslöpning"
@@ -156,7 +156,7 @@ const Coach = () => {
         </p>
       </section>
 
-      <div className="text-center flex justify-center mb-10 p-2">
+      <div className="text-center flex justify-center mb-10 p-5">
         <button
           onClick={openForm}
           className="custom-button bg-amber-700 text-white"

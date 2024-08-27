@@ -35,7 +35,7 @@ const PersonligCoach = () => {
         </header>
 
         {/* Consistent Article Section */}
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
+        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
           <p className="mb-5">
             Att löpträna på egen hand kan vara både utmanande och ibland ensamt.
             Oavsett om du är en nybörjare som vill komma igång eller en erfaren

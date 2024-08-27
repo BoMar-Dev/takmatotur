@@ -20,7 +20,7 @@ const Tour = () => {
   return (
     <>
       <SEOHelmet
-        title="Topptur för alla årstider | Tak Mat o Tur"
+        title="Toppturer | Tak Mat o Tur"
         description="Upplev fantastiska toppturer året runt i Jämtland. Boka ditt äventyr idag!"
         keywords="topptur, Jämtland, äventyr, sommar, vinter, natur"
         url="http://takmatotur.se/topptur"
@@ -56,7 +56,7 @@ const Tour = () => {
         </div>
 
         {/* Updated Article Section */}
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
+        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
           <p>
             Oavsett om det är höst, vinter, vår eller sommar så erbjuder vi
             toppturer som passar era önskemål. Våran vision är att blanda
@@ -70,7 +70,7 @@ const Tour = () => {
 
         <header className="text-center my-10">
           <h2 className="text-xl  text-amber-700 font-semibold">
-            Olika äventyr för olika årstider
+            Olika äventyr för olika årstider :
           </h2>
         </header>
         <div className="card-container md:w-[70%] flex flex-col space-y-8 xl:flex-row xl:space-y-0  xl:space-x-12">
@@ -104,7 +104,7 @@ const Tour = () => {
           </p>
         </div>
 
-        <div className="text-center flex justify-center mb-12 p-5 mt-10 md:w-[80%]">
+        <div className="text-center flex justify-center mb-12 p-5 mt-5 md:w-[80%]">
           <button
             className="custom-button bg-amber-700"
             onClick={openBookingForm}

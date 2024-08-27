@@ -5,7 +5,7 @@ const GridImgs = ({ src, alt, title, description, reverse }) => (
   <section
     className={`flex flex-col ${
       reverse ? "xl:flex-row-reverse" : "xl:flex-row"
-    } xl:items-center xl:justify-between rounded-lg mb-5`}
+    } xl:items-center xl:justify-between rounded-lg mb-`}
   >
     <img className="w-full xl:w-[50%] rounded-none" src={src} alt={alt} />
     <div className="w-full xl:w-[50%] p-4">

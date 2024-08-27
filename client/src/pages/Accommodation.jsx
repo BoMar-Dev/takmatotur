@@ -35,7 +35,7 @@ const Accommodation = () => {
   return (
     <>
       <SEOHelmet
-        title="Boende i Duved - Nära Åre | Upplev Jämtlands Fjällvärld"
+        title="Boende | Tak Mat o Tur i Duved"
         description="Boende i vackra Duved nära Åre. Upplev Jämtlands fjällvärld med närhet till skidbackar, vandringsleder och mer. Perfekt för din nästa semester."
         keywords="boende, Duved, Åre, Jämtland, fjäll, skidåkning, vandring, semester, fjällvärld, Sverige"
         url="http://takmatotur.se/boende"
@@ -47,7 +47,7 @@ const Accommodation = () => {
           className="absolute top-[-700px] left-0 w-full h-full bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImg})`,
-            backgroundSize: "200%",
+            backgroundSize: "300%",
             backgroundRepeat: "repeat-y",
             opacity: 0.08,
             zIndex: -1,
@@ -57,7 +57,7 @@ const Accommodation = () => {
         <header className="flex flex-col items-center justify-center mb-6 text-center">
           <h1 className="mb-2 font-bold">Boende</h1>
         </header>
-        <div className="text-center flex justify-center p-3">
+        <div className="text-center flex justify-center p-3  mb-7">
           <button
             onClick={openForm}
             className="custom-button bg-amber-700 text-white "
@@ -65,7 +65,7 @@ const Accommodation = () => {
             <span className="relative z-10">Bokningsförfrågan</span>
           </button>
         </div>
-        <article className="p-3 md:px-20 md:mt-5 xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
+        <article className="p-3 md:px-20 md:mt-5 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
           <p>
             Med ett ursprung i södra Sverige har vi, Emma och Martin, sedan
             några år bosatt oss i vackra Duved. Vår flytt till Jämtland har nog
@@ -104,13 +104,13 @@ const Accommodation = () => {
             src={boende1}
             alt="Bild på Emma & Martin - Tak Mat o Tur"
             title="Värdparet"
-            description="Bo i vår lägenhet med fjällen som utsikt och äventyret bara ett stenkast bort."
+            description="Upplev det bästa av fjällvärlden genom att bo i vår mysiga lägenhet. Här vaknar du upp till en hänförande utsikt över fjällen, med naturens äventyr precis utanför dörren. Vi ser fram emot att välkomna dig till en oförglömlig vistelse."
           />
           <GridImgs
             src={boende2}
             alt="Bild på Tak Mat o Tur utsida lägenhet"
             title="Egen ingång och gratis parkering"
-            description="Känn er som hemma efter en dag fylld av äventyr. Kommer du med elbil? Laddare finns på parkeringen."
+            description="Egen ingång och bekvämligheter som gratis parkering. Reser du med elbil? Ingen fara – vi har en laddare tillgänglig direkt på parkeringen. Känn er som hemma och njut av friheten att komma och gå som ni vill."
             reverse
           />
           <GridImgs
@@ -121,7 +121,7 @@ const Accommodation = () => {
           />
           <GridImgs
             src={boende4}
-            alt="föreläsare Marcus Torgeby"
+            alt="Bild på Tak Mat o Turs lägenhet som visar antal bäddar"
             title="Sovplats för upp mot 4 personer"
             description="Familjesäng och en stor bäddsoffa att slappna av i när benen är trötta."
             reverse
@@ -132,18 +132,19 @@ const Accommodation = () => {
             title="Slå sig ner"
             description="Vare sig det är att slå sig ner till middagen eller luta sig tillbaka i soffan med ett sällskapsspel så lovar vi ett trivsamt boende."
           />
-          <GridImgs
-            src={boende6}
-            alt="Tak Mat o Tur uppmundrar till äventyret"
-            title="Nära till äventyret"
-            description="Med gångavstånd från lägenheten hittar ni skidåkning i backe, fantastiska toppturer, längdspår, vandring eller varför inte ett svettigt löppass på fjället. Vi hjälper dig såklart med våra tips!"
-            reverse
-          />
+
           <GridImgs
             src={boende7}
             alt="Tak Mat o Tur Gastronomi och matupplevelser"
             title="Gastronomi"
             description="Hos oss vill vi ge dig en matupplevelse som stannar kvar långt efter att måltiden är över."
+            reverse
+          />
+          <GridImgs
+            src={boende6}
+            alt="Tak Mat o Tur uppmundrar till äventyret"
+            title="Nära till äventyret"
+            description="Endast ett stenkast från lägenheten väntar äventyr. Här kan du njuta av skidåkning i backen, fantastiska toppturer, längdspår, vandringsleder eller kanske ett utmanande löppass på fjället. Vi står redo att dela med oss av våra bästa tips för att göra ditt äventyr oförglömligt!"
           />
         </article>
 

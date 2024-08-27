@@ -10,7 +10,7 @@ const TourWinter = () => {
   return (
     <>
       <SEOHelmet
-        title="Topptur Vinter i Årefjällen | Tak Mat o Tur"
+        title="Topptur Vinter | Tak Mat o Tur"
         description="Upplev ett oförglömligt vinteräventyr i Årefjällen. Vi erbjuder skräddarsydda toppturer med spektakulära vyer och fantastisk skidåkning."
         keywords="topptur, vinter, Åre, fjällen, skitouring, skidåkning, guide"
         url="http://takmatotur.se/topptur/vinter"
@@ -35,7 +35,7 @@ const TourWinter = () => {
         </header>
 
         {/* Consistent Article Section */}
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
+        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
           <p>
             Upplev ett oförglömligt topptursäventyr i Årefjällen! Med vår
             gedigna erfarenhet kan vi erbjuda dig en upplevelse utöver det

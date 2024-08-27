@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <SEOHelmet
-        title="Om Oss | Tak Mat o Tur i Duved"
+        title="Om Oss | Tak Mat o Tur "
         description="Lär känna Martin och Emma Gillgren, grundarna av Tak Mat o Tur i Duved. Vi erbjuder personliga upplevelser med fokus på komfort, gastronomi och äventyr i hjärtat av Sveriges fjällvärld."
         keywords="Tak Mat o Tur, Duved, Martin Gillgren, Emma Gillgren, familjeföretag, fjällupplevelse, löpning, skidåkning, gastronomi, äventyr"
         url="http://takmatotur.se/om"
@@ -38,7 +38,7 @@ const About = () => {
 
         <div className="p-3 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%]">
           <section className="mb-10 font-semibold text-lg">
-            <p className=" md: xl:p-5 xl:w-[80%] m-auto font-semibold text-lg">
+            <p className="text-base md:text-md xl:text-xl xl:p-5 xl:w-[80%] m-auto font-semibold">
               Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
               komfort, gastronomi och äventyr för att skapa oförglömliga
               upplevelser. Vi specialiserar oss på att erbjuda personliga
@@ -63,13 +63,13 @@ const About = () => {
                 löpning och skidåkning kan få bli vardag. Allt det och mer har
                 flytten till Duved för några år sedan inneburit.
               </p>
-              <p className="mt-5">
+              <p className="mt-10">
                 Att få arbeta med att erbjuda detta till andra är en dröm som
                 gått i upplevelse. Tak Mat o Tur är en möjlighet för oss att i
                 egen regi kombinera det som livet gjort oss bra på; löpning,
                 skidåkning, gästupplevelser och mat.
               </p>
-              <p className="mt-5">
+              <p className="mt-10">
                 Duved är mer än bara en plats – det är en gemenskap och en port
                 till den vilda naturen. Vi strävar efter att erbjuda en unik och
                 genuin upplevelse, där varje ögonblick är noggrant planerat och
@@ -106,14 +106,14 @@ const About = () => {
                 löpning och skidåkning kan få bli vardag. Allt det och mer har
                 flytten till Duved för några år sedan inneburit.
               </p>
-              <p className="mt-5">
+              <p className="mt-10">
                 Att få arbeta med att erbjuda detta till andra är en dröm som
                 gått i upplevelse. Tak Mat o Tur är en möjlighet för oss att i
                 egen regi kombinera det som livet gjort oss bra på; löpning,
                 skidåkning, gästupplevelser och mat.
               </p>
             </div>
-            <div className="relative mt-5">
+            <div className="relative mt-10">
               <p>
                 Duved är mer än bara en plats – det är en gemenskap och en port
                 till den vilda naturen. Vi strävar efter att erbjuda en unik och
@@ -126,7 +126,7 @@ const About = () => {
           </section>
 
           {/* button div */}
-          <div className="button-holder flex justify-center mt-10 mb-5">
+          <div className="button-holder flex justify-center mt-16 mb-5">
             <Link to="/kontakt" className="inline-flex bg-amber-700 rounded-md">
               <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
                 <span className="relative z-10">Frågor / Kontakt</span>

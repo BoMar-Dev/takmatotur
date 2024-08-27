@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Card = ({ image, title, link, description }) => {
   return (
     <Link to={link} className="block h-full">
-      <div className="bg-white flex flex-col p-5 shadow-lg rounded-lg h-full hover:scale-105 transform transition-transform duration-300">
+      <div className="bg-white flex flex-col p-5 shadow-md rounded-lg h-full hover:scale-105 transform transition-transform duration-300">
         <img className="rounded-md" src={image} alt={title} />
         <div className=" font-bold text-xl flex-grow mt-5 text-amber-700">
           {title}

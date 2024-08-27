@@ -59,7 +59,7 @@ const Contact = () => {
   return (
     <>
       <SEOHelmet
-        title="Kontakta Oss | Tak Mat o Tur i Duved"
+        title="Kontakta oss | Tak Mat o Tur i Duved"
         description="Kontakta oss på Tak Mat o Tur i Duved. Vi finns här för att svara på alla dina frågor och ge dig bästa möjliga service."
         keywords="kontakt, Tak Mat o Tur, Duved, Åre, Jämtland, telefon, e-post, karta"
         url="http://takmatotur.se/kontakt"

@@ -10,7 +10,7 @@ const MandagsLopning = () => {
   return (
     <>
       <SEOHelmet
-        title="Måndagslöpning i Jämtland | Tak Mat o Tur"
+        title="Måndagslöpning | Tak Mat o Tur"
         description="Delta i Jämtlands härligaste löpargrupp! Sex måndagar med inspirerande löppass och personlig träning som hjälper dig att nå nya höjder."
         keywords="måndagslöpning, Jämtland, löpning, löpargrupp, träning, löpteknik"
         url="http://takmatotur.se/mandagslopning"
@@ -34,7 +34,7 @@ const MandagsLopning = () => {
           <h1 className="mb-5 font-bold">Måndagslöpning</h1>
         </header>
 
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-lg">
+        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
           <p className="mb-5">
             Upptäck magin med Jämtlands härligaste löpargrupp! Under sex
             måndagar får du chansen att vara med i en inspirerande gemenskap och
