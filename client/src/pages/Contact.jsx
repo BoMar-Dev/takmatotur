@@ -32,7 +32,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://your-backend-url.onrender.com/kontakt",
+        "https://tak-mat-o-tur-frontend.onrender.com/kontakt",
         {
           method: "POST",
           headers: {
