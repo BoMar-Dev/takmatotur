@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+// import icons
 import { GiConfirmed } from "react-icons/gi";
 import { MdOutlineDisabledByDefault } from "react-icons/md";
 

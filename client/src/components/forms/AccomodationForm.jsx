@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+// import icons
 import { IoClose } from "react-icons/io5";
 import { useFormDefaults } from "../../functions/useFormDefaults";
 import { MdOutlineDisabledByDefault } from "react-icons/md";

@@ -23,6 +23,7 @@ const BookingForm = ({ closeForm }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // breaking out the time from the date object
     const today = new Date().toISOString().split("T")[0];
 
     if (formData.date < today) {

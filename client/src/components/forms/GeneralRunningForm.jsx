@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+// import icons
 import { IoClose } from "react-icons/io5";
 import { MdOutlineDisabledByDefault } from "react-icons/md";
 import { GiConfirmed } from "react-icons/gi";
@@ -12,7 +14,7 @@ const GeneralRunningForm = ({ closeForm }) => {
     email: "",
     subject: "Måndagslöpning",
     peopleCount: "",
-    date: "", // Added date field
+    date: "",
     message: "",
   });
   const [emailSent, setEmailSent] = useState(false);
@@ -65,7 +67,7 @@ const GeneralRunningForm = ({ closeForm }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[450px] md:h-[550px] lg:h-[600px] relative overflow-y-auto"
+      className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[90vh] max-h-[90vh] md:h-[85vh] md:max-h-[85vh] lg:h-[80vh] lg:max-h-[80vh] relative overflow-y-auto"
     >
       <button
         type="button"
@@ -174,7 +176,7 @@ const GeneralRunningForm = ({ closeForm }) => {
       </div>
       <button
         type="submit"
-        className="bg-blue-500 text-white font-bold py-2 px-4 rounded mb-"
+        className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
       >
         Skicka
       </button>
