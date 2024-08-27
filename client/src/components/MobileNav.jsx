@@ -2,30 +2,21 @@ import { useState } from "react";
 // Import framer-motion
 import { motion } from "framer-motion";
 // import icons
-
 import { IoClose } from "react-icons/io5";
 import { CiMenuBurger } from "react-icons/ci";
-
 // import Link
 import { Link } from "react-router-dom";
 
 const MobileNav = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const [key, setKey] = useState(0); // State to hold a key to force re-render
 
   const variants = {
-    open: { opacity: 1, y: 0, zIndex: 50 },
-    closed: { opacity: 0, y: "-100%", zIndex: -10 },
+    open: { opacity: 1, y: 0 },
+    closed: { opacity: 0, y: "-100%" },
   };
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
-    setKey((prevKey) => prevKey + 1); // Increment key to force re-render
-  };
-
-  const resetAnimationClasses = () => {
-    setOpenMenu(false);
-    setKey((prevKey) => prevKey + 1); // Increment key to force re-render
   };
 
   return (
@@ -37,16 +28,15 @@ const MobileNav = () => {
         <CiMenuBurger />
       </div>
       <motion.div
-        key={key} // Using the key here to force re-render
         initial="closed"
         animate={openMenu ? "open" : "closed"}
         variants={variants}
+        transition={{ duration: 0.5, ease: "easeInOut" }} // Smoother transition
         className="bg-white shadow-2xl fixed w-full top-0 right-0 max-w-xs h-screen z-50"
-        style={{ transition: "z-index 0.3s, opacity 0.3s" }} // Ensure z-index transitions smoothly
       >
         <div
-          onClick={resetAnimationClasses}
-          className="text-4xl absolute z-30 left-5 top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold animate-jump-in animate-once animate-delay-1000"
+          onClick={toggleMenu}
+          className="text-4xl absolute z-30 left-5 top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold"
         >
           <IoClose />
         </div>
@@ -54,7 +44,7 @@ const MobileNav = () => {
           <li>
             <Link
               to="/om"
-              onClick={resetAnimationClasses}
+              onClick={toggleMenu}
               className="text-PrimaryColor hover:text-slate-500 transition font-semibold"
             >
               Tak Mat O Tur
@@ -63,7 +53,7 @@ const MobileNav = () => {
           <li>
             <Link
               to="/trailcamp"
-              onClick={resetAnimationClasses}
+              onClick={toggleMenu}
               className="text-PrimaryColor hover:text-slate-500 transition font-semibold"
             >
               Trail Camp
@@ -72,7 +62,7 @@ const MobileNav = () => {
           <li>
             <Link
               to="/coach"
-              onClick={resetAnimationClasses}
+              onClick={toggleMenu}
               className="text-PrimaryColor hover:text-slate-500 transition font-semibold"
             >
               Löpcoach
@@ -81,7 +71,7 @@ const MobileNav = () => {
           <li>
             <Link
               to="/topptur"
-              onClick={resetAnimationClasses}
+              onClick={toggleMenu}
               className="text-PrimaryColor hover:text-slate-500 transition font-semibold"
             >
               Topptur
@@ -90,7 +80,7 @@ const MobileNav = () => {
           <li>
             <Link
               to="/boende"
-              onClick={resetAnimationClasses}
+              onClick={toggleMenu}
               className="text-PrimaryColor hover:text-slate-500 transition font-semibold"
             >
               Boende
@@ -99,7 +89,7 @@ const MobileNav = () => {
           <li>
             <Link
               to="/kontakt"
-              onClick={resetAnimationClasses}
+              onClick={toggleMenu}
               className="text-PrimaryColor hover:text-slate-500 transition font-semibold"
             >
               Kontakt
