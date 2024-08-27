@@ -67,7 +67,7 @@ const GeneralRunningForm = ({ closeForm }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[90vh] max-h-[90vh] md:h-[85vh] md:max-h-[85vh] lg:h-[80vh] lg:max-h-[80vh] relative overflow-y-auto"
+      className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[70vh] max-h-[70vh] md:h-[70vh] md:max-h-[70vh] lg:h-[70vh] lg:max-h-[70vh] relative overflow-y-auto"
     >
       <button
         type="button"
