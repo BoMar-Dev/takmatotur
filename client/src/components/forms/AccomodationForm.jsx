@@ -37,7 +37,7 @@ const AccomodationForm = ({ closeForm }) => {
     setDateError(""); // Clear any previous date errors
 
     try {
-      const response = await fetch("http://localhost:5000/boende", {
+      const response = await fetch("https://takmatotur.onrender.com/boende", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
