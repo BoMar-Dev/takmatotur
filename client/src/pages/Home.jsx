@@ -7,6 +7,7 @@ import mondayRun from "../img/home/monday.webp";
 import topptur from "../img/home/topptur.webp";
 import boende3 from "../img/accommodation/boende3.webp";
 const landingImage = import("../img/header/landing.webp");
+import backgroundImg from "../img/about/background.svg";
 
 // Import component
 import Card from "../components/Card";
@@ -34,7 +35,7 @@ const Home = () => {
         url="https://takmatotur.se/"
         image={landingImage}
       />
-      <main className="bg-white p-5 pb-10 relative">
+      <main className="bg-white p-5 pb-10 relative mb-14">
         <motion.header
           className="absolute top-[-200px] xl:top-[-250px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:text-xl font-bold text-PrimaryColor z-10"
           initial={{ opacity: 0 }}
@@ -62,6 +63,7 @@ const Home = () => {
           <header className="flex flex-col items-center justify-center mb- text-center">
             <h1 className="mb-2 font-bold">Välkommen</h1>
           </header>
+
           <article className="p-3 md:px-20 md: xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
             <p>
               Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
@@ -79,6 +81,18 @@ const Home = () => {
             Aktiviteter & Utbud :
           </h2>
         </div>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${backgroundImg})`,
+            backgroundSize: "240%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.07,
+            zIndex: 0, // Adjust this as needed
+          }}
+          loading="lazy"
+        ></div>
 
         {/* Cards section */}
         <section className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:w-[70%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">

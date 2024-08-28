@@ -30,12 +30,13 @@ const GeneralRunningForm = ({ closeForm }) => {
 
     const today = new Date().toISOString().split("T")[0];
 
-    if (formData.date < today) {
+    // Kontrollera endast om datum har valts
+    if (formData.date && formData.date < today) {
       setDateError("Datumet måste vara idag eller senare.");
       return;
     }
 
-    setDateError(""); // Clear any previous date errors
+    setDateError(""); // Rensa tidigare datumfel
 
     try {
       const response = await fetch("https://takmatotur.onrender.com/coach", {

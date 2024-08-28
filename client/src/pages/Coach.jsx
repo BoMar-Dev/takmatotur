@@ -34,7 +34,7 @@ const Coach = () => {
         style={{
           backgroundImage: `url(${backgroundImg})`,
           backgroundSize: "700%",
-          opacity: 0.08,
+          opacity: 0.05,
           zIndex: -1,
           transform: "translateX(-30%)",
         }}

@@ -26,7 +26,7 @@ const About = () => {
             backgroundSize: "140%",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            opacity: 0.1,
+            opacity: 0.05,
             zIndex: -1,
           }}
           loading="lazy" // Lazy loading the background image

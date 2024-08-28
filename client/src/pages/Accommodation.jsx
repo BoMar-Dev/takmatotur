@@ -49,7 +49,7 @@ const Accommodation = () => {
             backgroundImage: `url(${backgroundImg})`,
             backgroundSize: "300%",
             backgroundRepeat: "repeat-y",
-            opacity: 0.08,
+            opacity: 0.05,
             zIndex: -1,
             transform: "translateX(-20%)",
           }}

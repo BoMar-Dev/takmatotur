@@ -24,7 +24,7 @@ const ForetagsCoach = () => {
             backgroundImage: `url(${backgroundImg})`,
             backgroundSize: "110%", // Adjust the size to be slightly bigger
             backgroundRepeat: "repeat-x",
-            opacity: 0.08, // Slightly different opacity
+            opacity: 0.05, // Slightly different opacity
             zIndex: -1,
             transform: "translateX(-15%) translateY(30%)", // Different positioning
           }}

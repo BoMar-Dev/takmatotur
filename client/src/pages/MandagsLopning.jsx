@@ -24,7 +24,7 @@ const MandagsLopning = () => {
             backgroundImage: `url(${backgroundImg})`,
             backgroundSize: "150%",
             backgroundRepeat: "no-repeat",
-            opacity: 0.08,
+            opacity: 0.05,
             zIndex: -1,
             transform: "translateX(1%) translateY(20%)",
           }}
