@@ -47,23 +47,23 @@ const MandagsLopning = () => {
             <div className="p-4">
               <h2 className="mb-2 font-semibold ">Vad ingår?</h2>
               <ul className="list-disc list-inside">
-                <li className="mb-5">
-                  Professionellt ledda löppass fyllda med glädje och gemenskap.
-                  Varje pass är unikt och varierar med fokus på olika aspekter
-                  av löpning, från teknikträning och intervaller till
-                  långdistans och fartlek. Du får även tillgång till löpanalys,
-                  där vi analyserar din löpteknik och ger dig konkreta tips för
-                  att förbättra din prestation och undvika skador.
+                <li className="mb-7">
+                  Professionellt ledda löppass erbjuder en inspirerande och
+                  gemensam atmosfär. Varje pass är unikt och fokuserar på olika
+                  aspekter av löpning, inklusive teknikträning, intervaller,
+                  långdistans och fartlek.
+                  <li className="mt-7">
+                    Som en del av programmet får du ett personligt
+                    träningsprogram som är skräddarsytt efter dina specifika mål
+                    och förutsättningar. Löpcoachningen är utformad för att
+                    hjälpa dig nå nya höjder, oavsett om du är nybörjare eller
+                    erfaren löpare.
+                  </li>
                 </li>
-                <li className="mb-5">
-                  Ett personligt träningsprogram skräddarsytt efter dina mål och
-                  förutsättningar, med löpcoachning som hjälper dig att nå nya
-                  höjder oavsett om du är nybörjare eller erfaren löpare.
-                </li>
-                <li className="mb-5">
-                  Ett personligt träningsprogram skräddarsytt efter dina mål och
-                  förutsättningar, med löpcoachning som hjälper dig att nå nya
-                  höjder oavsett om du är nybörjare eller erfaren löpare.
+                <li className="mb-7">
+                  Varje löppass avslutas med en gemensam aktivitet, såsom bastu,
+                  kallbad, föreläsningar, styrketräning, yoga eller middag,
+                  vilket stärker gemenskapen bland deltagarna.
                 </li>
               </ul>
             </div>

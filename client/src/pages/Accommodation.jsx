@@ -66,20 +66,11 @@ const Accommodation = () => {
           </button>
         </div>
         <article className="p-3 md:px-20 md:mt-5 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
-          <p>
-            Med ett ursprung i södra Sverige har vi, Emma och Martin, sedan
-            några år bosatt oss i vackra Duved. Vår flytt till Jämtland har nog
-            egentligen alltid varit självklar och, kanske, på något sätt
-            förutbestämd. Natur, träning, mat och service har alltid legat oss
-            varmt om hjärtat och Åredalen är för oss den perfekta platsen för
-            detta.
-          </p>
-          <p className="mt-5">
+          <p className="">
             Hos oss har du fjällen med allt vad de erbjuder ett stenkast bort.
             En kort promenad tar dig upp till Duveds och Tegefjälls liftsystem
             om vintern och på sommaren kan du enkelt ansluta till flera leder
-            för vandring och löpning. För transport till Åre finns skidbussen
-            precis nedför backan.
+            för vandring och löpning.
           </p>
         </article>
 
@@ -104,7 +95,7 @@ const Accommodation = () => {
             src={boende1}
             alt="Bild på Emma & Martin - Tak Mat o Tur"
             title="Värdparet"
-            description="Upplev det bästa av fjällvärlden genom att bo i vår mysiga lägenhet. Här vaknar du upp till en hänförande utsikt över fjällen, med naturens äventyr precis utanför dörren. Vi ser fram emot att välkomna dig till en oförglömlig vistelse."
+            description="Med ett ursprung i södra Sverige har vi, Emma och Martin, sedan några år bosatt oss i vackra Duved. Vår flytt till Jämtland har nog egentligen alltid varit självklar och, kanske, på något sätt förutbestämd. Natur, träning, mat och service har alltid legat oss varmt om hjärtat och Åredalen är för oss den perfekta platsen för detta.."
           />
           <GridImgs
             src={boende2}
@@ -123,7 +114,7 @@ const Accommodation = () => {
             src={boende4}
             alt="Bild på Tak Mat o Turs lägenhet som visar antal bäddar"
             title="Sovplats för upp mot 4 personer"
-            description="Familjesäng och en stor bäddsoffa att slappna av i när benen är trötta."
+            description="Med bekväma sängar och en rymlig bäddsoffa, har du gott om utrymme att slappna av efter en dag fylld av roliga saker. Perfekt för att återhämta dig och njuta av en lugn kväll."
             reverse
           />
           <GridImgs
@@ -137,7 +128,7 @@ const Accommodation = () => {
             src={boende7}
             alt="Tak Mat o Tur Gastronomi och matupplevelser"
             title="Gastronomi"
-            description="Hos oss vill vi ge dig en matupplevelse som stannar kvar långt efter att måltiden är över."
+            description="Hos oss vill vi ge dig en matupplevelse som stannar kvar långt efter att måltiden är över.  Lägg till frukost med nybakat bröd, goda och nyttiga smothies med råvaror från fjällen. Varför inte en god middag med influenser från Jämtland och Asien i en magisk kombination."
             reverse
           />
           <GridImgs
@@ -147,26 +138,72 @@ const Accommodation = () => {
             description="Endast ett stenkast från lägenheten väntar äventyr. Här kan du njuta av skidåkning i backen, fantastiska toppturer, längdspår, vandringsleder eller kanske ett utmanande löppass på fjället. Vi står redo att dela med oss av våra bästa tips för att göra ditt äventyr oförglömligt!"
           />
         </article>
-
-        <article className="p-3 xl:w-2/3 m-auto text-md">
+        <article className="p-5 xl:p-8 xl:w-[50%] w-[90%] md:w-[75%] m-auto text-md border-2 border-amber-700 rounded-md mt-10 ">
           <div className="m-auto text-5xl text-amber-700">
             <FaInfoCircle className="" />
           </div>
-          <li className="mt-3">
-            Duved Centralstation för buss / tåg: 20 min promenad eller 5 min med
-            bil
-          </li>
-          <li className="mt-3">
-            Duveds skidbackar och skiduthyrning: 15 min promenad eller 4 min med
-            bil
-          </li>
-          <li className="mt-3">
-            Supermarket: 13 min promenad eller 2 min med bil
-          </li>
-          <li className="mt-3">
-            Resturanger och fik: 13 min promenad eller 2 min med bil
-          </li>
-          <li className="mt-3">Åre by: 7.5 km</li>
+          <ul className="list-outside ml-4">
+            <li className="mt-3">
+              <strong>
+                Duved Centralstation:
+                <span className=" sm:hidden">
+                  <br />
+                </span>{" "}
+                {/* Break on small screens */}
+              </strong>
+              20 min promenad eller 5 min med bil
+            </li>
+            <li className="mt-3">
+              <strong>
+                Duveds skidbackar:
+                <span className=" sm:hidden">
+                  <br />
+                </span>{" "}
+                {/* Break on small screens */}
+              </strong>
+              15 min promenad eller 4 min med bil
+            </li>
+            <li className="mt-3">
+              <strong>
+                Skidbuss:
+                <span className=" sm:hidden">
+                  <br />
+                </span>{" "}
+                {/* Break on small screens */}
+              </strong>
+              5 minuter promenad
+            </li>
+            <li className="mt-3">
+              <strong>
+                Supermarket:
+                <span className=" sm:hidden">
+                  <br />
+                </span>{" "}
+                {/* Break on small screens */}
+              </strong>
+              13 min promenad eller 2 min med bil
+            </li>
+            <li className="mt-3">
+              <strong>
+                Resturanger och fik:
+                <span className=" sm:hidden">
+                  <br />
+                </span>{" "}
+                {/* Break on small screens */}
+              </strong>
+              13 min promenad eller 2 min med bil
+            </li>
+            <li className="mt-3">
+              <strong>
+                Åre by:
+                <span className=" sm:hidden">
+                  <br />
+                </span>{" "}
+                {/* Break on small screens */}
+              </strong>
+              7.5 km
+            </li>
+          </ul>
         </article>
 
         {/* New Encouragement Section */}

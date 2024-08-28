@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 // Import framer-motion
 import { motion } from "framer-motion";
 // import icons
@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 
 const MobileNav = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const menuRef = useRef(null);
+  const [isLandscape, setIsLandscape] = useState(false);
 
   const variants = {
     open: { opacity: 1, y: 0 },
@@ -19,28 +21,59 @@ const MobileNav = () => {
     setOpenMenu(!openMenu);
   };
 
+  useEffect(() => {
+    if (openMenu && menuRef.current) {
+      // Scroll to the top of the menu when it opens
+      menuRef.current.scrollTop = 0;
+    }
+
+    // Check orientation and screen size and update state
+    const checkOrientation = () => {
+      if (window.innerWidth < 768 && window.innerWidth > window.innerHeight) {
+        // Only set landscape if the width is less than 768px (mobile devices)
+        setIsLandscape(true);
+      } else {
+        setIsLandscape(false);
+      }
+    };
+
+    window.addEventListener("resize", checkOrientation);
+    checkOrientation(); // Initial check on component mount
+
+    return () => window.removeEventListener("resize", checkOrientation);
+  }, [openMenu]);
+
   return (
     <nav className="text-PrimaryColor lg:hidden xl:hidden">
       <div
         onClick={toggleMenu}
-        className="cursor-pointer mt-12 text-[50px] md:text-[60px] md:font- font-extrabold"
+        className="cursor-pointer mt-12 text-[50px] md:text-[60px] font-extrabold"
       >
         <CiMenuBurger />
       </div>
       <motion.div
+        ref={menuRef}
         initial="closed"
         animate={openMenu ? "open" : "closed"}
         variants={variants}
         transition={{ duration: 0.5, ease: "easeInOut" }} // Smoother transition
-        className="bg-white shadow-2xl fixed w-full top-0 right-0 max-w-xs h-screen z-50"
+        className="bg-white shadow-2xl fixed w-full top-0 right-0 max-w-xs h-screen z-50 overflow-y-auto"
       >
-        <div
+        <motion.div
+          key={openMenu ? "open" : "closed"} // Force re-render by changing key
           onClick={toggleMenu}
-          className="text-4xl absolute z-30 left-5 top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.5 }} // Smooth pop-in effect with delay
+          className="text-4xl fixed z-30 left-5 top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold"
         >
           <IoClose />
-        </div>
-        <ul className="h-full flex flex-col justify-center items-center gap-10 text-PrimaryColor font-sans font-bold text-xl">
+        </motion.div>
+        <ul
+          className={`h-full flex flex-col justify-center items-center gap-8 text-PrimaryColor font-sans font-bold text-xl ${
+            isLandscape ? "mt-24" : "mt-0"
+          }`}
+        >
           <li>
             <Link
               to="/om"

@@ -66,7 +66,7 @@ const AccomodationForm = ({ closeForm }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[450px] md:h-[550px] lg:h-[600px] relative overflow-y-auto "
+      className="bg-white p-5  mb-10  rounded-lg shadow-lg w-[90%] max-w-md h-[70vh] max-h-[60vh] md:h-[70vh] md:max-h-[70vh] lg:h-[70vh] lg:max-h-[70vh] relative overflow-y-auto"
     >
       <button
         className="absolute top-2 left-2 p-2 text-3xl text-gray-700"

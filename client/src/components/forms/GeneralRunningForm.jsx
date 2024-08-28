@@ -38,7 +38,7 @@ const GeneralRunningForm = ({ closeForm }) => {
     setDateError(""); // Clear any previous date errors
 
     try {
-      const response = await fetch("http://localhost:5000/coach", {
+      const response = await fetch("https://takmatotur.onrender.com/coach", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const GeneralRunningForm = ({ closeForm }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[70vh] max-h-[70vh] md:h-[70vh] md:max-h-[70vh] lg:h-[70vh] lg:max-h-[70vh] relative overflow-y-auto"
+      className="bg-white mb-10 p-5 rounded-lg shadow-lg w-[90%] max-w-md h-[70vh] max-h-[60vh] md:h-[70vh] md:max-h-[70vh] lg:h-[70vh] lg:max-h-[70vh] relative overflow-y-auto"
     >
       <button
         type="button"
@@ -151,12 +151,14 @@ const GeneralRunningForm = ({ closeForm }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block mb-2 font-bold">Önskat datum</label>
+        <label className="block mb-2 font-bold">
+          Önskat startdatum{" "}
+          <span className="text-sm text-gray-500">(frivilligt)</span>
+        </label>
         <input
           type="date"
           name="date"
           className="w-full p-2 border border-gray-300 rounded"
-          required
           value={formData.date}
           onChange={handleChange}
         />
