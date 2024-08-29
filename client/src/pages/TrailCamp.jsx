@@ -15,16 +15,16 @@ const TrailCamp = () => {
       <SEOHelmet
         title="Trail Camp Åre 2024 | Tak Mat O Tur"
         description="Join us for Trail Camp Åre 2024, a three-day running experience in the heart of Åre's magnificent mountains. From August 30th to September 1st, immerse yourself in nature, challenge yourself, and connect with like-minded runners."
-        keywords="Trail Camp, Åre 2024, running camp, trail running, Markus Torgeby, Mullfjället, running experience, Tak Mat O Tur"
+        keywords="Trail Camp, Tak Mat o Tur  Åre 2024, running camp, trail running, Markus Torgeby, Mullfjället, running experience, Tak Mat O Tur"
         url="https://takmatotur.se/trailcamp"
         image="https://yourwebsite.com/path-to-image.jpg"
         ogType="website"
         twitterCard="summary_large_image"
       />
 
-      <section className="relative flex flex-col items-center p-5 mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
+      <section className="relative p-5 pb-16 max-w-screen-xl mx-auto">
         <div
-          className="absolute left-0 w-full h-full bg-cover bg-center"
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImg})`,
             backgroundSize: "cover",
@@ -33,12 +33,13 @@ const TrailCamp = () => {
             zIndex: -1,
           }}
         ></div>
-        <header className="flex flex-col items-center justify-center mb-6 text-center">
-          <h1 className="mb-2 font-bold ">Trail Camp 2024</h1>
-          <h2 className="text-lg font-bold mb-5">30/8 - 1/9</h2>
+
+        <header className="text-center mb-6">
+          <h1 className="font-bold mb-2">Trail Camp 2024</h1>
+          <h2 className="text-lg font-bold">30/8 - 1/9</h2>
         </header>
 
-        <div className="bg-yellow-100 border border-yellow-400 text-black p-4 rounded-lg mb-6 text-center w-full max-w-xl mx-auto">
+        <div className="bg-yellow-100 border border-yellow-400 text-black p-4 rounded-lg mb-6 text-center max-w-screen-lg mx-auto w-">
           <p className="font-semibold">
             Trail camp har fått en uppdatering. Gå in på våran
             <a
@@ -54,7 +55,7 @@ const TrailCamp = () => {
           </p>
         </div>
 
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl 3xl:w-[85%]">
+        <article className="p-3 md:p-20 xl:p-8 max-w-screen-xl mx-auto font-semibold text-base md:text-md xl:text-xl">
           <p>
             Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse
             i hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
@@ -63,9 +64,7 @@ const TrailCamp = () => {
           </p>
         </article>
 
-        <div className="mb-6 text-center font-semibold md:w-[80%] xl:w-[70%]"></div>
-
-        <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[90%]">
+        <section className="max-w-screen-xl mx-auto mt-10 space-y-10">
           <GridImgs
             src={welcome}
             alt="Trail Camp Welcome"
@@ -134,10 +133,10 @@ const TrailCamp = () => {
             }
             imgProps={{ loading: "lazy" }}
           />
-        </article>
+        </section>
 
-        <section className="flex flex-col w-full md:w-[80%] lg:w-[75%] xl:w-[90%] sm:mt-0 md:p-10 p-3">
-          <p className="xl:w-[70%] xl:text-center xl:m-auto">
+        <section className="p-4 xl:p-6 max-w-screen-lg mx-auto text-md mt-10">
+          <p>
             Boka din plats idag och TÄVLA om att få hela helgen gratis
             tillsammans med en vän. Platserna är begränsade, så se till att boka
             din plats redan idag för att säkra din medverkan i denna unika

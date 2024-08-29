@@ -20,13 +20,13 @@ const Coach = () => {
   const closeForm = () => setIsFormOpen(false);
 
   return (
-    <section className="section flex flex-col p-5 items-center relative 3xl:w-[70%] 3xl:m-auto mb-5">
+    <section className="relative flex flex-col items-center p-5 pb-16">
       <SEOHelmet
         title="Löpcoach | Tak Mat O Tur"
         description="Privat löpcoachning och företagsträning från Tak Mat o Tur. Vi erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken."
-        keywords="Löpcoach, träning, coaching, triathlon, personlig träning"
+        keywords="Löpcoach, Tak Mat o Tur, träning, coaching, triathlon, personlig träning"
         url="http://takmatotur.se/coach"
-        image={profil} // Image for social sharing
+        image={profil}
       />
 
       <div
@@ -70,8 +70,9 @@ const Coach = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <article className="p-3 md:px-20 md:mt-5 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl 3xl:w-[85%] mb-10">
-        <p className="3xl:w-[85%] m-auto">
+
+      <article className="max-w-screen-xl mx-auto p-3 mb-10">
+        <p className="text-base md:text-md xl:text-xl font-semibold">
           Med ett ursprung inom friidrott och fotboll har löpning alltid varit
           en grund i mitt liv. Jag specialiserade mig främst på 800 m, 1500 m
           och 5000 m. Detta är år som jag är otroligt tacksam för. Farten är
@@ -80,7 +81,7 @@ const Coach = () => {
         </p>
       </article>
 
-      <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
+      <div className="xl:flex xl:space-x-10 xl:items-start max-w-screen-xl mx-auto">
         <article className="p-5 xl:w-1/2">
           <p className="mb-5">
             När gnistan för att tävla på löparbanor började avta övergick jag
@@ -106,22 +107,21 @@ const Coach = () => {
           </p>
         </article>
         <aside className="p-5 xl:w-1/2 flex items-center">
-          <div></div>
           <img
             src={profil}
             alt="Profilbild på Martin Gillgren löpcoach Tak Mat o Tur"
-            className=" rounded-lg"
+            className="rounded-lg"
           />
         </aside>
       </div>
 
       <div className="text-center my-10">
         <h2 className="text-xl font-semibold text-amber-700">
-          Vad jag erbjuder :
+          Vad jag erbjuder:
         </h2>
       </div>
 
-      <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-10 mb-10 3xl:">
+      <div className="max-w-screen-xl mx-auto flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-10 mb-10">
         <Card
           image={mondayRun}
           title="Måndagslöpning"
@@ -145,13 +145,12 @@ const Coach = () => {
         />
       </div>
 
-      <section className="text-center p-5 md:w-[80%]">
+      <section className="text-center p-5 max-w-screen-xl mx-auto">
         <p>
-          Kom igång att springa redan idag{" "}
-          <span className="font-extrabold"></span>
+          Kom igång att springa redan idag!
           <br />
           Kontakta mig så ser vi till att göra en rolig strukturerad plan som
-          passar just dig eller er
+          passar just dig eller er.
         </p>
       </section>
 

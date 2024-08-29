@@ -35,9 +35,9 @@ const Home = () => {
         url="https://takmatotur.se/"
         image={landingImage}
       />
-      <main className="bg-white p-5 pb-10 relative mb-14">
+      <main className="relative bg-white p-5 pb-16">
         <motion.header
-          className="absolute top-[-200px] xl:top-[-250px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:text-xl font-bold text-PrimaryColor z-10"
+          className="absolute top-[-200px] xl:top-[-250px] left-1/2 transform -translate-x-1/2 xl:text-xl font-bold text-PrimaryColor z-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 3, ease: "easeOut" }}
@@ -58,14 +58,13 @@ const Home = () => {
           </div>
         </motion.header>
 
-        {/* Company description section */}
-        <section className="relative flex flex-col items-center mb-5 2xl:pb-10 3xl:w-[60%] 3xl:m-auto">
-          <header className="flex flex-col items-center justify-center mb- text-center">
-            <h1 className="mb-2 font-bold">Välkommen</h1>
+        <section className="relative flex flex-col items-center mb-10 max-w-screen-xl mx-auto">
+          <header className="text-center mb-5">
+            <h1 className="font-bold">Välkommen</h1>
           </header>
 
-          <article className="p-3 md:px-20 md: xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl 3xl:w-[85%]">
-            <p>
+          <article className="max-w-screen-xl mx-auto p-5 md:p-8 xl:p-10 font-semibold text-base md:text-md xl:text-xl">
+            <p className="text-center xl:text-left">
               Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
               gastronomi och äventyr för oförglömliga upplevelser. Drivna av vår
               passion för löpning, skidåkning och gästupplevelser, strävar vi
@@ -81,6 +80,7 @@ const Home = () => {
             Aktiviteter & Utbud :
           </h2>
         </div>
+
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -89,13 +89,12 @@ const Home = () => {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             opacity: 0.07,
-            zIndex: 0, // Adjust this as needed
+            zIndex: -1,
           }}
           loading="lazy"
         ></div>
 
-        {/* Cards section */}
-        <section className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:w-800%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-screen-xl mx-auto mb-12">
           <Card
             image={mondayRun}
             title="Måndagslöpning"

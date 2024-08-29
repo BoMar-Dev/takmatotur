@@ -11,14 +11,14 @@ const About = () => {
   return (
     <>
       <SEOHelmet
-        title="Om Oss | Tak Mat o Tur "
+        title="Om Oss | Tak Mat o Tur"
         description="Lär känna Martin och Emma Gillgren, grundarna av Tak Mat o Tur i Duved. Vi erbjuder personliga upplevelser med fokus på komfort, gastronomi och äventyr i hjärtat av Sveriges fjällvärld."
         keywords="Tak Mat o Tur, Duved, Martin Gillgren, Emma Gillgren, familjeföretag, fjällupplevelse, löpning, skidåkning, gastronomi, äventyr"
         url="http://takmatotur.se/om"
         image={portraitImg}
       />
 
-      <section className="section p-5 pb-16 relative">
+      <section className="relative p-5 pb-16">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -29,16 +29,16 @@ const About = () => {
             opacity: 0.05,
             zIndex: -1,
           }}
-          loading="lazy" // Lazy loading the background image
+          loading="lazy"
         ></div>
 
         <header className="flex justify-center mb-6">
           <h1 className="font-bold text-center">Tak Mat o Tur</h1>
         </header>
 
-        <div className="p-3 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%]">
-          <section className="mb-10 font-semibold text-lg">
-            <p className="text-base md:text-md xl:text-xl xl:p-5 xl:w-[80%] m-auto font-semibold 3xl:w-[110%]">
+        <div className="max-w-screen-xl mx-auto p-3 mb-10">
+          <section className="font-semibold text-lg">
+            <p className="text-base md:text-md xl:text-xl p-5 mx-auto">
               Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
               komfort, gastronomi och äventyr för att skapa oförglömliga
               upplevelser. Vi specialiserar oss på att erbjuda personliga
@@ -48,14 +48,14 @@ const About = () => {
               hittat rätt.
             </p>
 
-            <h2 className="text-xl text-center mt-10 font-semibold text-amber-700 m">
+            <h2 className="text-xl text-center mt-10 font-semibold text-amber-700">
               Emma & Martin
             </h2>
           </section>
 
           {/* Image and text section for xl and above */}
-          <section className="hidden xl:flex xl:space-x-10 items-center rounded-lg px-5">
-            <div className="flex-1 xl:order-1">
+          <section className="hidden xl:flex xl:space-x-10 items-center mt-10">
+            <div className="flex-1">
               <p>
                 Tak Mat o Tur är ett familjeföretag som drivs av Martin och Emma
                 Gillgren. Vi har alltid haft en längtan efter att bo på en plats
@@ -78,27 +78,27 @@ const About = () => {
                 vistelse fylld med äventyr, god mat och fantastisk natur.
               </p>
             </div>
-            <figure className="flex-1 xl:order-2">
+            <figure className="flex-1">
               <img
-                className="rounded-full shadow-xl w-[87%] "
+                className="rounded-full shadow-xl w-[87%] mx-auto"
                 src={portraitImg}
-                alt="bild på grundarna av Tak Mat o Tur"
-                loading="lazy" // Lazy loading the portrait image
+                alt="Bild på grundarna av Tak Mat o Tur"
+                loading="lazy"
               />
             </figure>
           </section>
 
           {/* Image and text section for lg and below */}
-          <section className="xl:hidden">
-            <figure className="img-div mt-10">
+          <section className="xl:hidden mt-10">
+            <figure className="img-div">
               <img
-                className="rounded-full xl:rounded-xl shadow-xl w-full md:w-3/4 lg:w-3/5 m-auto"
+                className="rounded-full shadow-xl w-full md:w-3/4 lg:w-3/5 mx-auto"
                 src={portraitImg}
-                alt="bild på grundarna av Tak Mat o Tur"
-                loading="lazy" // Lazy loading the portrait image
+                alt="Bild på grundarna av Tak Mat o Tur"
+                loading="lazy"
               />
             </figure>
-            <div className="relative mt-10">
+            <div className="mt-10">
               <p>
                 Tak Mat o Tur är ett familjeföretag som drivs av Martin och Emma
                 Gillgren. Vi har alltid haft en längtan efter att bo på en plats
@@ -112,9 +112,7 @@ const About = () => {
                 egen regi kombinera det som livet gjort oss bra på; löpning,
                 skidåkning, gästupplevelser och mat.
               </p>
-            </div>
-            <div className="relative mt-10">
-              <p>
+              <p className="mt-10">
                 Duved är mer än bara en plats – det är en gemenskap och en port
                 till den vilda naturen. Vi strävar efter att erbjuda en unik och
                 genuin upplevelse, där varje ögonblick är noggrant planerat och
@@ -126,9 +124,9 @@ const About = () => {
           </section>
 
           {/* button div */}
-          <div className="button-holder flex justify-center mt-16 mb-5">
-            <Link to="/kontakt" className="inline-flex bg-amber-700 rounded-md">
-              <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
+          <div className="flex justify-center mt-16 mb-5">
+            <Link to="/kontakt" className="inline-flex">
+              <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-amber-700 text-white shadow-2xl transition-all rounded-md">
                 <span className="relative z-10">Frågor / Kontakt</span>
               </button>
             </Link>

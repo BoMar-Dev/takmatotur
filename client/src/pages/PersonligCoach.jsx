@@ -12,45 +12,40 @@ const PersonligCoach = () => {
       <SEOHelmet
         title="Personlig Löpcoachning | Tak Mat o Tur"
         description="Privat löpcoachning för alla nivåer. Få individanpassad träning, teknikanalys och personlig motivation för att nå dina löpmål."
-        keywords="personlig löpcoachning, löpträning, Jämtland, löpcoach, individuell träning"
+        keywords="personlig löpcoachning, Tak Mat o Tur, löpträning, Jämtland, löpcoach, individuell träning"
         url="http://takmatotur.se/coach/personlig"
         image={backgroundImg} // Replace with a relevant image if available
       />
 
-      <section className="relative flex flex-col items-center p-5 mb-10 overflow-hidden">
+      <section className="relative p-5 pb-16">
         <div
-          className="absolute top-[-100px] left-[-150px] w-full h-full bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImg})`,
             backgroundSize: "300%",
+            backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             opacity: 0.05,
             zIndex: -1,
-            transform: "translateX(20%) translateY(10%)",
           }}
+          loading="lazy"
         ></div>
 
         <header className="flex justify-center mb-6">
-          <h1 className="mb-2 font-bold">Personlig Löpcoachning</h1>
+          <h1 className="font-bold text-center mb-5">Personlig Löpcoachning</h1>
         </header>
 
-        {/* Consistent Article Section */}
-        <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
-          <section className="mb-10">
-            <div className="text-left 3xl:w-[85%] m-auto">
-              <p className="text-base md:text-md xl:text-xl font-semibold mb-5">
-                Att löpträna på egen hand kan vara både utmanande och ibland
-                ensamt. Oavsett om du är en nybörjare som vill komma igång eller
-                en erfaren löpare som siktar på nya personliga rekord, kan
-                privat löpcoachning från oss vara nyckeln till att ta ditt
-                löpande till nästa nivå. Inspiration, stöd och motivation varje
-                steg på vägen.
-              </p>
-            </div>
-          </section>
+        <article className="max-w-screen-xl mx-auto p-3 mb-10">
+          <p className="text-base md:text-md xl:text-xl font-semibold p-5 mx-auto">
+            Att löpträna på egen hand kan vara både utmanande och ibland ensamt.
+            Oavsett om du är en nybörjare som vill komma igång eller en erfaren
+            löpare som siktar på nya personliga rekord, kan privat löpcoachning
+            från oss vara nyckeln till att ta ditt löpande till nästa nivå.
+            Inspiration, stöd och motivation varje steg på vägen.
+          </p>
         </article>
 
-        <article className="flex flex-col p-5 w-full max-w-4xl">
+        <article className="max-w-screen-xl mx-auto p-5">
           <section className="mb-6">
             <div className="p-4">
               <h2 className="mb-2 font-semibold text-xl">
@@ -102,14 +97,14 @@ const PersonligCoach = () => {
             </div>
           </section>
 
-          <section className="p-3 text-center">
+          <section className="p-4 text-center">
             <p className="text-center md:w-[80%] lg:w-[60%] xl:w-[70%] md:m-auto">
               Gör er redo att snöra på skorna och följ med oss på en resa mot
               bättre hälsa, ökad arbetsglädje och snabbare löpsteg!
             </p>
           </section>
 
-          <div className="button-holder flex justify-center mb-5 mt-5">
+          <div className="text-center flex justify-center mt-5 mb-10">
             <Link to="/coach" className="inline-flex bg-slate-800 rounded-md">
               <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
                 <span className="relative z-10">Bakåt</span>

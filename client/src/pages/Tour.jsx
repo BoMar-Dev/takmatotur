@@ -27,7 +27,7 @@ const Tour = () => {
         image={vinter}
       />
 
-      <section className="section flex flex-col p-4 items-center relative 3xl:w-[70%] 3xl:m-auto text-PrimaryColor">
+      <section className="relative flex flex-col items-center p-5 pb-16 max-w-screen-xl mx-auto">
         <div
           className="absolute inset-0 h-full w-full bg-cover bg-center"
           style={{
@@ -39,14 +39,16 @@ const Tour = () => {
             transform: "translateX(-30%)",
           }}
         ></div>
-        <header className="text-center mb-2">
+
+        <header className="text-center mb-5">
           <h1 className="font-bold">
             Topptur
             <span className="block sm:hidden">för alla årstider</span>
             <span className="hidden sm:inline"> – för alla årstider</span>
           </h1>
         </header>
-        <div className="text-center flex justify-center p-5 md:w-[80%]">
+
+        <div className="text-center flex justify-center mb-10">
           <button
             className="custom-button bg-amber-700"
             onClick={openBookingForm}
@@ -55,58 +57,51 @@ const Tour = () => {
           </button>
         </div>
 
-        {/* Updated Article Section */}
-        <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl 3xl:w-[85%]">
-          <div className="3xl:w-[85%] m-auto 2xl:w-[70%]">
-            <p className="mb-5">
-              Oavsett om det är höst, vinter, vår eller sommar så erbjuder vi
-              toppturer som passar era önskemål. Vår vision är att blanda
-              äventyr, utmaningar och samtidigt känna på lugnet ute i naturen.
-            </p>
-            <p className="mt-5">
-              Våra toppturer ska passa alla enligt önskemål. Våra mål är att ni
-              ska få uppleva det fina med vår natur här uppe i Jämtland.
-            </p>
-          </div>
+        <article className="max-w-screen-xl mx-auto p-3 mb-10">
+          <p className="text-base md:text-md xl:text-xl font-semibold">
+            Oavsett om det är höst, vinter, vår eller sommar så erbjuder vi
+            toppturer som passar era önskemål. Vår vision är att blanda äventyr,
+            utmaningar och samtidigt känna på lugnet ute i naturen.
+          </p>
+          <p className="mt-5 text-base md:text-md xl:text-xl font-semibold">
+            Våra toppturer ska passa alla enligt önskemål. Våra mål är att ni
+            ska få uppleva det fina med vår natur här uppe i Jämtland.
+          </p>
         </article>
 
         <header className="text-center my-10">
-          <h2 className="text-xl  text-amber-700 font-semibold">
-            Olika äventyr för olika årstider :
+          <h2 className="text-xl text-amber-700 font-semibold">
+            Olika äventyr för olika årstider:
           </h2>
         </header>
-        <div className="card-container md:w-[70%] 3xl:w-[60%] flex flex-col space-y-8 xl:flex-row xl:space-y-0  xl:space-x-12">
-          <div className="flex flex-col flex-grow">
-            <Card
-              image={vinter}
-              title="Vinter"
-              link="/topptur/vinter"
-              description="Ett äventyr både uppför och nerför - Upptäck vårt fantastiska vinterlandskap och följ med på en topptur där du slipper folkmassan. Detta är lika mycket en naturupplevelse som ett äventyr."
-              imageProps={{ loading: "lazy" }} // Lazy-load the image
-            />
-          </div>
-          <div className="flex flex-col flex-grow">
-            <Card
-              image={sommar}
-              title="Sommar / Höst / Vår"
-              link="/topptur/sommar"
-              description="Här finns inga gränser. Vill du bara njuta av naturen eller springa dig trött? Kanske ha en personlig kock uppe på fjället som förgyller detta unika tillfälle. Oavsett var du väljer så är möjligheterna oändliga."
-              imageProps={{ loading: "lazy" }} // Lazy-load the image
-            />
-          </div>
+
+        <div className="max-w-screen-xl mx-auto flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-10 mb-10">
+          <Card
+            image={vinter}
+            title="Vinter"
+            link="/topptur/vinter"
+            description="Ett äventyr både uppför och nerför - Upptäck vårt fantastiska vinterlandskap och följ med på en topptur där du slipper folkmassan. Detta är lika mycket en naturupplevelse som ett äventyr."
+            imageProps={{ loading: "lazy" }}
+          />
+          <Card
+            image={sommar}
+            title="Sommar / Höst / Vår"
+            link="/topptur/sommar"
+            description="Här finns inga gränser. Vill du bara njuta av naturen eller springa dig trött? Kanske ha en personlig kock uppe på fjället som förgyller detta unika tillfälle. Oavsett vad du väljer så är möjligheterna oändliga."
+            imageProps={{ loading: "lazy" }}
+          />
         </div>
 
-        <div className="text-center p-5 md:w-[80%] my-10">
+        <div className="text-center my-10 max-w-screen-xl mx-auto">
           <p>
             Börja ditt äventyr redan idag!
-            <span className="font-extrabold"></span>
             <br />
             Kontakta oss så hjälper vi dig att planera en oförglömlig topptur
             som passar just dina eller era önskemål.
           </p>
         </div>
 
-        <div className="text-center flex justify-center mb-12 p-5 mt-5 md:w-[80%]">
+        <div className="text-center flex justify-center mb-12">
           <button
             className="custom-button bg-amber-700"
             onClick={openBookingForm}

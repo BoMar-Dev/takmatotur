@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SEOHelmet from "../components/SEOHelment";
 
 // Import images
-import backgroundImg from "../img/about/background.svg"; // Import the background image
+import backgroundImg from "../img/about/background.svg";
 
 const ForetagsCoach = () => {
   return (
@@ -14,43 +14,39 @@ const ForetagsCoach = () => {
         description="Stärk teamet och nå nya höjder med vår 10-veckors löpcoaching för företagsgrupper. Kombinera träning, motivation och gemenskap för att skapa en starkare teamkänsla och ökad arbetsglädje."
         keywords="Företagscoaching, löpcoaching, teamkänsla, arbetsglädje, hälsa, Tak Mat o Tur"
         url="http://takmatotur.se/coach/foretag"
-        image={backgroundImg} // This can be any image related to the page
+        image={backgroundImg}
       />
 
-      <section className="relative flex flex-col items-center p-5 mb-10 overflow-hidden">
+      <section className="relative p-5 pb-16">
         <div
-          className="absolute top-[-500px] right-[-200px] w-full h-full bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImg})`,
-            backgroundSize: "110%", // Adjust the size to be slightly bigger
-            backgroundRepeat: "repeat-x",
-            opacity: 0.05, // Slightly different opacity
+            backgroundSize: "300%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            opacity: 0.05,
             zIndex: -1,
-            transform: "translateX(-15%) translateY(30%)", // Different positioning
           }}
-          loading="lazy" // Lazy loading the background image
+          loading="lazy"
         ></div>
 
         <header className="flex justify-center mb-6">
-          <h1 className="mb-5 font-bold">Företagscoaching</h1>
+          <h1 className="font-bold text-center mb-5">Företagscoaching</h1>
         </header>
 
-        <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
-          <section className="mb-10">
-            <div className="text-left 3xl:w-[85%] m-auto">
-              <p className="text-base md:text-md xl:text-xl font-semibold mb-2">
-                Stärk Teamet och Nå Nya Höjder – Följ med oss på en 10-veckors
-                Löpcoachingresa för Företagsgrupper! Vill ni skapa en starkare
-                teamkänsla, öka arbetsglädjen och samtidigt förbättra hälsan hos
-                era medarbetare? Välkommen till vår unika löpcoaching för
-                företagsgrupper – en 10-veckors resa där vi kombinerar träning,
-                motivation och gemenskap.
-              </p>
-            </div>
-          </section>
+        <article className="max-w-screen-xl mx-auto p-3 mb-10">
+          <p className="text-base md:text-md xl:text-xl font-semibold p-5 mx-auto">
+            Stärk Teamet och Nå Nya Höjder – Följ med oss på en 10-veckors
+            Löpcoachingresa för Företagsgrupper! Vill ni skapa en starkare
+            teamkänsla, öka arbetsglädjen och samtidigt förbättra hälsan hos era
+            medarbetare? Välkommen till vår unika löpcoaching för
+            företagsgrupper – en 10-veckors resa där vi kombinerar träning,
+            motivation och gemenskap.
+          </p>
         </article>
 
-        <article className="flex flex-col p-5 w-full max-w-4xl">
+        <article className="max-w-screen-xl mx-auto p-5">
           <section className="mb-6">
             <div className="p-4">
               <h2 className="mb-2 font-semibold text-xl">
@@ -131,7 +127,7 @@ const ForetagsCoach = () => {
             </p>
           </section>
 
-          <div className="button-holder flex justify-center  mb-5 mt-5">
+          <div className="text-center flex justify-center mt-5 mb-10">
             <Link to="/coach" className="inline-flex bg-slate-800 rounded-md">
               <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
                 <span className="relative z-10">Bakåt</span>
