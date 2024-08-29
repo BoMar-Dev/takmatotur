@@ -121,7 +121,7 @@ const Accommodation = () => {
           />
         </section>
 
-        <article className="p-4 xl:p-6 max-w-screen-lg mx-auto text-md border-2 border-amber-700 rounded-md mt-10">
+        <article className="p-20 xl:p-6 max-w-[800px] mx-auto text-md border-2 border-amber-700 rounded-md mt-10 ]">
           <div className="m-auto text-5xl text-amber-700">
             <FaInfoCircle />
           </div>
