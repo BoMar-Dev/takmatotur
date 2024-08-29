@@ -34,12 +34,16 @@ const MandagsLopning = () => {
           <h1 className="mb-5 font-bold">Måndagslöpning</h1>
         </header>
 
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
-          <p className="mb-5">
-            Upptäck magin med Jämtlands härligaste löpargrupp! Under sex
-            måndagar får du chansen att vara med i en inspirerande gemenskap och
-            utveckla din löpning på bästa möjliga sätt.
-          </p>
+        <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
+          <section className="mb-10">
+            <div className="text-left 3xl:w-[85%] m-auto">
+              <p className="text-base md:text-md xl:text-xl font-semibold mb-5">
+                Upptäck magin med Jämtlands härligaste löpargrupp! Under sex
+                måndagar får du chansen att vara med i en inspirerande gemenskap
+                och utveckla din löpning på bästa möjliga sätt.
+              </p>
+            </div>
+          </section>
         </article>
 
         <article className="flex flex-col p-5 w-full max-w-4xl">

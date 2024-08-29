@@ -28,9 +28,9 @@ const Header = () => {
         backgroundSize: "cover",
         backgroundPosition: "center 70%",
       }}
-      className="px-8 3xl:px-[850px] lg:px-[100px] z-30 flex w-full h-[400px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[550px] 3xl:h-[1000px]"
+      className="px-8 3xl:px lg:px-[100px] z-30 flex w-full h-[400px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[550px] 3xl:h-[1000px]"
     >
-      <div className="flex flex-col lg:flex-row w-full justify-between items-start">
+      <div className="flex flex-col lg:flex-row w-full justify-between items-start 3xl:px-[200px] 3xl:max-w-[2300px] mx-auto ">
         <Link to="/" className="pt-5 z-40">
           <img
             src={Logo}

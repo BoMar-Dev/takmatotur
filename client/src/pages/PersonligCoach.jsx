@@ -35,14 +35,19 @@ const PersonligCoach = () => {
         </header>
 
         {/* Consistent Article Section */}
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
-          <p className="mb-5">
-            Att löpträna på egen hand kan vara både utmanande och ibland ensamt.
-            Oavsett om du är en nybörjare som vill komma igång eller en erfaren
-            löpare som siktar på nya personliga rekord, kan privat löpcoachning
-            från oss vara nyckeln till att ta ditt löpande till nästa nivå.
-            Inspiration, stöd och motivation varje steg på vägen.
-          </p>
+        <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
+          <section className="mb-10">
+            <div className="text-left 3xl:w-[85%] m-auto">
+              <p className="text-base md:text-md xl:text-xl font-semibold mb-5">
+                Att löpträna på egen hand kan vara både utmanande och ibland
+                ensamt. Oavsett om du är en nybörjare som vill komma igång eller
+                en erfaren löpare som siktar på nya personliga rekord, kan
+                privat löpcoachning från oss vara nyckeln till att ta ditt
+                löpande till nästa nivå. Inspiration, stöd och motivation varje
+                steg på vägen.
+              </p>
+            </div>
+          </section>
         </article>
 
         <article className="flex flex-col p-5 w-full max-w-4xl">

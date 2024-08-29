@@ -65,8 +65,8 @@ const Accommodation = () => {
             <span className="relative z-10">Bokningsförfrågan</span>
           </button>
         </div>
-        <article className="p-3 md:px-20 md:mt-5 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
-          <p className="">
+        <article className="p-3 md:px-20 md:mt-5 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl 3xl:w-[105%]">
+          <p className="3xl:w-[85%] m-auto">
             Hos oss har du fjällen med allt vad de erbjuder ett stenkast bort.
             En kort promenad tar dig upp till Duveds och Tegefjälls liftsystem
             om vintern och på sommaren kan du enkelt ansluta till flera leder

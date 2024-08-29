@@ -64,7 +64,7 @@ const Home = () => {
             <h1 className="mb-2 font-bold">Välkommen</h1>
           </header>
 
-          <article className="p-3 md:px-20 md: xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
+          <article className="p-3 md:px-20 md: xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl 3xl:w-[85%]">
             <p>
               Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
               gastronomi och äventyr för oförglömliga upplevelser. Drivna av vår
@@ -95,7 +95,7 @@ const Home = () => {
         ></div>
 
         {/* Cards section */}
-        <section className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:w-[70%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">
+        <section className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:w-800%] m-auto gap-10 md:w-[80%] 3xl:w-[50%] mb-12">
           <Card
             image={mondayRun}
             title="Måndagslöpning"

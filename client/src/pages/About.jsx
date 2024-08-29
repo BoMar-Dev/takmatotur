@@ -38,7 +38,7 @@ const About = () => {
 
         <div className="p-3 mb-2 md:w-[80%] m-auto relative 3xl:w-[50%]">
           <section className="mb-10 font-semibold text-lg">
-            <p className="text-base md:text-md xl:text-xl xl:p-5 xl:w-[80%] m-auto font-semibold">
+            <p className="text-base md:text-md xl:text-xl xl:p-5 xl:w-[80%] m-auto font-semibold 3xl:w-[110%]">
               Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
               komfort, gastronomi och äventyr för att skapa oförglömliga
               upplevelser. Vi specialiserar oss på att erbjuda personliga
@@ -80,7 +80,7 @@ const About = () => {
             </div>
             <figure className="flex-1 xl:order-2">
               <img
-                className="rounded-xl shadow-xl w-[87%]"
+                className="rounded-full shadow-xl w-[87%] "
                 src={portraitImg}
                 alt="bild på grundarna av Tak Mat o Tur"
                 loading="lazy" // Lazy loading the portrait image

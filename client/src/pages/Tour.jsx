@@ -56,16 +56,18 @@ const Tour = () => {
         </div>
 
         {/* Updated Article Section */}
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
-          <p>
-            Oavsett om det är höst, vinter, vår eller sommar så erbjuder vi
-            toppturer som passar era önskemål. Våran vision är att blanda
-            äventyr, utmaningar och samtidigt känna på lugnet ute i naturen.
-          </p>
-          <p className="mt-5">
-            Våra toppturer ska passa alla enligt önskemål. Våra mål är att ni
-            ska få uppleva det fina med vår natur här uppe i Jämtland.
-          </p>
+        <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl 3xl:w-[85%]">
+          <div className="3xl:w-[85%] m-auto 2xl:w-[70%]">
+            <p className="mb-5">
+              Oavsett om det är höst, vinter, vår eller sommar så erbjuder vi
+              toppturer som passar era önskemål. Vår vision är att blanda
+              äventyr, utmaningar och samtidigt känna på lugnet ute i naturen.
+            </p>
+            <p className="mt-5">
+              Våra toppturer ska passa alla enligt önskemål. Våra mål är att ni
+              ska få uppleva det fina med vår natur här uppe i Jämtland.
+            </p>
+          </div>
         </article>
 
         <header className="text-center my-10">
@@ -73,7 +75,7 @@ const Tour = () => {
             Olika äventyr för olika årstider :
           </h2>
         </header>
-        <div className="card-container md:w-[70%] flex flex-col space-y-8 xl:flex-row xl:space-y-0  xl:space-x-12">
+        <div className="card-container md:w-[70%] 3xl:w-[60%] flex flex-col space-y-8 xl:flex-row xl:space-y-0  xl:space-x-12">
           <div className="flex flex-col flex-grow">
             <Card
               image={vinter}

@@ -35,26 +35,30 @@ const TourSummer = () => {
         </header>
 
         {/* Consistent Article Section */}
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
-          <p>
-            Upptäck magin i Jämtlands sommarvandringar där naturens skönhet tar
-            andan ur dig. Följ med oss upp på höjder som erbjuder hisnande
-            utsikter, svalka dig i en fjällsjö eller vandra ner för Åreskutan
-            till tystare platser där lugnet råder.
-          </p>
-          <p className="mt-5">
-            Med vår djupa lokalkännedom och känsla för det unika, leder vi dig
-            genom Åres sagolika natur och visar dig dolda pärlor som få har
-            sett. Varje steg blir en upplevelse utöver det vanliga, oavsett om
-            du söker äventyr eller stillhet. Låt oss skapa en skräddarsydd
-            vandring för dig, där din upplevelse står i fokus, oavsett din
-            erfarenhetsnivå.
-          </p>
-          <p className="mt-5">
-            Välj mellan en halvdagstur, heldagsvandring, tur med övernattning
-            eller om ni har helt andra idéer? Vi ser till att ert önskemål blir
-            till verklighet!
-          </p>
+        <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
+          <section className="mb-10">
+            <div className="text-left 3xl:w-[85%] m-auto">
+              <p className="text-base md:text-md xl:text-xl font-semibold mb-5">
+                Upptäck magin i Jämtlands sommarvandringar där naturens skönhet
+                tar andan ur dig. Följ med oss upp på höjder som erbjuder
+                hisnande utsikter, svalka dig i en fjällsjö eller vandra ner för
+                Åreskutan till tystare platser där lugnet råder.
+              </p>
+              <p className="text-base md:text-md xl:text-xl font-semibold mt-5">
+                Med vår djupa lokalkännedom och känsla för det unika, leder vi
+                dig genom Åres sagolika natur och visar dig dolda pärlor som få
+                har sett. Varje steg blir en upplevelse utöver det vanliga,
+                oavsett om du söker äventyr eller stillhet. Låt oss skapa en
+                skräddarsydd vandring för dig, där din upplevelse står i fokus,
+                oavsett din erfarenhetsnivå.
+              </p>
+              <p className="text-base md:text-md xl:text-xl font-semibold mt-5">
+                Välj mellan en halvdagstur, heldagsvandring, tur med
+                övernattning eller om ni har helt andra idéer? Vi ser till att
+                ert önskemål blir till verklighet!
+              </p>
+            </div>
+          </section>
         </article>
 
         <article className="flex flex-col p-5 w-full max-w-4xl">

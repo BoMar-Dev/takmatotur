@@ -54,7 +54,7 @@ const TrailCamp = () => {
           </p>
         </div>
 
-        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl">
+        <article className="p-3 md:p-20 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl 3xl:w-[85%]">
           <p>
             Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse
             i hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
@@ -136,7 +136,7 @@ const TrailCamp = () => {
           />
         </article>
 
-        <section className="flex flex-col w-full md:w-[80%] lg:w-[75%] xl:w-[90%] mt-5 p-3">
+        <section className="flex flex-col w-full md:w-[80%] lg:w-[75%] xl:w-[90%] sm:mt-0 md:p-10 p-3">
           <p className="xl:w-[70%] xl:text-center xl:m-auto">
             Boka din plats idag och TÄVLA om att få hela helgen gratis
             tillsammans med en vän. Platserna är begränsade, så se till att boka

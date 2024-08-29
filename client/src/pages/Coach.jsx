@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 // import images
-import profil2 from "../img/coach/profil2.webp";
+import profil from "../img/coach/profil4.jpg";
 import corporateCoach from "../img/coach/foretag.webp";
 import privatCoach from "../img/coach/personlig.webp";
 import mondayRun from "../img/home/monday.webp";
@@ -26,7 +26,7 @@ const Coach = () => {
         description="Privat löpcoachning och företagsträning från Tak Mat o Tur. Vi erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken."
         keywords="Löpcoach, träning, coaching, triathlon, personlig träning"
         url="http://takmatotur.se/coach"
-        image={profil2} // Image for social sharing
+        image={profil} // Image for social sharing
       />
 
       <div
@@ -70,16 +70,18 @@ const Coach = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      <article className="p-3 md:px-20 md:mt-5 xl:p-8 xl:w-2/3 m-auto font-semibold text-base md:text-md xl:text-xl 3xl:w-[85%] mb-10">
+        <p className="3xl:w-[85%] m-auto">
+          Med ett ursprung inom friidrott och fotboll har löpning alltid varit
+          en grund i mitt liv. Jag specialiserade mig främst på 800 m, 1500 m
+          och 5000 m. Detta är år som jag är otroligt tacksam för. Farten är
+          förstås inte den samma som 42-åring men erfarenheter kring teknik,
+          motivation och effektivitet i löpsteget finns kvar.
+        </p>
+      </article>
 
       <div className="xl:flex xl:space-x-10 xl:items-start md:w-[80%]">
         <article className="p-5 xl:w-1/2">
-          <p className="mb-5">
-            Med ett ursprung inom friidrott och fotboll har löpning alltid varit
-            en grund i mitt liv. Jag specialiserade mig främst på 800 m, 1500 m
-            och 5000 m. Detta är år som jag är otroligt tacksam för. Farten är
-            förstås inte den samma som 42-åring men erfarenheter kring teknik,
-            motivation och effektivitet i löpsteget finns kvar.
-          </p>
           <p className="mb-5">
             När gnistan för att tävla på löparbanor började avta övergick jag
             till längre distanser och påbörjade också en satsning mot triathlon
@@ -104,14 +106,11 @@ const Coach = () => {
           </p>
         </article>
         <aside className="p-5 xl:w-1/2 flex items-center">
+          <div></div>
           <img
-            src={profil2}
+            src={profil}
             alt="Profilbild på Martin Gillgren löpcoach Tak Mat o Tur"
-            className="w-full rounded-3xl object-cover xl:w-[80%] 3xl:w-[50%]"
-            loading="lazy"
-            width="400"
-            height="600"
-            style={{ height: "auto", maxHeight: "100%" }}
+            className=" rounded-lg"
           />
         </aside>
       </div>
@@ -122,7 +121,7 @@ const Coach = () => {
         </h2>
       </div>
 
-      <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-10 mb-10">
+      <div className="card-container md:w-[80%] flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-10 mb-10 3xl:">
         <Card
           image={mondayRun}
           title="Måndagslöpning"

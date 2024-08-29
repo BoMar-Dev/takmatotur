@@ -37,7 +37,7 @@ const ForetagsCoach = () => {
 
         <article className="flex flex-col p-5 w-full md:w-[80%] lg:w-[75%] xl:w-[60%] m-auto">
           <section className="mb-10">
-            <div className="text-left">
+            <div className="text-left 3xl:w-[85%] m-auto">
               <p className="text-base md:text-md xl:text-xl font-semibold mb-2">
                 Stärk Teamet och Nå Nya Höjder – Följ med oss på en 10-veckors
                 Löpcoachingresa för Företagsgrupper! Vill ni skapa en starkare
