@@ -70,10 +70,9 @@ const GeneralRunningForm = ({ closeForm }) => {
 
   const handleCaptchaChange = (val) => {
     setCapVal(val);
-    // Lägg till en fördröjning på 1.5 sekunder innan knappen blir aktiv
     setTimeout(() => {
       setIsCaptchaVerified(true);
-    }, 1500);
+    }, 1200);
   };
 
   return (
