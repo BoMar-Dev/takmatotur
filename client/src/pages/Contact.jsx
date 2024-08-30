@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { useFormDefaults } from "../functions/useFormDefaults";
 
+//6LcbqDIqAAAAAMKI07uq98ehyckicKh4sKXb9efc
+
 // Import images
 import map from "../img/contact/map.jpg";
 import backgroundImg from "../img/about/background.svg";
 
-// Import component
+// import component
 import ContactForm from "../components/forms/ContactForm";
 import SEOHelmet from "../components/SEOHelment";
 
@@ -66,7 +68,7 @@ const Contact = () => {
         image={map}
       />
 
-      <section className="section flex flex-col p-5 mb-10 relative overflow-x-hidden">
+      <section className="section flex flex-col p-5 mb-10 relative">
         <div
           className="absolute top-[-400px] left-[-100px] w-full h-full bg-cover bg-center"
           style={{
@@ -115,7 +117,7 @@ const Contact = () => {
                 aria-label="Visa karta till Tak Mat O Tur på Google Maps"
               >
                 <img
-                  className="rounded-lg shadow-xl cursor-pointer w-[90%]"
+                  className="rounded-lg shadow-xl w-full cursor-pointer"
                   src={map}
                   alt="Karta till Tak Mat O Tur"
                   loading="lazy"
