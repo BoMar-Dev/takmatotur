@@ -71,13 +71,17 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
 
       <button
         type="submit"
-        className={`p-2 text-white rounded hover:bg-opacity-90 transition-opacity duration-300 ${
-          capVal ? "bg-blue-500" : "bg-gray-400 cursor-not-allowed"
+        className={`p-2 text-white rounded transform transition-all duration-150 ease-in-out ${
+          capVal
+            ? "bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-95 active:shadow-lg"
+            : "bg-gray-400 cursor-not-allowed"
         }`}
         disabled={!capVal}
       >
         Skicka
       </button>
+
+      {/* Will popup if email was succesfully sent */}
       {emailSent && (
         <p className="text-green-500 text-sm mt-2 flex items-center">
           <GiConfirmed className="mr-2" /> Skickat
