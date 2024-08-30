@@ -31,7 +31,7 @@ const Home = () => {
       <SEOHelmet
         title="Välkommen | Tak Mat O Tur"
         description="Välkommen till Tak Mat o Tur i Duved. Vi kombinerar komfort, gastronomi och äventyr för oförglömliga upplevelser i fantastiska Jämtland."
-        keywords="Tak Mat o Tur, Duved, äventyr, komfort, gastronomi, boende, topptur, löpning, vandra, mat"
+        keywords="takmatotur Tak Mat o Tur, Duved, äventyr, komfort, gastronomi, boende, topptur, löpning, vandra, mat"
         url="https://takmatotur.se/"
         image={landingImage}
       />

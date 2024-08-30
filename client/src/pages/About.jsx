@@ -13,7 +13,7 @@ const About = () => {
       <SEOHelmet
         title="Om Oss | Tak Mat o Tur"
         description="Lär känna Martin och Emma Gillgren, grundarna av Tak Mat o Tur i Duved. Vi erbjuder personliga upplevelser med fokus på komfort, gastronomi och äventyr i hjärtat av Sveriges fjällvärld."
-        keywords="Tak Mat o Tur, Duved, Martin Gillgren, Emma Gillgren, familjeföretag, fjällupplevelse, löpning, skidåkning, gastronomi, äventyr"
+        keywords="Tak Mat o Tur, takmatotur Duved, Martin Gillgren, Emma Gillgren, familjeföretag, fjällupplevelse, löpning, skidåkning, gastronomi, äventyr"
         url="http://takmatotur.se/om"
         image={portraitImg}
       />

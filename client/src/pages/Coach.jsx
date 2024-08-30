@@ -24,7 +24,7 @@ const Coach = () => {
       <SEOHelmet
         title="Löpcoach | Tak Mat O Tur"
         description="Privat löpcoachning och företagsträning från Tak Mat o Tur. Vi erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken."
-        keywords="Löpcoach, Tak Mat o Tur, träning, coaching, triathlon, personlig träning"
+        keywords="Löpcoach, Tak Mat o Tur, takmatotur, träning, coaching, triathlon, personlig träning"
         url="http://takmatotur.se/coach"
         image={profil}
       />
