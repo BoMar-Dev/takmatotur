@@ -10,7 +10,7 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
   const [capVal, setCapVal] = useState(null);
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 mt-5 xl:w-[50%]">
+    <form onSubmit={handleSubmit} className=" xl:w-[50%]">
       <div className="flex flex-col mb-5">
         <label htmlFor="name" className="mb-2 font-bold text-primary">
           Namn
