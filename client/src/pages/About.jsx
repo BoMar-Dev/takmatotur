@@ -38,14 +38,16 @@ const About = () => {
 
         <div className="max-w-screen-xl mx-auto p-3 mb-10">
           <section className="font-semibold text-lg">
-            <p className="text-base md:text-md xl:text-xl p-3 mx-auto">
+            <p className="text-base md:text-md xl:text-xl px-3 mx-auto">
               Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
               komfort, gastronomi och äventyr för att skapa oförglömliga
-              upplevelser. Vi specialiserar oss på att erbjuda personliga
-              helhetslösningar för mindre och större sällskap. Oavsett om du
-              söker en avkopplande semester, ett lyft i din löpning eller ett
-              äventyrsfyllt besök på en av Sveriges vackraste platser, har du
-              hittat rätt.
+              upplevelser.
+            </p>
+            <p className="mt-5 text-base md:text-md xl:text-xl p-3 mx-auto ">
+              Vi specialiserar oss på att erbjuda personliga helhetslösningar
+              för mindre och större sällskap. Oavsett om du söker en avkopplande
+              semester, ett lyft i din löpning eller ett äventyrsfyllt besök på
+              en av Sveriges vackraste platser, har du hittat rätt.
             </p>
 
             <h2 className="text-xl text-center mt-10 font-semibold text-amber-700">
