@@ -22,6 +22,7 @@ const GeneralRunningForm = ({ closeForm }) => {
   const [emailError, setEmailError] = useState(false);
   const [dateError, setDateError] = useState("");
   const [capVal, setCapVal] = useState(null);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -65,6 +66,14 @@ const GeneralRunningForm = ({ closeForm }) => {
       setEmailSent(false);
       setEmailError(true);
     }
+  };
+
+  const handleCaptchaChange = (val) => {
+    setCapVal(val);
+    // Lägg till en fördröjning på 1.5 sekunder innan knappen blir aktiv
+    setTimeout(() => {
+      setIsCaptchaVerified(true);
+    }, 1500);
   };
 
   return (
@@ -182,18 +191,18 @@ const GeneralRunningForm = ({ closeForm }) => {
 
       <ReCAPTCHA
         sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
-        onChange={(val) => setCapVal(val)}
+        onChange={handleCaptchaChange}
         className="mb-3"
       ></ReCAPTCHA>
 
       <button
         type="submit"
         className={`p-2 text-white rounded transform transition-all duration-150 ease-in-out ${
-          capVal
+          isCaptchaVerified
             ? "bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-95 active:shadow-lg"
             : "bg-gray-400 cursor-not-allowed"
         }`}
-        disabled={!capVal}
+        disabled={!isCaptchaVerified}
       >
         Skicka
       </button>
