@@ -63,11 +63,13 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
         ></textarea>
       </div>
 
-      <ReCAPTCHA
-        sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
-        onChange={(val) => setCapVal(val)}
-        className="mb-3"
-      ></ReCAPTCHA>
+      <div className="max-w-xs mx-auto">
+        <ReCAPTCHA
+          sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
+          onChange={(val) => setCapVal(val)}
+          className="transform scale-90"
+        />
+      </div>
 
       <button
         type="submit"

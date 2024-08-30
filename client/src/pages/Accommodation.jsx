@@ -53,6 +53,15 @@ const Accommodation = () => {
           <h1 className="font-bold text-center mb-5">Boende</h1>
         </header>
 
+        <div className="text-center flex justify-center w-full mt-8 mb-20">
+          <button
+            onClick={openForm}
+            className="custom-button bg-amber-700 text-white"
+          >
+            <span className="relative z-10">Bokningsförfrågan</span>
+          </button>
+        </div>
+
         <div className="max-w-screen-xl mx-auto p-3 mb-10">
           <article className="xl:text-left">
             <p className="text-base md:text-md xl:text-xl font-semibold leading-normal mx-auto">
@@ -62,15 +71,6 @@ const Accommodation = () => {
               för vandring och löpning.
             </p>
           </article>
-        </div>
-
-        <div className="text-center flex justify-center w-full mt-8 mb-20">
-          <button
-            onClick={openForm}
-            className="custom-button bg-amber-700 text-white"
-          >
-            <span className="relative z-10">Bokningsförfrågan</span>
-          </button>
         </div>
 
         <section className="max-w-screen-xl mx-auto mt-10 space-y-10">
