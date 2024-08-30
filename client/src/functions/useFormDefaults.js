@@ -10,13 +10,17 @@ export function useFormDefaults(initialState = {}) {
     validator = () => true,
     invalidMessage = "Inte giltig"
   ) {
+    // Set a different maxLength for the 'message' field or remove it
+    const isMessageField = name === "message";
+    const fieldMaxLength = isMessageField ? 800 : 50; // Allow 1000 characters for the message field
+
     return {
       name,
       value: formData[name] || "",
       placeholder,
       required: true,
       autoComplete: "on",
-      maxLength: 50,
+      maxLength: fieldMaxLength,
       type: "text",
       onChange: ({ target: t }) => {
         setFormData({ ...formData, [t.name]: t.value });
