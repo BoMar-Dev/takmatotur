@@ -1,13 +1,12 @@
+// import components
+import GridImgs from "../components/GridImgs";
 import SEOHelmet from "../components/SEOHelment";
 
-// Import images
+// import images
 import backgroundImg from "../img/about/background.svg";
 import torgeby from "../img/trailcamp/marcustorgeby.webp";
 import group from "../img/trailcamp/group.webp";
 import welcome from "../img/trailcamp/welcome.webp";
-
-// Import component
-import GridImgs from "../components/GridImgs"; // Assuming GridImgs is a reusable component for image and text layout
 
 const TrailCamp = () => {
   return (
@@ -17,21 +16,23 @@ const TrailCamp = () => {
         description="Join us for Trail Camp Åre 2024, a three-day running experience in the heart of Åre's magnificent mountains. From August 30th to September 1st, immerse yourself in nature, challenge yourself, and connect with like-minded runners."
         keywords="Trail Camp, Tak Mat o Tur  Åre 2024, running camp, trail running, Markus Torgeby, Mullfjället, running experience, Tak Mat O Tur"
         url="https://takmatotur.se/trailcamp"
-        image="https://yourwebsite.com/path-to-image.jpg"
+        image={backgroundImg}
         ogType="website"
         twitterCard="summary_large_image"
       />
 
-      <section className="relative p-5 pb-16 max-w-screen-xl mx-auto">
+      <section className="relative p-5 pb-16">
         <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImg})`,
-            backgroundSize: "cover",
+            backgroundSize: "200%",
+            backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             opacity: 0.05,
             zIndex: -1,
           }}
+          loading="lazy"
         ></div>
 
         <header className="text-center mb-6">
@@ -55,14 +56,17 @@ const TrailCamp = () => {
           </p>
         </div>
 
-        <article className="p-3 md:p-20 xl:p-8 max-w-screen-xl mx-auto font-semibold text-base md:text-md xl:text-xl">
-          <p>
-            Välkommen till Trail Camp Åre 2024 – en oförglömlig löparupplevelse
-            i hjärtat av Åres storslagna fjällvärld! Mellan den 30 augusti och 1
-            september bjuder vi in dig till tre dagar fyllda med inspiration,
-            utmaning och gemenskap i en av Sveriges mest natursköna miljöer.
-          </p>
-        </article>
+        <div className="max-w-screen-xl mx-auto p-3 mb-10">
+          <article className="xl:text-left">
+            <p className="text-base md:text-md xl:text-xl font-semibold leading-normal mx-auto">
+              Välkommen till Trail Camp Åre 2024 – en oförglömlig
+              löparupplevelse i hjärtat av Åres storslagna fjällvärld! Mellan
+              den 30 augusti och 1 september bjuder vi in dig till tre dagar
+              fyllda med inspiration, utmaning och gemenskap i en av Sveriges
+              mest natursköna miljöer.
+            </p>
+          </article>
+        </div>
 
         <section className="max-w-screen-xl mx-auto mt-10 space-y-10">
           <GridImgs

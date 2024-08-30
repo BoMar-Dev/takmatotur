@@ -33,7 +33,7 @@ const Coach = () => {
         className="absolute top-[-700px] left-0 h-full w-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: "700%",
+          backgroundSize: "300%",
           opacity: 0.05,
           zIndex: -1,
           transform: "translateX(-30%)",

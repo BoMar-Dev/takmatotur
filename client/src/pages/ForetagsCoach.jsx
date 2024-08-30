@@ -17,7 +17,7 @@ const ForetagsCoach = () => {
         image={backgroundImg}
       />
 
-      <section className="relative p-5 pb-16">
+      <section className="relative p-3 pb-16">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -35,20 +35,22 @@ const ForetagsCoach = () => {
           <h1 className="font-bold text-center mb-5">Företagscoaching</h1>
         </header>
 
-        <article className="max-w-screen-xl mx-auto p-3 mb-10">
-          <p className="text-base md:text-md xl:text-xl font-semibold p-5 mx-auto">
-            Stärk Teamet och Nå Nya Höjder – Följ med oss på en 10-veckors
-            Löpcoachingresa för Företagsgrupper! Vill ni skapa en starkare
-            teamkänsla, öka arbetsglädjen och samtidigt förbättra hälsan hos era
-            medarbetare? Välkommen till vår unika löpcoaching för
-            företagsgrupper – en 10-veckors resa där vi kombinerar träning,
-            motivation och gemenskap.
-          </p>
-        </article>
+        <div className="max-w-screen-xl mx-auto p-1 mb-10">
+          <article className=" xl:text-left">
+            <p className="text-base md:text-md xl:text-xl font-semibold p-3 mx-auto">
+              Stärk teamet och nå nya höjder – följ med oss på en 10-veckors
+              löpcoachingresa för företagsgrupper! Vill ni skapa en starkare
+              teamkänsla, öka arbetsglädjen och samtidigt förbättra hälsan hos
+              era medarbetare? Välkommen till vår unika löpcoaching för
+              företagsgrupper – en 10-veckors resa där vi kombinerar träning,
+              motivation och gemenskap.
+            </p>
+          </article>
+        </div>
 
-        <article className="max-w-screen-xl mx-auto p-5">
+        <div className="max-w-screen-xl mx-auto p-3 mb-10">
           <section className="mb-6">
-            <div className="p-4">
+            <div className="p-3">
               <h2 className="mb-2 font-semibold text-xl">
                 Varför välja vår löpcoaching för företagsgrupper?
               </h2>
@@ -91,7 +93,7 @@ const ForetagsCoach = () => {
           </section>
 
           <section className="mb-6">
-            <div className="p-4">
+            <div className="p-3">
               <h2 className="mb-2 font-semibold text-xl">
                 Vad ni kan förvänta er:
               </h2>
@@ -118,8 +120,8 @@ const ForetagsCoach = () => {
             </div>
           </section>
 
-          <section className="p-4 text-center">
-            <p className="text-center md:w-[80%] lg:w-[60%] xl:w-[70%] md:m-auto">
+          <section className="p-3 text-center">
+            <p className="text-center md:w-[80%] lg:w-[60%] xl:w-[70%] mx-auto">
               Gör er redo att snöra på skorna och följ med oss på en resa mot
               bättre hälsa, ökad arbetsglädje och starkare teamkänsla.
               Tillsammans tar vi stegen mot framgång – både på arbetsplatsen och
@@ -127,14 +129,14 @@ const ForetagsCoach = () => {
             </p>
           </section>
 
-          <div className="text-center flex justify-center mt-5 mb-10">
-            <Link to="/coach" className="inline-flex bg-slate-800 rounded-md">
-              <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-PrimaryColor text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-sky-700 before:duration-500 before:ease-out hover:shadow-sky-700 hover:before:h-56 hover:before:w-56 rounded-md">
+          <div className="text-center flex justify-center mt-16 mb-5">
+            <Link to="/coach" className="inline-flex">
+              <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-amber-700 text-white shadow-2xl transition-all rounded-md">
                 <span className="relative z-10">Bakåt</span>
               </button>
             </Link>
           </div>
-        </article>
+        </div>
       </section>
     </>
   );

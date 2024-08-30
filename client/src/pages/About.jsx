@@ -18,12 +18,12 @@ const About = () => {
         image={portraitImg}
       />
 
-      <section className="relative p-5 pb-16">
+      <section className="relative p-3 pb-16">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImg})`,
-            backgroundSize: "140%",
+            backgroundSize: "190%",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             opacity: 0.05,
@@ -32,13 +32,13 @@ const About = () => {
           loading="lazy"
         ></div>
 
-        <header className="flex justify-center mb-6">
+        <header className="flex justify-center mb-6 pt-2">
           <h1 className="font-bold text-center">Tak Mat o Tur</h1>
         </header>
 
         <div className="max-w-screen-xl mx-auto p-3 mb-10">
           <section className="font-semibold text-lg">
-            <p className="text-base md:text-md xl:text-xl p-5 mx-auto">
+            <p className="text-base md:text-md xl:text-xl p-3 mx-auto">
               Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar
               komfort, gastronomi och äventyr för att skapa oförglömliga
               upplevelser. Vi specialiserar oss på att erbjuda personliga

@@ -30,7 +30,7 @@ const Accommodation = () => {
       <SEOHelmet
         title="Boende | Tak Mat o Tur i Duved"
         description="Boende i vackra Duved nära Åre. Upplev Jämtlands fjällvärld med närhet till skidbackar, vandringsleder och mer. Perfekt för din nästa semester."
-        keywords=" Tak Mat o Tur, boende, Duved, Åre, Jämtland, fjäll, skidåkning, vandring, semester, fjällvärld, Sverige"
+        keywords="Tak Mat o Tur, boende, Duved, Åre, Jämtland, fjäll, skidåkning, vandring, semester, fjällvärld, Sverige"
         url="http://takmatotur.se/boende"
         image={boende1}
       />
@@ -40,7 +40,7 @@ const Accommodation = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImg})`,
-            backgroundSize: "140%",
+            backgroundSize: "200%",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             opacity: 0.05,
@@ -54,8 +54,8 @@ const Accommodation = () => {
         </header>
 
         <div className="max-w-screen-xl mx-auto p-3 mb-10">
-          <article className="text-center xl:text-left">
-            <p className="text-base md:text-md xl:text-xl font-semibold p-5 mx-auto">
+          <article className="xl:text-left">
+            <p className="text-base md:text-md xl:text-xl font-semibold leading-normal mx-auto">
               Hos oss har du fjällen med allt vad de erbjuder ett stenkast bort.
               En kort promenad tar dig upp till Duveds och Tegefjälls liftsystem
               om vintern och på sommaren kan du enkelt ansluta till flera leder
@@ -78,7 +78,7 @@ const Accommodation = () => {
             src={boende1}
             alt="Bild på Emma & Martin - Tak Mat o Tur"
             title="Värdparet"
-            description="Med ett ursprung i södra Sverige har vi, Emma och Martin, sedan några år bosatt oss i vackra Duved. Vår flytt till Jämtland har nog egentligen alltid varit självklar och, kanske, på något sätt förutbestämd. Natur, träning, mat och service har alltid legat oss varmt om hjärtat och Åredalen är för oss den perfekta platsen för detta.."
+            description="Med ett ursprung i södra Sverige har vi, Emma och Martin, sedan några år bosatt oss i vackra Duved. Vår flytt till Jämtland har nog egentligen alltid varit självklar och, kanske, på något sätt förutbestämd. Natur, träning, mat och service har alltid legat oss varmt om hjärtat och Åredalen är för oss den perfekta platsen för detta."
           />
           <GridImgs
             src={boende2}
@@ -110,7 +110,7 @@ const Accommodation = () => {
             src={boende7}
             alt="Tak Mat o Tur Gastronomi och matupplevelser"
             title="Gastronomi"
-            description="Hos oss vill vi ge dig en matupplevelse som stannar kvar långt efter att måltiden är över.  Lägg till frukost med nybakat bröd, goda och nyttiga smoothies med råvaror från fjällen. Varför inte en god middag med influenser från Jämtland och Asien i en magisk kombination."
+            description="Hos oss vill vi ge dig en matupplevelse som stannar kvar långt efter att måltiden är över. Lägg till frukost med nybakat bröd, goda och nyttiga smoothies med råvaror från fjällen. Varför inte en god middag med influenser från Jämtland och Asien i en magisk kombination."
             reverse
           />
           <GridImgs
@@ -121,7 +121,7 @@ const Accommodation = () => {
           />
         </section>
 
-        <article className="p-20 xl:p-6 max-w-[800px] mx-auto text-md border-2 border-amber-700 rounded-md mt-10 ]">
+        <article className="p-20 xl:p-6 max-w-[800px] mx-auto text-md border-2 border-amber-700 rounded-md mt-10">
           <div className="m-auto text-5xl text-amber-700">
             <FaInfoCircle />
           </div>
