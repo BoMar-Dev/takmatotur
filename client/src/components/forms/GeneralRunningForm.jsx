@@ -197,6 +197,7 @@ const GeneralRunningForm = ({ closeForm }) => {
       >
         Skicka
       </button>
+
       {emailSent && (
         <p className="text-green-500 text-sm mt-2 flex items-center">
           <GiConfirmed className="mr-2" /> Skickat
