@@ -64,7 +64,7 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
       </div>
 
       <ReCAPTCHA
-        sitekey="6LddrTIqAAAAAKccYacwj6n-TC2DLyp1GVPloJu0"
+        sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
         onChange={(val) => setCapVal(val)}
         className="mb-3"
       ></ReCAPTCHA>
