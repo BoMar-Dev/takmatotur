@@ -82,7 +82,7 @@ const About = () => {
             </div>
             <figure className="flex-1">
               <img
-                className="rounded-lg shadow-xl w-[87%] mx-auto"
+                className="rounded-lg shadow-xl w-[80%] mx-auto"
                 src={portraitImg}
                 alt="Bild på grundarna av Tak Mat o Tur"
                 loading="lazy"
@@ -94,7 +94,7 @@ const About = () => {
           <section className="xl:hidden mt-10">
             <figure className="img-div">
               <img
-                className="rounded-lg shadow-xl w-full md:w-3/4 lg:w-3/5 mx-auto"
+                className="rounded-lg shadow-xl w-full md:w-[90%] lg:w-[90%] mx-auto"
                 src={portraitImg}
                 alt="Bild på grundarna av Tak Mat o Tur"
                 loading="lazy"

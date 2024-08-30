@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 // import icons
 import { IoClose } from "react-icons/io5";
@@ -20,6 +21,7 @@ const GeneralRunningForm = ({ closeForm }) => {
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [dateError, setDateError] = useState("");
+  const [capVal, setCapVal] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -177,9 +179,21 @@ const GeneralRunningForm = ({ closeForm }) => {
           onChange={handleChange}
         ></textarea>
       </div>
+
+      <ReCAPTCHA
+        sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
+        onChange={(val) => setCapVal(val)}
+        className="mb-3"
+      ></ReCAPTCHA>
+
       <button
         type="submit"
-        className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+        className={`p-2 text-white rounded transform transition-all duration-150 ease-in-out ${
+          capVal
+            ? "bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-95 active:shadow-lg"
+            : "bg-gray-400 cursor-not-allowed"
+        }`}
+        disabled={!capVal}
       >
         Skicka
       </button>
