@@ -1,17 +1,12 @@
 import { useState, useEffect } from "react";
 import { useFormDefaults } from "../functions/useFormDefaults";
 
-//6LcbqDIqAAAAAMKI07uq98ehyckicKh4sKXb9efc
-
-// Import images
 import map from "../img/contact/map.jpg";
 import backgroundImg from "../img/about/background.svg";
 
-// import component
 import ContactForm from "../components/forms/ContactForm";
 import SEOHelmet from "../components/SEOHelment";
 
-// Import icons
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 
@@ -75,23 +70,23 @@ const Contact = () => {
             backgroundImage: `url(${backgroundImg})`,
             backgroundSize: "120%",
             backgroundRepeat: "repeat-x",
-            opacity: 0.08,
+            opacity: 0.05,
             zIndex: -1,
             transform: "translateX(-20%) translateY(20%)",
           }}
         ></div>
 
         <header className="text-center mb-5">
-          <h1 className="font-bold">Kontakta oss</h1>
+          <h1 className="font-bold text-3xl">Kontakta oss</h1>
         </header>
 
-        <div className="p-5 mb-10 md:w-[80%] m-auto relative 3xl:w-[50%] lg:rounded-lg">
-          <div className="hidden xl:flex xl:space-x-10 items-center p-5">
+        <div className="p-3 mb-10 w-full max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] 2xl:max-w-[80%] 3xl:w-[40%] m-auto relative lg:rounded-lg">
+          <div className="hidden xl:flex xl:space-x-10 p-5">
             <div className="flex-1 xl:order-1 text-center">
               <div className="text-lg font-bold text-amber-700 m-auto">
                 <h2>Vi svarar så fort vi kan</h2>
               </div>
-              <p className="p-5 text-primary">
+              <p className="p-3 text-primary">
                 Är det något ni funderar över som inte står på vår hemsida så är
                 ni varmt välkommen att kontakta oss via telefon eller epost. Vi
                 finns tillgängliga för att ni ska få bästa tänkbara service.
@@ -125,12 +120,14 @@ const Contact = () => {
               </a>
             </div>
           </div>
+
+          {/* // smaller then xl  */}
           <div className="xl:hidden">
             <div className="text-container text-center">
               <div className="text-lg font-bold  m-auto text-amber-700">
                 <h2>Vi svarar så fort vi kan</h2>
               </div>
-              <p className="p-5 text-primary">
+              <p className="p-2  text-primary">
                 Är det något ni funderar över som inte står på vår hemsida så är
                 ni varmt välkommen att kontakta oss via telefon eller epost. Vi
                 finns tillgängliga för att ni ska få bästa tänkbara service.
@@ -153,7 +150,7 @@ const Contact = () => {
               aria-label="Visa karta till Tak Mat O Tur på Google Maps"
             >
               <img
-                className="rounded-lg shadow-xl w-full cursor-pointer"
+                className="rounded-lg shadow-xl w-full cursor-pointer mt-10"
                 src={map}
                 alt="Karta till Tak Mat O Tur"
                 loading="lazy"

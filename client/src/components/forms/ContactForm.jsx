@@ -10,15 +10,15 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
   const [capVal, setCapVal] = useState(null);
 
   return (
-    <form onSubmit={handleSubmit} className=" xl:w-[50%]">
+    <form onSubmit={handleSubmit} className=" xl:w-[50%] mt-10">
       <div className="flex flex-col mb-5">
         <label htmlFor="name" className="mb-2 font-bold text-primary">
           Namn
         </label>
         <input
-          id="name" // Ensure id matches the label's htmlFor
+          id="name"
           {...defaults("name", "", {
-            placeholder: "Ditt namn", // Optional: add placeholder for better UX
+            placeholder: "Ditt namn",
             className: "p-2 border border-gray-300 rounded",
           })}
         />
@@ -28,10 +28,10 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
           Email
         </label>
         <input
-          id="email" // Ensure id matches the label's htmlFor
+          id="email"
           {...defaults("email", "", {
             type: "email",
-            placeholder: "Din e-postadress", // Optional: add placeholder for better UX
+            placeholder: "Din e-postadress",
             className: "p-2 border border-gray-300 rounded",
           })}
         />
