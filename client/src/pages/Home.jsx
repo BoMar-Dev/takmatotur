@@ -119,7 +119,7 @@ const Home = () => {
         <div className="text-center flex justify-center w-full p-5 max-w-screen-xl xl:max-w-[1000px] mx-auto mt-7">
           <div>
             <h2 className="text-xl font-semibold text-amber-700">
-              Upptäck mer hos Tak Mat o Tur!
+              Upptäck mer hos oss!
             </h2>
             <p>
               Oavsett om du är här för äventyr, god mat eller bara en
