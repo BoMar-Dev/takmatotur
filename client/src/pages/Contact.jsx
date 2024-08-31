@@ -80,7 +80,7 @@ const Contact = () => {
           <h1 className="font-bold text-3xl">Kontakta oss</h1>
         </header>
 
-        <div className="p-3 mb-10 w-full max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] 2xl:max-w-[80%] 3xl:w-[40%] m-auto relative lg:rounded-lg">
+        <div className="p-3 mb-10 w-full max-w-[100%] lg:max-w-[70%] xl:max-w-[60%] 2xl:max-w-[80%] 3xl:w-[40%] m-auto relative lg:rounded-lg">
           <div className="hidden xl:flex xl:space-x-10 p-5">
             <div className="flex-1 xl:order-1 text-center">
               <div className="text-lg font-bold text-amber-700 m-auto">
