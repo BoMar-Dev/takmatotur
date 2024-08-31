@@ -116,6 +116,27 @@ const Home = () => {
             />
           </div>
         </section>
+        <div className="text-center flex justify-center w-full p-5 max-w-screen-xl xl:max-w-[1000px] mx-auto mt-7">
+          <div>
+            <h2 className="text-xl font-semibold text-amber-700">
+              Upptäck mer hos Tak Mat o Tur!
+            </h2>
+            <p>
+              Oavsett om du är här för äventyr, god mat eller bara en
+              avkopplande vistelse, vi har något för alla. Tveka inte att
+              kontakta oss för att planera ditt nästa besök, och låt oss göra
+              det till en oförglömlig upplevelse.
+            </p>
+
+            <div className="flex justify-center mt-10 mb-5 ">
+              <Link to="/kontakt" className="inline-flex">
+                <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-amber-700 text-white shadow-2xl transition-all rounded-md">
+                  <span className="relative z-10">Kontakta / Frågor</span>
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );

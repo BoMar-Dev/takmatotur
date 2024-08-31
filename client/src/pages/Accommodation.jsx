@@ -121,7 +121,7 @@ const Accommodation = () => {
           />
         </section>
 
-        <article className="p-20 xl:p-6 max-w-[800px] mx-auto text-md border-2 border-amber-700 rounded-md mt-10">
+        <article className="p-5 xl:p-6 max-w-[800px] mx-auto text-md border-2 border-amber-700 rounded-md mt-10">
           <div className="m-auto text-5xl text-amber-700">
             <FaInfoCircle />
           </div>
@@ -151,9 +151,10 @@ const Accommodation = () => {
         </article>
 
         <div className="text-center p-5 max-w-screen-xl mx-auto mt-7">
-          <p>
+          <h2 className="text-xl font-semibold text-amber-700">
             Planera din vistelse hos oss redan idag!
-            <br />
+          </h2>
+          <p>
             Kontakta oss så ser vi till att skapa en minnesvärd upplevelse för
             dig eller er, med allt från fjällaktiviteter till matupplevelser.
           </p>
