@@ -6,8 +6,15 @@ import { GiConfirmed } from "react-icons/gi";
 import { MdOutlineDisabledByDefault } from "react-icons/md";
 
 const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
-  // Add the useState hook for capVal
   const [capVal, setCapVal] = useState(null);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+
+  const handleCaptchaChange = (val) => {
+    setCapVal(val);
+    setTimeout(() => {
+      setIsCaptchaVerified(true);
+    }, 1200); // Add a 1.2 second delay before enabling the submit button
+  };
 
   return (
     <form onSubmit={handleSubmit} className=" xl:w-[50%] mt-10">
@@ -66,7 +73,7 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
       <div className="max-w-xs mx-auto">
         <ReCAPTCHA
           sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
-          onChange={(val) => setCapVal(val)}
+          onChange={handleCaptchaChange}
           className="g-recaptcha"
           style={{
             transform: "scale(0.77)",
@@ -80,11 +87,11 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
       <button
         type="submit"
         className={`p-2 text-white rounded transform transition-all duration-150 ease-in-out ${
-          capVal
+          isCaptchaVerified
             ? "bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-95 active:shadow-lg"
             : "bg-gray-400 cursor-not-allowed"
         }`}
-        disabled={!capVal}
+        disabled={!isCaptchaVerified}
       >
         Skicka
       </button>
