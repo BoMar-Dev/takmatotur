@@ -42,11 +42,9 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 3, ease: "easeOut" }}
         >
-          <div className="relative bg-black bg-opacity-50 p-4 md:p-6 rounded-md text-center">
+          <div className="relative p-4 md:p-6 rounded-md text-center">
             <div className="ml-2 md:ml-5 xl:ml-1 font-semibold text-white">
-              <h1 className="text-xl md:text-2xl xl:text-4xl">
-                Trail Camp 2024
-              </h1>
+              <h1 className=" md:text-2xl xl:text-4xl">Trail Camp 2024</h1>
             </div>
             <div className="mt-2 md:mt-4 flex justify-center">
               <Link to="/trailcamp">
