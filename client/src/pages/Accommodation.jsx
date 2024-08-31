@@ -49,11 +49,11 @@ const Accommodation = () => {
           loading="lazy"
         ></div>
 
-        <header className="flex justify-center mb-6">
-          <h1 className="font-bold text-center mb-5">Boende</h1>
+        <header className="flex justify-center ">
+          <h1 className="font-bold text-center ">Boende</h1>
         </header>
 
-        <div className="text-center flex justify-center w-full mt-8 mb-20">
+        <div className="text-center flex justify-center w-full mt-8 mb-10">
           <button
             onClick={openForm}
             className="custom-button bg-amber-700 text-white"
