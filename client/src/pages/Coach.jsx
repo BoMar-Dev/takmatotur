@@ -146,9 +146,10 @@ const Coach = () => {
       </div>
 
       <section className="text-center p-5 max-w-screen-xl mx-auto">
+        <h2 className="text-xl font-semibold text-amber-700">
+          Börja ditt äventyr redan idag!
+        </h2>
         <p>
-          Kom igång att springa redan idag!
-          <br />
           Kontakta mig så ser vi till att göra en rolig strukturerad plan som
           passar just dig eller er.
         </p>

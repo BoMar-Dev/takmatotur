@@ -103,7 +103,7 @@ const Tour = () => {
           </aside>
         </div>
 
-        <div className="text-center my-10">
+        <div className="text-center my-10 p-5 ">
           <h2 className="text-xl font-semibold text-amber-700">
             Börja ditt äventyr redan idag!
           </h2>
