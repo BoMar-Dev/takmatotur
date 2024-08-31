@@ -192,7 +192,13 @@ const GeneralRunningForm = ({ closeForm }) => {
         sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
         onChange={handleCaptchaChange}
         className="mb-3"
-      ></ReCAPTCHA>
+        style={{
+          transform: "scale(0.77)",
+          WebkitTransform: "scale(0.77)",
+          transformOrigin: "0 0",
+          WebkitTransformOrigin: "0 0",
+        }}
+      />
 
       <button
         type="submit"

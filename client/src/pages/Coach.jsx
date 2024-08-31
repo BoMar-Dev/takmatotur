@@ -12,9 +12,11 @@ import backgroundImg from "../img/about/background.svg";
 import GeneralRunningForm from "../components/forms/GeneralRunningForm";
 import SEOHelmet from "../components/SEOHelment";
 import Card from "../components/Card";
+import SkeletonLoader from "../components/SkeletonLoader";
 
 const Coach = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const openForm = () => setIsFormOpen(true);
   const closeForm = () => setIsFormOpen(false);
@@ -107,10 +109,15 @@ const Coach = () => {
           </p>
         </article>
         <aside className="p-5 xl:w-1/2 flex items-center">
+          {loading && <SkeletonLoader height="100%" width="100%" />}
           <img
             src={profil}
             alt="Profilbild på Martin Gillgren löpcoach Tak Mat o Tur"
-            className="rounded-lg"
+            className={`rounded-lg transition-opacity duration-500 ${
+              loading ? "opacity-0" : "opacity-100"
+            }`}
+            onLoad={() => setLoading(false)}
+            style={{ display: loading ? "none" : "block" }}
           />
         </aside>
       </div>

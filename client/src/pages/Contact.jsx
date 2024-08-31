@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { useFormDefaults } from "../functions/useFormDefaults";
 
+// import img
 import map from "../img/contact/map.jpg";
 import backgroundImg from "../img/about/background.svg";
 
+// import components
 import ContactForm from "../components/forms/ContactForm";
 import SEOHelmet from "../components/SEOHelment";
+import SkeletonLoader from "../components/SkeletonLoader";
 
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
@@ -20,6 +23,7 @@ const Contact = () => {
 
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [loading, setLoading] = useState(true); // Add loading state for the map image
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -77,7 +81,7 @@ const Contact = () => {
         ></div>
 
         <header className="text-center mb-5">
-          <h1 className="font-bold text-3xl">Kontakta oss</h1>
+          <h1 className="font-bold ">Kontakta oss</h1>
         </header>
 
         <div className="p-3 mb-10 w-full max-w-[100%] lg:max-w-[70%] xl:max-w-[60%] 2xl:max-w-[80%] 3xl:w-[40%] m-auto relative lg:rounded-lg">
@@ -105,6 +109,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex-1 xl:order-2">
+              {loading && <SkeletonLoader height="100%" width="100%" />}
               <a
                 href="https://www.google.com/maps/place/Tegebacken+5,+837+71+Duved,+Sweden"
                 target="_blank"
@@ -112,16 +117,18 @@ const Contact = () => {
                 aria-label="Visa karta till Tak Mat O Tur på Google Maps"
               >
                 <img
-                  className="rounded-lg shadow-xl w-full cursor-pointer"
+                  className={`rounded-lg shadow-xl w-full cursor-pointer ${
+                    loading ? "opacity-0" : "opacity-100"
+                  }`}
                   src={map}
                   alt="Karta till Tak Mat O Tur"
-                  loading="lazy"
+                  onLoad={() => setLoading(false)}
                 />
               </a>
             </div>
           </div>
 
-          {/* // smaller then xl  */}
+          {/* // smaller than xl */}
           <div className="xl:hidden">
             <div className="text-container text-center">
               <div className="text-lg font-bold  m-auto text-amber-700">
@@ -143,6 +150,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+            {loading && <SkeletonLoader height="300px" width="100%" />}
             <a
               href="https://www.google.com/maps/place/Tegebacken+5,+837+71+Duved,+Sweden"
               target="_blank"
@@ -150,10 +158,12 @@ const Contact = () => {
               aria-label="Visa karta till Tak Mat O Tur på Google Maps"
             >
               <img
-                className="rounded-lg shadow-xl w-full cursor-pointer mt-10"
+                className={`rounded-lg shadow-xl w-full cursor-pointer mt-10 ${
+                  loading ? "opacity-0" : "opacity-100"
+                }`}
                 src={map}
                 alt="Karta till Tak Mat O Tur"
-                loading="lazy"
+                onLoad={() => setLoading(false)}
               />
             </a>
           </div>

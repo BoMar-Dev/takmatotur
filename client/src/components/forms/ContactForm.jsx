@@ -108,13 +108,3 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
 };
 
 export default ContactForm;
-
-{
-  /* <script>function scaleapatcha(){
- const captchWidth = 900
- const containerWidth = $(".g-recapatcha").width();
- if 
-
- }
-  </script>; */
-}

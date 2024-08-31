@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 // import component
 import SEOHelmet from "../components/SEOHelment";
@@ -6,8 +7,10 @@ import SEOHelmet from "../components/SEOHelment";
 // Import images
 import backgroundImg from "../img/about/background.svg";
 import portraitImg from "../img/about/portrait.webp";
+import SkeletonLoader from "../components/SkeletonLoader";
 
 const About = () => {
+  const [loading, setLoading] = useState(true);
   return (
     <>
       <SEOHelmet
@@ -81,11 +84,15 @@ const About = () => {
               </p>
             </div>
             <figure className="flex-1">
+              {loading && <SkeletonLoader height="100%" width="100%" />}
               <img
-                className="rounded-lg shadow-xl w-[80%] mx-auto"
+                className={`rounded-lg shadow-xl w-[80%] mx-auto transition-opacity duration-500 ${
+                  loading ? "opacity-0" : "opacity-100"
+                }`}
                 src={portraitImg}
                 alt="Bild på grundarna av Tak Mat o Tur"
-                loading="lazy"
+                onLoad={() => setLoading(false)}
+                style={{ display: loading ? "none" : "block" }}
               />
             </figure>
           </section>
