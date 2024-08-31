@@ -25,6 +25,7 @@ const AccomodationForm = ({ closeForm }) => {
   const [emailError, setEmailError] = useState(false);
   const [dateError, setDateError] = useState("");
   const [capVal, setCapVal] = useState(null);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,10 +66,17 @@ const AccomodationForm = ({ closeForm }) => {
     }
   };
 
+  const handleCaptchaChange = (val) => {
+    setCapVal(val);
+    setTimeout(() => {
+      setIsCaptchaVerified(true);
+    }, 1200); // Add a 1.2 second delay before enabling the submit button
+  };
+
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-5  mb-10  rounded-lg shadow-lg w-[90%] max-w-md h-[70vh] max-h-[60vh] md:h-[70vh] md:max-h-[70vh] lg:h-[70vh] lg:max-h-[70vh] relative overflow-y-auto"
+      className="bg-white p-5 mb-10 rounded-lg shadow-lg w-[90%] max-w-md h-[70vh] max-h-[60vh] md:h-[70vh] md:max-h-[70vh] lg:h-[70vh] lg:max-h-[70vh] relative overflow-y-auto"
     >
       <button
         className="absolute top-2 left-2 p-2 text-3xl text-gray-700"
@@ -145,20 +153,29 @@ const AccomodationForm = ({ closeForm }) => {
           className="w-full p-2 border border-gray-300 rounded"
         ></textarea>
       </div>
-      <ReCAPTCHA
-        sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
-        onChange={(val) => setCapVal(val)}
-        className="mb-3"
-      ></ReCAPTCHA>
+
+      <div className="max-w-xs mx-auto mb-3">
+        <ReCAPTCHA
+          sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
+          onChange={handleCaptchaChange}
+          className="g-recaptcha"
+          style={{
+            transform: "scale(0.77)",
+            WebkitTransform: "scale(0.77)",
+            transformOrigin: "0 0",
+            WebkitTransformOrigin: "0 0",
+          }}
+        />
+      </div>
 
       <button
         type="submit"
         className={`p-2 text-white rounded transform transition-all duration-150 ease-in-out ${
-          capVal
+          isCaptchaVerified
             ? "bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-95 active:shadow-lg"
             : "bg-gray-400 cursor-not-allowed"
         }`}
-        disabled={!capVal}
+        disabled={!isCaptchaVerified}
       >
         Skicka
       </button>
