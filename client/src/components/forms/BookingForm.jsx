@@ -21,6 +21,7 @@ const BookingForm = ({ closeForm }) => {
   const [emailError, setEmailError] = useState(false);
   const [dateError, setDateError] = useState("");
   const [capVal, setCapVal] = useState(null);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,6 +61,13 @@ const BookingForm = ({ closeForm }) => {
       setEmailSent(false);
       setEmailError(true);
     }
+  };
+
+  const handleCaptchaChange = (val) => {
+    setCapVal(val);
+    setTimeout(() => {
+      setIsCaptchaVerified(true);
+    }, 1200); // Add a 1.2 second delay before enabling the submit button
   };
 
   return (
@@ -130,20 +138,29 @@ const BookingForm = ({ closeForm }) => {
           className="w-full p-2 border border-gray-300 rounded"
         ></textarea>
       </div>
-      <ReCAPTCHA
-        sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
-        onChange={(val) => setCapVal(val)}
-        className="mb-3"
-      ></ReCAPTCHA>
+
+      <div className="max-w-xs mx-auto mb-3">
+        <ReCAPTCHA
+          sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
+          onChange={handleCaptchaChange}
+          className="g-recaptcha"
+          style={{
+            transform: "scale(0.77)",
+            WebkitTransform: "scale(0.77)",
+            transformOrigin: "0 0",
+            WebkitTransformOrigin: "0 0",
+          }}
+        />
+      </div>
 
       <button
         type="submit"
         className={`p-2 text-white rounded transform transition-all duration-150 ease-in-out ${
-          capVal
+          isCaptchaVerified
             ? "bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-95 active:shadow-lg"
             : "bg-gray-400 cursor-not-allowed"
         }`}
-        disabled={!capVal}
+        disabled={!isCaptchaVerified}
       >
         Skicka
       </button>
