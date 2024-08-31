@@ -104,7 +104,7 @@ const Tour = () => {
         </div>
 
         <div className="text-center my-10 p-5 ">
-          <h2 className="text-xl font-semibold text-amber-700">
+          <h2 className="text-xl font-semibold text-amber-700 mb-2">
             Börja ditt äventyr redan idag!
           </h2>
           <p>

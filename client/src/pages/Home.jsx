@@ -118,7 +118,7 @@ const Home = () => {
         </section>
         <div className="text-center flex justify-center w-full p-5 max-w-screen-xl xl:max-w-[1000px] mx-auto mt-7">
           <div>
-            <h2 className="text-xl font-semibold text-amber-700">
+            <h2 className="text-xl font-semibold text-amber-700 mb-2">
               Upptäck mer hos oss!
             </h2>
             <p>

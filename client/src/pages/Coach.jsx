@@ -153,7 +153,7 @@ const Coach = () => {
       </div>
 
       <section className="text-center p-5 max-w-screen-xl mx-auto">
-        <h2 className="text-xl font-semibold text-amber-700">
+        <h2 className="text-xl font-semibold text-amber-700 mb-2">
           Kom igång att springa redan idag!
         </h2>
         <p>
