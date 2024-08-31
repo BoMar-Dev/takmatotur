@@ -114,7 +114,15 @@ const About = () => {
                 egen regi kombinera det som livet gjort oss bra på; löpning,
                 skidåkning, gästupplevelser och mat.
               </p>
-              <p className="mt-10">
+            </div>
+          </section>
+
+          <div className="text-center flex justify-center w-full p-5 max-w-screen-xl xl:max-w-[1000px] mx-auto mt-7">
+            <div>
+              <h2 className="text-xl font-semibold text-amber-700">
+                Duved är mer än bara en plats
+              </h2>
+              <p className="">
                 Duved är mer än bara en plats – det är en gemenskap och en port
                 till den vilda naturen. Vi strävar efter att erbjuda en unik och
                 genuin upplevelse, där varje ögonblick är noggrant planerat och
@@ -123,7 +131,7 @@ const About = () => {
                 vistelse fylld med äventyr, god mat och fantastisk natur.
               </p>
             </div>
-          </section>
+          </div>
 
           {/* button div */}
           <div className="flex justify-center mt-16 mb-5">
