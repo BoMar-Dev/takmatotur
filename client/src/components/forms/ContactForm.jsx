@@ -67,7 +67,13 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
         <ReCAPTCHA
           sitekey="6LcdrzIqAAAAAIC23Ad4rAiN-Qi2vkIdVaH70UOi"
           onChange={(val) => setCapVal(val)}
-          className="transform scale-90"
+          className="g-recaptcha"
+          style={{
+            transform: "scale(0.77)",
+            WebkitTransform: "scale(0.77)",
+            transformOrigin: "0 0",
+            WebkitTransformOrigin: "0 0",
+          }}
         />
       </div>
 
@@ -102,3 +108,13 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
 };
 
 export default ContactForm;
+
+{
+  /* <script>function scaleapatcha(){
+ const captchWidth = 900
+ const containerWidth = $(".g-recapatcha").width();
+ if 
+
+ }
+  </script>; */
+}
