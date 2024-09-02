@@ -36,3 +36,9 @@ const GridImgs = ({ src, alt, title, description, reverse }) => {
 };
 
 export default GridImgs;
+
+// loading är ett state som börjar som true, vilket betyder att bilden håller på att laddas.
+// När bilden har laddats klart (onLoad-händelsen), sätts loading till false.
+// SkeletonLoader visas medan bilden laddas:
+// Om loading är true (dvs. bilden laddas fortfarande), visas SkeletonLoader.
+// När bilden är färdigladdad (loading är false), försvinner SkeletonLoader och bilden visas istället.

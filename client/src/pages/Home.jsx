@@ -31,7 +31,7 @@ const Home = () => {
       <SEOHelmet
         title="Välkommen | Tak Mat O Tur"
         description="Välkommen till Tak Mat o Tur i Duved. Vi kombinerar komfort, gastronomi och äventyr för oförglömliga upplevelser i fantastiska Jämtland."
-        keywords="takmatotur Tak Mat o Tur, Duved, äventyr, komfort, gastronomi, boende, topptur, löpning, vandra, mat"
+        keywords="tak, mat, tur, takmatotur, Tak Mat o Tur, Duved, äventyr, komfort, gastronomi, boende, topptur, löpning, vandra"
         url="https://takmatotur.se/"
         image={landingImage}
       />
@@ -130,7 +130,7 @@ const Home = () => {
 
             <div className="flex justify-center mt-10 mb-5 ">
               <Link to="/kontakt" className="inline-flex">
-                <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-amber-700 text-white shadow-2xl transition-all rounded-md">
+                <button className="custom-button relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-amber-700 text-white shadow-2xl transition-all rounded-md">
                   <span className="relative z-10">Kontakta / Frågor</span>
                 </button>
               </Link>

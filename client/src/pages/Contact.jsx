@@ -142,11 +142,14 @@ const Contact = () => {
               <div className="flex flex-col font-bold text-primary p-5 mb-5">
                 <div className="flex items-center space-x-2">
                   <BsFillTelephoneFill />
-                  <h2>+4670123456</h2>
+                  <h2>&#48;&#55;&#48;&#55;&#53;&#56;&#50;&#54;&#48;&#54;</h2>
                 </div>
                 <div className="flex items-center space-x-2 mt-2">
                   <IoMdMail />
-                  <h2>takmatotur@gmail.com</h2>
+                  <h2>
+                    {" "}
+                    &#116;&#97;&#107;&#109;&#97;&#116;&#111;&#116;&#117;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;
+                  </h2>
                 </div>
               </div>
             </div>
