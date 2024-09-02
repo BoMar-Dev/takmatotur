@@ -12,14 +12,31 @@ import { getImgLoader } from "../functions/getImgLoader";
 const Header = () => {
   const location = useLocation();
   const [currentImage, setCurrentImage] = useState(null);
+  const [loadingImage, setLoadingImage] = useState(null);
 
   useEffect(() => {
     const loadImage = async () => {
       const imageModule = await getImgLoader(location.pathname);
-      setCurrentImage(imageModule.default);
+      const img = new Image();
+      img.src = imageModule.default;
+
+      img.onload = () => {
+        setLoadingImage(imageModule.default);
+      };
     };
+
     loadImage();
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (loadingImage) {
+      const timeout = setTimeout(() => {
+        setCurrentImage(loadingImage);
+      }, 500); // Optional: delay the transition for smoother effect
+
+      return () => clearTimeout(timeout);
+    }
+  }, [loadingImage]);
 
   return (
     <header
