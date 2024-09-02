@@ -30,7 +30,7 @@ const Accommodation = () => {
       <SEOHelmet
         title="Boende | Tak Mat o Tur i Duved"
         description="Boende i vackra Duved nära Åre. Upplev Jämtlands fjällvärld med närhet till skidbackar, vandringsleder och mer. Perfekt för din nästa semester."
-        keywords="Tak Mat o Tur, boende, Duved, Åre, Jämtland, fjäll, skidåkning, vandring, semester, fjällvärld, Sverige"
+        keywords="Tak Mat o Tur, boende, Duved, Åre, Jämtland, fjäll, skidåkning, vandring, semester, fjällvärld, Sverige, boende Duved, fjällnära boende, Duved lägenhet, "
         url="http://takmatotur.se/boende"
         image={boende1}
       />
