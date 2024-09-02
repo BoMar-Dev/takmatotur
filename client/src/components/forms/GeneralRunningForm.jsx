@@ -23,6 +23,7 @@ const GeneralRunningForm = ({ closeForm }) => {
   const [dateError, setDateError] = useState("");
   const [capVal, setCapVal] = useState(null);
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -40,6 +41,8 @@ const GeneralRunningForm = ({ closeForm }) => {
     }
 
     setDateError(""); // Rensa tidigare datumfel
+
+    setIsSubmitting(true); // Indicate form submission is in progress
 
     try {
       const response = await fetch("https://takmatotur.onrender.com/coach", {
@@ -65,6 +68,8 @@ const GeneralRunningForm = ({ closeForm }) => {
       console.error("There was an error submitting the form!", error);
       setEmailSent(false);
       setEmailError(true);
+    } finally {
+      setIsSubmitting(false); // Reset the submitting state
     }
   };
 
@@ -203,20 +208,19 @@ const GeneralRunningForm = ({ closeForm }) => {
       <button
         type="submit"
         className={`p-2 text-white rounded transform transition-all duration-150 ease-in-out ${
-          isCaptchaVerified
+          isSubmitting
+            ? "bg-yellow-500 cursor-wait"
+            : emailSent
+            ? "bg-green-500"
+            : isCaptchaVerified
             ? "bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-95 active:shadow-lg"
             : "bg-gray-400 cursor-not-allowed"
         }`}
-        disabled={!isCaptchaVerified}
+        disabled={!isCaptchaVerified || isSubmitting}
       >
-        Skicka
+        {isSubmitting ? "Skickar..." : emailSent ? "Skickat" : "Skicka"}
       </button>
 
-      {emailSent && (
-        <p className="text-green-500 text-sm mt-2 flex items-center">
-          <GiConfirmed className="mr-2" /> Skickat
-        </p>
-      )}
       {emailError && (
         <p className="text-red-500 text-[12px] mt-2 flex flex-col items-center w-[80%] m-auto">
           <MdOutlineDisabledByDefault className="mr-2 text-xl" />
