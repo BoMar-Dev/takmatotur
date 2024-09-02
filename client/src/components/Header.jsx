@@ -12,27 +12,12 @@ import { getImgLoader } from "../functions/getImgLoader";
 const Header = () => {
   const location = useLocation();
   const [currentImage, setCurrentImage] = useState(null);
-  const [isHighQualityLoaded, setIsHighQualityLoaded] = useState(false);
 
   useEffect(() => {
     const loadImage = async () => {
-      const { lowQualityImg, highQualityImg } = await getImgLoader(
-        location.pathname
-      );
-
-      // Set the low-quality image first
-      setCurrentImage(lowQualityImg.default);
-
-      // Preload the high-quality image
-      const img = new Image();
-      img.src = highQualityImg.default;
-      img.onload = () => {
-        // Once high-quality image is loaded, update the current image
-        setCurrentImage(highQualityImg.default);
-        setIsHighQualityLoaded(true);
-      };
+      const imageModule = await getImgLoader(location.pathname);
+      setCurrentImage(imageModule.default);
     };
-
     loadImage();
   }, [location.pathname]);
 
@@ -42,9 +27,7 @@ const Header = () => {
         backgroundImage: currentImage ? `url(${currentImage})` : "none",
         backgroundSize: "cover",
         backgroundPosition: "center 70%",
-        transition: isHighQualityLoaded
-          ? "background-image 1s ease-in-out"
-          : "none",
+        transition: "background-image 1s ease-in-out",
       }}
       className="px-8 3xl:px lg:px-[100px] z-30 flex w-full h-[400px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[550px] 3xl:h-[1000px]"
     >
