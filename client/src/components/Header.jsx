@@ -27,7 +27,6 @@ const Header = () => {
         backgroundImage: currentImage ? `url(${currentImage})` : "none",
         backgroundSize: "cover",
         backgroundPosition: "center 70%",
-        transition: "background-image 1s ease-in-out", // Added transition here
       }}
       className="px-8 3xl:px lg:px-[100px] z-30 flex w-full h-[400px] md:h-[400px] lg:h-[450px] xl:h-[490px] 2xl:h-[550px] 3xl:h-[1000px]"
     >
