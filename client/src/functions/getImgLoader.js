@@ -1,25 +1,49 @@
 export const getImgLoader = async (pathname) => {
   switch (pathname) {
     case "/":
-      return import("../img/header/landing.webp");
+      return {
+        lowQualityImg: await import("../img/header/low.landing.webp"),
+        highQualityImg: await import("../img/header/landing.webp"),
+      };
     case "/om":
-      return import("../img/header/about.webp");
+      return {
+        lowQualityImg: await import("../img/header/low.about.webp"),
+        highQualityImg: await import("../img/header/about.webp"),
+      };
     case "/kontakt":
-      return import("../img/contact/contactHeader.webp");
+      return {
+        lowQualityImg: await import("../img/contact/low.contactHeader.webp"),
+        highQualityImg: await import("../img/contact/contactHeader.webp"),
+      };
     case "/coach":
     case "/coach/foretag":
     case "/coach/mandagslopning":
     case "/coach/personlig":
-      return import("../img/coach/coachHeader.webp");
+      return {
+        lowQualityImg: await import("../img/coach/low.coachHeader.webp"),
+        highQualityImg: await import("../img/coach/coachHeader.webp"),
+      };
     case "/trailcamp":
-      return import("../img/trailcamp/campHeader.webp");
+      return {
+        lowQualityImg: await import("../img/trailcamp/low.campHeader.webp"),
+        highQualityImg: await import("../img/trailcamp/campHeader.webp"),
+      };
     case "/topptur":
     case "/topptur/vinter":
     case "/topptur/sommar":
-      return import("../img/tour/tourHeader.webp");
+      return {
+        lowQualityImg: await import("../img/tour/low.tourHeader.webp"),
+        highQualityImg: await import("../img/tour/tourHeader.webp"),
+      };
     case "/boende":
-      return import("../img/accommodation/accoHeader.webp");
+      return {
+        lowQualityImg: await import("../img/accommodation/low.accoHeader.webp"),
+        highQualityImg: await import("../img/accommodation/accoHeader.webp"),
+      };
     default:
-      return import("../img/header/landing.webp");
+      return {
+        lowQualityImg: await import("../img/header/low.landing.webp"),
+        highQualityImg: await import("../img/header/landing.webp"),
+      };
   }
 };
