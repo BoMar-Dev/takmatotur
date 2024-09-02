@@ -30,11 +30,7 @@ const Header = () => {
 
   useEffect(() => {
     if (loadingImage) {
-      const timeout = setTimeout(() => {
-        setCurrentImage(loadingImage);
-      }, 500); // Optional: delay the transition for smoother effect
-
-      return () => clearTimeout(timeout);
+      setCurrentImage(loadingImage);
     }
   }, [loadingImage]);
 
