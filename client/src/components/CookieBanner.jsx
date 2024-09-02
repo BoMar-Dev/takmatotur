@@ -123,10 +123,13 @@ const CookieBanner = () => {
               </li>
               <li>
                 <strong>Policy:</strong>{" "}
-                <a href="" target="_blank" className="underline text-blue-600">
+                <a
+                  href="https://policies.google.com/technologies/cookies?hl=sv"
+                  target="_blank"
+                  className="underline text-blue-600"
+                >
                   Länk till policy
-                </a>{" "}
-                (policies.google.com)
+                </a>
               </li>
               <li>
                 <strong>Tas bort efter:</strong> 1 år, 11 månader
