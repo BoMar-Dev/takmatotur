@@ -8,16 +8,24 @@ import { MdOutlineDisabledByDefault } from "react-icons/md";
 const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
   const [capVal, setCapVal] = useState(null);
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleCaptchaChange = (val) => {
     setCapVal(val);
     setTimeout(() => {
       setIsCaptchaVerified(true);
-    }, 1200); // Add a 1.2 second delay before enabling the submit button
+    }, 1000); // Add a 1-second delay before enabling the submit button
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    await handleSubmit(e);
+    setIsSubmitting(false);
   };
 
   return (
-    <form onSubmit={handleSubmit} className=" xl:w-[50%] mt-10">
+    <form onSubmit={handleFormSubmit} className="xl:w-[50%] mt-10">
       <div className="flex flex-col mb-5">
         <label htmlFor="name" className="mb-2 font-bold text-primary">
           Namn
@@ -87,27 +95,34 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
       <button
         type="submit"
         className={`p-2 text-white rounded transform transition-all duration-150 ease-in-out ${
-          isCaptchaVerified
+          isSubmitting
+            ? "bg-yellow-500 cursor-wait"
+            : emailSent
+            ? "bg-green-500"
+            : emailError
+            ? "bg-red-500 hover:bg-red-600 active:bg-red-700 active:scale-95 active:shadow-lg"
+            : isCaptchaVerified
             ? "bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-95 active:shadow-lg"
             : "bg-gray-400 cursor-not-allowed"
         }`}
-        disabled={!isCaptchaVerified}
+        disabled={!isCaptchaVerified || isSubmitting}
       >
-        Skicka
+        {isSubmitting
+          ? "Skickar..."
+          : emailSent
+          ? "Skickat"
+          : emailError
+          ? "Ej skickad"
+          : "Skicka"}
       </button>
 
-      {/* Will popup if email was succesfully sent */}
-      {emailSent && (
-        <p className="text-green-500 text-sm mt-2 flex items-center">
-          <GiConfirmed className="mr-2" /> Skickat
-        </p>
-      )}
-
+      {/* Will popup if there's an email error */}
       {emailError && (
         <p className="text-red-500 text-[12px] mt-2 flex flex-col items-center w-[80%] m-auto">
           <MdOutlineDisabledByDefault className="mr-2 text-xl" />
-          Inte skickat - något gick fel. Vänligen skicka ett manuellt mail till
-          takmatotur@gmail.com. Tack för er förståelse.
+          Vänligen skicka ett manuellt mail till
+          <br />
+          takmatotur@gmail.com
         </p>
       )}
     </form>
@@ -115,3 +130,14 @@ const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {
 };
 
 export default ContactForm;
+
+// //How It Fits Together:
+// Parent (Contact) Component:
+
+// Contains the actual handleSubmit function that processes form data and communicates with the backend.
+// Passes this handleSubmit function to the ContactForm as a prop.
+// Child (ContactForm) Component:
+
+// Uses handleFormSubmit as the event handler for the form's onSubmit event.
+// Manages the form's UI state (like disabling the submit button and showing a loading state) during the submission process.
+// Calls the parent's handleSubmit function to actually handle the form data.
