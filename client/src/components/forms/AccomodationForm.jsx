@@ -1,11 +1,8 @@
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-
-// import icons
 import { IoClose } from "react-icons/io5";
 import { useFormDefaults } from "../../functions/useFormDefaults";
 import { MdOutlineDisabledByDefault } from "react-icons/md";
-import { GiConfirmed } from "react-icons/gi";
 
 // eslint-disable-next-line react/prop-types
 const AccomodationForm = ({ closeForm }) => {
@@ -26,6 +23,7 @@ const AccomodationForm = ({ closeForm }) => {
   const [dateError, setDateError] = useState("");
   const [capVal, setCapVal] = useState(null);
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,6 +36,7 @@ const AccomodationForm = ({ closeForm }) => {
     }
 
     setDateError(""); // Clear any previous date errors
+    setIsSubmitting(true); // Indicate form submission is in progress
 
     try {
       const response = await fetch("https://takmatotur.onrender.com/boende", {
@@ -63,6 +62,8 @@ const AccomodationForm = ({ closeForm }) => {
       console.error("There was an error submitting the form!", error);
       setEmailSent(false);
       setEmailError(true);
+    } finally {
+      setIsSubmitting(false); // Reset the submitting state
     }
   };
 
@@ -171,24 +172,34 @@ const AccomodationForm = ({ closeForm }) => {
       <button
         type="submit"
         className={`p-2 text-white rounded transform transition-all duration-150 ease-in-out ${
-          isCaptchaVerified
+          isSubmitting
+            ? "bg-yellow-500 cursor-wait"
+            : emailSent
+            ? "bg-green-500"
+            : emailError
+            ? "bg-red-500 hover:bg-red-600 active:bg-red-700 active:scale-95 active:shadow-lg"
+            : isCaptchaVerified
             ? "bg-blue-500 hover:bg-blue-600 active:bg-blue-700 active:scale-95 active:shadow-lg"
             : "bg-gray-400 cursor-not-allowed"
         }`}
-        disabled={!isCaptchaVerified}
+        disabled={!isCaptchaVerified || isSubmitting}
       >
-        Skicka
+        {isSubmitting
+          ? "Skickar..."
+          : emailSent
+          ? "Skickat"
+          : emailError
+          ? "Ej skickad"
+          : "Skicka"}
       </button>
-      {emailSent && (
-        <p className="text-green-500 text-sm mt-2 flex items-center">
-          <GiConfirmed className="mr-2" /> Skickat
-        </p>
-      )}
+
+      {/* Will popup if there's an email error */}
       {emailError && (
         <p className="text-red-500 text-[12px] mt-2 flex flex-col items-center w-[80%] m-auto">
           <MdOutlineDisabledByDefault className="mr-2 text-xl" />
-          Inte skickat - något gick fel. Vänligen skicka ett manuellt mail till
-          takmatotur@gmail.com. Tack för er förståelse.
+          Vänligen skicka ett manuellt mail till
+          <br />
+          takmatotur@gmail.com
         </p>
       )}
     </form>
