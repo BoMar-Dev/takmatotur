@@ -19,7 +19,10 @@ const Card = ({ image, title, link, description }) => {
             src={image}
             alt={title}
             onLoad={() => setLoading(false)}
-            style={{ display: loading ? "none" : "block" }}
+            style={{
+              display: loading ? "none" : "block",
+              transition: "opacity 1s ease-in-out",
+            }}
           />
         </div>
         <div className="font-bold text-xl flex-grow mt-5 text-amber-700">

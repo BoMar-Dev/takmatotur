@@ -118,7 +118,7 @@ const Contact = () => {
               >
                 <img
                   className={`rounded-lg shadow-xl w-full cursor-pointer ${
-                    loading ? "opacity-0" : "opacity-100"
+                    loading ? "opacity-0" : "opacity-100 ease-in-out"
                   }`}
                   src={map}
                   alt="Karta till Tak Mat O Tur"

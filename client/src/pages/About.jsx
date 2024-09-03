@@ -92,7 +92,10 @@ const About = () => {
                 src={portraitImg}
                 alt="Bild på grundarna av Tak Mat o Tur"
                 onLoad={() => setLoading(false)}
-                style={{ display: loading ? "none" : "block" }}
+                style={{
+                  display: loading ? "none" : "block",
+                  transition: "opacity 1s ease-in-out",
+                }}
               />
             </figure>
           </section>

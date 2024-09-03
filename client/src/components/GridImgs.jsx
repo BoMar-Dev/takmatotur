@@ -22,7 +22,10 @@ const GridImgs = ({ src, alt, title, description, reverse }) => {
           src={src}
           alt={alt}
           onLoad={() => setLoading(false)}
-          style={{ display: loading ? "none" : "block" }}
+          style={{
+            display: loading ? "none" : "block",
+            transition: "opacity 1s ease-in-out",
+          }}
         />
       </div>
       <div className="w-full xl:w-[50%] p-4">

@@ -117,7 +117,10 @@ const Coach = () => {
               loading ? "opacity-0" : "opacity-100"
             }`}
             onLoad={() => setLoading(false)}
-            style={{ display: loading ? "none" : "block" }}
+            style={{
+              display: loading ? "none" : "block",
+              transition: "opacity 1s ease-in-out",
+            }}
           />
         </aside>
       </div>
