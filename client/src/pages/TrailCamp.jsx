@@ -68,7 +68,7 @@ const TrailCamp = () => {
           </article>
         </div>
 
-        <section className="max-w-screen-xl mx-auto mt-10 space-y-10">
+        <section className="max-w-screen-xl mx-auto mt-10 ">
           <GridImgs
             src={welcome}
             alt="Trail Camp Welcome"

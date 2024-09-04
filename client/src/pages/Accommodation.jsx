@@ -73,7 +73,7 @@ const Accommodation = () => {
           </article>
         </div>
 
-        <section className="max-w-screen-xl mx-auto mt-10 space-y-10">
+        <section className="max-w-screen-xl mx-auto mt-10 ">
           <GridImgs
             src={boende1}
             alt="Bild på Emma & Martin - Tak Mat o Tur"
