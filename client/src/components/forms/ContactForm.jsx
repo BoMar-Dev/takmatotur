@@ -2,7 +2,6 @@
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
 // import icons
-import { GiConfirmed } from "react-icons/gi";
 import { MdOutlineDisabledByDefault } from "react-icons/md";
 
 const ContactForm = ({ handleSubmit, defaults, emailSent, emailError }) => {

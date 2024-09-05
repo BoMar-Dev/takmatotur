@@ -4,7 +4,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 // import icons
 import { IoClose } from "react-icons/io5";
 import { MdOutlineDisabledByDefault } from "react-icons/md";
-import { GiConfirmed } from "react-icons/gi";
 
 // eslint-disable-next-line react/prop-types
 const GeneralRunningForm = ({ closeForm }) => {

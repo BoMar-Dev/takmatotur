@@ -130,7 +130,7 @@ const About = () => {
           <div className="text-center flex justify-center w-full p-5 max-w-screen-xl xl:max-w-[1000px] mx-auto mt-7">
             <div>
               <h2 className="text-xl font-semibold text-amber-700 mb-2">
-                Duved är mer än bara en plats
+                Duved är mer...
               </h2>
               <p className="">
                 Duved är mer än bara en plats – det är en gemenskap och en port
