@@ -30,7 +30,7 @@ const Accommodation = () => {
       <SEOHelmet
         title="Boende | Tak Mat o Tur i Duved"
         description="Boende i vackra Duved nära Åre. Upplev Jämtlands fjällvärld med närhet till skidbackar, vandringsleder och mer. Perfekt för din nästa semester."
-        keywords="Tak Mat o Tur, boende, Duved, Åre, Jämtland, fjäll, skidåkning, vandring, semester, fjällvärld, Sverige, boende Duved, fjällnära boende, Duved lägenhet, fin lägenhet, Duved familjeboende, familjeboende, centralt boende duved, nyrenoverat boende, modern lägenhet, Åredalen boende, Boende nära Åre, boende nära Tegefjäll, boende med gångavstånd, lägenhet för två, lägenhet för tre, lägenhet för fyra. Fin lägenhet, boende egen ingång, boende parkering, boende med elbil, laddare elbil, laddstation, lägenhet i fjällen, fjällnära lägenhet, lägenhet för famlj, boende med parkering, lägenhet i lungt område, lägenhet skidbuss, lägenhet åredalen. Bästa boendet i Duved, familjevänligt boende, lägenhet för par.    "
+        keywords="Tak Mat o Tur, boende, Duved, Åre, Jämtland, fjäll, skidåkning, vandring, semester, fjällvärld, Sverige, boende Duved, fjällnära boende, Duved lägenhet, fin lägenhet, Duved familjeboende, familjeboende, centralt boende duved, nyrenoverat boende, modern lägenhet, Åredalen boende, Boende nära Åre, boende nära Tegefjäll, boende med gångavstånd, lägenhet för två, lägenhet för tre, lägenhet för fyra. Fin lägenhet, boende egen ingång, boende parkering, boende med elbil, laddare elbil, laddstation, lägenhet i fjällen, fjällnära lägenhet, lägenhet för familj, barnvänligt boende. Lägenhet nära skidåkning   "
         url="http://takmatotur.se/boende"
         image={boende1}
       />
@@ -177,13 +177,8 @@ const Accommodation = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              onClick={() => setIsFormOpen(false)} // Close modal when clicking on the backdrop
             >
-              <div onClick={(e) => e.stopPropagation()}>
-                {" "}
-                {/* Wrap the form in a div */}
-                <AccomodationForm closeForm={closeForm} />
-              </div>
+              <AccomodationForm closeForm={closeForm} />
             </motion.div>
           )}
         </AnimatePresence>
