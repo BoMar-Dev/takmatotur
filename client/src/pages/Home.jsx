@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       <SEOHelmet
-        title="Välkommen | Tak Mat O Tur"
+        title="Välkommen | Tak Mat o Tur"
         description="Välkommen till Tak Mat o Tur i Duved. Vi kombinerar komfort, gastronomi och äventyr för oförglömliga upplevelser i fantastiska Jämtland."
         keywords="tak, mat, tur, takmatotur, Tak Mat o Tur, Duved, äventyr, komfort, gastronomi, boende, topptur, löpning, vandra"
         url="https://takmatotur.se/"
@@ -88,7 +88,7 @@ const Home = () => {
             backgroundSize: "240%",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            opacity: 0.07,
+            opacity: 0.05,
             zIndex: -1,
           }}
           loading="lazy"
