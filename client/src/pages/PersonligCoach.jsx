@@ -12,7 +12,7 @@ const PersonligCoach = () => {
       <SEOHelmet
         title="Personlig Löpcoachning | Tak Mat o Tur"
         description="Privat löpcoachning för alla nivåer. Få individanpassad träning, teknikanalys och personlig motivation för att nå dina löpmål."
-        keywords="personlig löpcoachning, Tak Mat o Tur, löpträning, Jämtland, löpcoach, individuell träning"
+        keywords="Löpcoach, Tak Mat o Tur, löpning åre, trail, åre löpning, träningsprogram löpning, måndagslöpning, åredalens löpgupp, löpgrupp, åredalen coach, företagsträning åre, företagslöpning åre, löpning företag, gruppträning, gemenskap, löpning roligt, takmat, takmatotur, träning, coaching, triathlon, personlig träning, Marin Gillgren, rolig löpning, förbättra löpsteg, löpgrupp, måndagslöpning, löpning för alla, program, löp, nybörjare, avancerad, löping som passar alla, personligt program, online coach, online, coachning, löpinstruktör,"
         url="http://takmatotur.se/coach/personlig"
         image={backgroundImg} // Replace with a relevant image if available
       />

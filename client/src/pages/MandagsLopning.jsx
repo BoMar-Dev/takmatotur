@@ -12,7 +12,7 @@ const MandagsLopning = () => {
       <SEOHelmet
         title="Måndagslöpning | Tak Mat o Tur"
         description="Delta i Jämtlands härligaste löpargrupp! Sex måndagar med inspirerande löppass och personlig träning som hjälper dig att nå nya höjder."
-        keywords="måndagslöpning, Tak Mat o Tur, Jämtland, löpning, löpargrupp, träning, löpteknik"
+        keywords="Löpcoach, Tak Mat o Tur, löpning åre, trail, åre löpning, träningsprogram löpning, måndagslöpning, åredalens löpgupp, löpgrupp, åredalen coach, företagsträning åre, företagslöpning åre, löpning företag, gruppträning, gemenskap, löpning roligt, takmat, takmatotur, träning, coaching, triathlon, personlig träning, Marin Gillgren, rolig löpning, förbättra löpsteg, löpgrupp, måndagslöpning, löpning för alla, program, löp, nybörjare, avancerad, löping som passar alla, personligt program, online coach, online, coachning, löpinstruktör,"
         url="http://takmatotur.se/mandagslopning"
         image={backgroundImg}
       />

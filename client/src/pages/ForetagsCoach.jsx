@@ -12,7 +12,7 @@ const ForetagsCoach = () => {
       <SEOHelmet
         title="Företagscoaching | Tak Mat o Tur"
         description="Stärk teamet och nå nya höjder med vår 10-veckors löpcoaching för företagsgrupper. Kombinera träning, motivation och gemenskap för att skapa en starkare teamkänsla och ökad arbetsglädje."
-        keywords="Företagscoaching, löpcoaching, teamkänsla, arbetsglädje, hälsa, Tak Mat o Tur"
+        keywords="Löpcoach, Tak Mat o Tur, löpning åre, trail, åre löpning, träningsprogram löpning, företag, löpning för företag, företagshälsa, företagsträning, teambuilding, team träning, gruppträning, måndagslöpning, åredalens löpgupp, löpgrupp, åredalen coach, företagsträning åre, företagslöpning åre, löpning företag, gruppträning, gemenskap, löpning roligt, takmat, takmatotur, träning, coaching, triathlon, personlig träning, Marin Gillgren, rolig löpning, förbättra löpsteg, löpgrupp, måndagslöpning, löpning för alla, program, löp, nybörjare, avancerad, löping som passar alla, personligt program, online coach, online, coachning, löpinstruktör,"
         url="http://takmatotur.se/coach/foretag"
         image={backgroundImg}
       />
