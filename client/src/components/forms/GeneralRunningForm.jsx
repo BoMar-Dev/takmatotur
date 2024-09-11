@@ -58,6 +58,9 @@ const GeneralRunningForm = ({ closeForm }) => {
         console.log("Server response:", data);
         setEmailSent(true);
         setEmailError(false);
+        setTimeout(() => {
+          closeForm(); // coming as a callbackfunction from the parent
+        }, 2000);
       } else {
         console.log("Error response from server:", data);
         setEmailSent(false);
