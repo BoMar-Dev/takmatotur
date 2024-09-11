@@ -56,7 +56,7 @@ const AccomodationForm = ({ closeForm }) => {
         // Auto-close the form after 2 seconds when the form is submittet and came back as all good ( Skickat )
         setTimeout(() => {
           closeForm(); // coming as a callbackfunction from the parent
-        }, 2000);
+        }, 1800);
       } else {
         console.log("Error response from server:", data);
         setEmailSent(false);

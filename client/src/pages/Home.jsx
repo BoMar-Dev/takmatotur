@@ -31,7 +31,7 @@ const Home = () => {
       <SEOHelmet
         title="Välkommen | Tak Mat o Tur"
         description="Välkommen till Tak Mat o Tur i Duved. Vi kombinerar komfort, gastronomi och äventyr för oförglömliga upplevelser i fantastiska Jämtland."
-        keywords="tak, mat, tur, takmatotur, Tak Mat o Tur, Duved, äventyr, komfort, gastronomi, boende, topptur, löpning, vandra"
+        keywords="tak, mat, tur, takmatotur, Tak Mat o Tur, Duved, äventyr, komfort, gastronomi, boende, topptur, löpning, vandra, onlinecoach, online, springa, gruppträning, måndagslöpning, trail, löpsteg, åredalen löpning, personlig coach, äventyr, upplevelser, upplev mer, Duved, Åre, jämtland, löpning för alla, löpning på dina villkor, personlig löpning, anpassad löpning,"
         url="https://takmatotur.se/"
         image={landingImage}
       />
@@ -45,13 +45,13 @@ const Home = () => {
           <div className="relative md:p-6 rounded-md text-center">
             <div className="ml-2 md:ml-5 xl:ml-1 font-semibold text-white">
               <h1 className=" sm:text-4xl whitespace-nowrap">
-                Trail Camp 2024
+                Löpning på dina villkor
               </h1>
             </div>
             <div className="mt-2 md:mt-4 flex justify-center">
-              <Link to="/trailcamp">
+              <Link to="/coach">
                 <button className="custom-button bg-amber-700 opacity-90 text-white hover:shadow-sky-700">
-                  <span className="relative z-10">Boka / Info</span>
+                  <span className="relative z-10">Mer info</span>
                 </button>
               </Link>
             </div>
