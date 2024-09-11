@@ -77,7 +77,7 @@ const PersonligCoach = () => {
               <h2 className="mb-2 font-semibold text-xl">
                 Personlig Anpassning
               </h2>
-              <p className="mb-5">
+              <p className="mb-7">
                 En av de största fördelarna med privat löpcoachning från Tak Mat
                 o Tur är den individuella anpassningen. Vi skapar
                 träningsprogram som är exakt anpassade efter dina mål, din
@@ -89,7 +89,7 @@ const PersonligCoach = () => {
               </p>
 
               <h2 className="mb-2 font-semibold text-xl">Löpcoaching Online</h2>
-              <p className="mb-5">
+              <p className="mb-7">
                 För dig som föredrar flexibilitet och bekvämlighet erbjuder vi
                 även personlig löpcoaching online. Vår onlinecoaching ger dig
                 samma personliga anpassning och expertstöd som våra fysiska
@@ -99,7 +99,7 @@ const PersonligCoach = () => {
               </p>
 
               <h2 className="mb-2 font-semibold text-xl">Teknisk Expertis</h2>
-              <p className="mb-5">
+              <p className="mb-7">
                 Att ha någon som kan analysera din löpteknik och ge dig konkreta
                 råd är ovärderligt. Som en del av ditt individuella program
                 ingår filmning och analys av din löpteknik. Genom att arbeta med
@@ -110,7 +110,7 @@ const PersonligCoach = () => {
               <h2 className="mb-2 font-semibold text-xl">
                 Motivation och Stöd
               </h2>
-              <p className="mb-5">
+              <p className="mb-7">
                 Löpning kan vara en mental utmaning lika mycket som en fysisk.
                 Jag fungerar som din personliga hejaklack och stöttepelare,
                 särskilt när motivationen sviktar. Genom regelbundna check-ins
@@ -124,7 +124,7 @@ const PersonligCoach = () => {
               <h2 className="mb-2 font-semibold text-xl">
                 Resultat och Framgångar
               </h2>
-              <p className="mb-3">
+              <p className="mb-7">
                 Ingenting är mer inspirerande än att se resultat från ditt hårda
                 arbete. Genom strukturerad träning och dedikerad coaching kommer
                 du att märka förbättringar i din uthållighet, hastighet och
@@ -156,16 +156,16 @@ const PersonligCoach = () => {
                     träningsprogram som är anpassat efter dig och dina
                     förutsättningar.
                   </li>
-                  <li className="mt-3">
+                  <li className="mt-5">
                     Träningsprogram i 12 veckor med detaljer som exempelvis
                     distans, fart & pulszon/ansträngningsnivå.
                   </li>
-                  <li className="mt-3">
+                  <li className="mt-5">
                     Check-ins: vi träffas online en gång i månaden och
                     utvärderar månaden som gått och gör eventuella förändringar
                     i ditt program.
                   </li>
-                  <p className=" font-semibold mt-3 mb-10"> Pris: 1500 kr</p>
+                  <p className=" font-semibold mt-5 mb-10"> Pris: 1500 kr</p>
                 </p>
                 <p>
                   <strong className="">Privat coaching:</strong>
@@ -175,18 +175,18 @@ const PersonligCoach = () => {
                     träningsprogram som är anpassat efter dig och dina
                     förutsättningar.
                   </li>
-                  <li className="mt-3">
+                  <li className="mt-5">
                     Träningsprogram i 12 veckor med detaljer som exempelvis
                     distans, fart & pulszon/ansträngningsnivå.
                   </li>
-                  <li className="mt-3">1 löpanalys med filmning</li>
-                  <li className="mt-3">2 PT-timmar</li>
-                  <li className="mt-3">
+                  <li className="mt-5">1 löpanalys med filmning</li>
+                  <li className="mt-5">2 PT-timmar</li>
+                  <li className="mt-5">
                     Check-ins: vi träffas en gång i månaden och utvärderar
                     månaden som gått och gör eventuella förändringar i ditt
                     program.
                   </li>
-                  <p className=" font-semibold mt-3">Pris: 2100 kr</p>
+                  <p className=" font-semibold mt-5">Pris: 2100 kr</p>
                 </p>
               </div>
             </section>
