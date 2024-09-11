@@ -131,7 +131,7 @@ const Coach = () => {
         </h2>
       </div>
 
-      <div className="max-w-screen-xl mx-auto flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-10 mb-10">
+      <div className="max-w-screen-xl mx-auto flex flex-col space-y-8 xl:flex-row xl:space-y-0 xl:space-x-10 mb-10 md:p-5 ">
         <Card
           image={mondayRun}
           title="Måndagslöpning"
