@@ -40,7 +40,7 @@ const PersonligCoach = () => {
           <h1 className="font-bold text-center">Personlig Löpcoachning</h1>
         </header>
 
-        <div className="max-w-screen-xl mx-auto  mb-10">
+        <div className="max-w-screen-xl mx-auto  mb-7">
           <article className="xl:text-left">
             <p className="text-base md:text-md xl:text-xl font-semibold p-3 mx-auto">
               Att löpträna på egen hand kan vara både utmanande och ibland
