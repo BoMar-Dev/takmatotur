@@ -9,7 +9,7 @@ import boende3 from "../img/accommodation/boende3.webp";
 const landingImage = import("../img/header/landing.webp");
 import backgroundImg from "../img/about/background.svg";
 // import maurten from "../img/home/maurtens.svg";
-import maurtenWhite from "../img/home/maurtenW.svg";
+import maurtenWhite from "../img/home/maurten.svg";
 
 // Import component
 import Card from "../components/Card";
