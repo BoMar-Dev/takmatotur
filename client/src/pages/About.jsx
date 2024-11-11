@@ -36,10 +36,10 @@ const About = () => {
         ></div>
 
         <header className="flex justify-center mb-6 pt-2">
-          <h1 className="font-bold text-center">Tak Mat o Tur</h1>
+          <h1 className="font-bold text-center text-primary">Tak Mat o Tur</h1>
         </header>
 
-        <div className="max-w-screen-xl mx-auto p-3 mb-10">
+        <div className="max-w-screen-xl mx-auto p-3 mb-10 text-primary">
           <section className="font-semibold text-lg">
             <p className="text-base md:text-md xl:text-xl px-3 mx-auto">
               Välkommen till Tak Mat o Tur i hjärtat av Duved, där vi förenar

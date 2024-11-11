@@ -8,6 +8,8 @@ import topptur from "../img/home/topptur.webp";
 import boende3 from "../img/accommodation/boende3.webp";
 const landingImage = import("../img/header/landing.webp");
 import backgroundImg from "../img/about/background.svg";
+// import maurten from "../img/home/maurtens.svg";
+import maurtenWhite from "../img/home/maurtenW.svg";
 
 // Import component
 import Card from "../components/Card";
@@ -35,7 +37,7 @@ const Home = () => {
         url="https://takmatotur.se/"
         image={landingImage}
       />
-      <main className="relative p-3 pb-16">
+      <main className="relative p-3 pb-16 text-primary">
         <motion.header
           className="absolute top-[-200px] xl:top-[-250px] left-1/2 transform -translate-x-1/2 xl:text-xl font-bold text-PrimaryColor z-10"
           initial={{ opacity: 0 }}
@@ -60,10 +62,10 @@ const Home = () => {
 
         <section className="relative flex flex-col items-center mb-10 max-w-screen-xl mx-auto">
           <header className="text-center mb-10 pt-2">
-            <h1 className="font-bold">Välkommen</h1>
+            <h1 className="font-bold ">Häng med oss!</h1>
           </header>
 
-          <article className="max-w-screen-xl mx-auto p-3 mb-10">
+          <article className="max-w-screen-xl mx-auto p-3 mb-10 bg-ab">
             <p className="xl:text-left text-base md:text-md xl:text-xl p-1 font-semibold mx-auto">
               Välkommen till Tak Mat o Tur i Duved, där vi kombinerar komfort,
               gastronomi och äventyr för oförglömliga upplevelser. Drivna av vår
@@ -77,7 +79,7 @@ const Home = () => {
 
         <div className="text-center my-10">
           <h2 className="text-xl font-semibold text-amber-700">
-            Aktiviteter & Utbud :
+            Aktiviteter och utbud :
           </h2>
         </div>
 
@@ -94,7 +96,7 @@ const Home = () => {
           loading="lazy"
         ></div>
 
-        <section className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
+        <section className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
           <Card
             image={mondayRun}
             title="Måndagslöpning"
@@ -116,6 +118,23 @@ const Home = () => {
             />
           </div>
         </section>
+
+        <div className="bg-black w-[calc(100%+1.5rem)] relative left-[-0.75rem] m-0 transform skew-y-3 mb-10 py-10">
+          <article className="max-w-screen-lg mx-auto px-7 flex flex-col justify-center items-center text-white transform -skew-y-3">
+            <img src={maurtenWhite} alt="" style={{ width: "55%" }} />
+            <h2 className="mb-5 font-extrabold md:text-2xl ">
+              Stolt presenterar vi vår samarbetspartner !
+            </h2>
+            <p className="xl:text-left text-base md:text-md xl:text-xl p-1 mb-10  mx-auto ">
+              Maurten Gel är en innovativ sportgel som använder
+              hydrogelteknologi för att leverera energi på ett skonsamt sätt för
+              magen. Till skillnad från traditionella geler är Maurten Gel
+              naturlig och fri från tillsatt smak, färgämnen och
+              konserveringsmedel. Ta ett extra steg med Maurten.
+            </p>
+          </article>
+        </div>
+
         <div className="text-center flex justify-center w-full p-5 max-w-screen-xl xl:max-w-[1000px] mx-auto mt-7">
           <div>
             <h2 className="text-xl font-semibold text-amber-700 mb-2">

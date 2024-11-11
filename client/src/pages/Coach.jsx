@@ -22,7 +22,7 @@ const Coach = () => {
   const closeForm = () => setIsFormOpen(false);
 
   return (
-    <section className="relative flex flex-col items-center p-5 pb-16">
+    <section className="relative flex flex-col items-center p-5 pb-16 text-primary">
       <SEOHelmet
         title="Löpcoach | Tak Mat O Tur"
         description="Privat löpcoachning och företagsträning från Tak Mat o Tur. Vi erbjuder skräddarsydda träningsprogram och teknisk rådgivning för att förbättra din löpstil, öka effektiviteten och minska skaderisken."

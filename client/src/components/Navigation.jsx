@@ -16,7 +16,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="hidden lg:flex space-x-12 pt-12 ml-24 mr-20 justify-center ">
+    <nav className="hidden lg:flex space-x-12 pt-12 ml-24 mr-20 justify-center text-primary ">
       {navLinks.map((link) => (
         <div key={link.path} className="relative flex flex-col items-center">
           <Link

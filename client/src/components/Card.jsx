@@ -9,7 +9,7 @@ const Card = ({ image, title, link, description }) => {
 
   return (
     <Link to={link} className="block h-full">
-      <div className="bg-white flex flex-col p-5 shadow-lg rounded-lg h-full hover:scale-105 transform transition-transform duration-300">
+      <div className="bg-white flex flex-col p-5 shadow-lg rounded-lg h-full hover:scale-105 transform transition-transform duration-300 ">
         <div className="relative">
           {loading && <SkeletonLoader height="200px" width="100%" />}
           <img

@@ -35,7 +35,7 @@ const Accommodation = () => {
         image={boende1}
       />
 
-      <section className="relative p-5 pb-16">
+      <section className="relative p-5 pb-16 text-primary">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
