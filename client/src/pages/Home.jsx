@@ -123,14 +123,15 @@ const Home = () => {
           <article className="max-w-screen-lg mx-auto px-7 flex flex-col justify-center items-center text-white transform -skew-y-3">
             <img src={maurtenWhite} alt="" style={{ width: "55%" }} />
             <h2 className="mb-5 font-extrabold md:text-2xl ">
-              Stolt presenterar vi vår samarbetspartner !
+              Stolt över att ha er ombord !
             </h2>
             <p className="xl:text-left text-base md:text-md xl:text-xl p-1 mb-10  mx-auto ">
-              Maurten Gel är en innovativ sportgel som använder
-              hydrogelteknologi för att leverera energi på ett skonsamt sätt för
-              magen. Till skillnad från traditionella geler är Maurten Gel
-              naturlig och fri från tillsatt smak, färgämnen och
-              konserveringsmedel. Ta ett extra steg med Maurten.
+              Äntligen kan vi presentera vår partner. Maurten Gel är en
+              innovativ sportgel som använder hydrogelteknologi för att leverera
+              energi på ett skonsamt sätt för magen. Till skillnad från
+              traditionella geler är Maurten Gel naturlig och fri från tillsatt
+              smak, färgämnen och konserveringsmedel. Ta ett extra steg med
+              Maurten.
             </p>
           </article>
         </div>
