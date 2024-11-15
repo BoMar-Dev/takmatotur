@@ -65,7 +65,7 @@ const MobileNav = () => {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 0.5 }} // Smooth pop-in effect with delay
-          className="text-4xl fixed z-30 left-5 top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold"
+          className="text-4xl fixed z-30 ml-3  top-10 text-PrimaryColor hover:text-slate-500 transition font-semibold"
         >
           <IoClose />
         </motion.div>
